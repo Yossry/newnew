@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <record id="resume_line_inherit" model="ir.ui.view">
+            <field name="name">hr.resume.line.form.ineherit</field>
+            <field name="model">hr.resume.line</field>
+            <field name="inherit_id" ref="hr_skills.resume_line_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_type']" position="after">
+                    <field name="skill_type" invisible='1'/>
+                    <field name='obtained_via' attrs="{'invisible': [('skill_type', '!=', 'certification')]}"/>
+                    <field name='study_format' attrs="{'invisible': [('skill_type', '!=', 'certification')]}"/> 
+
+                    <field name='language' options="{'no_create':True, 'no_open':True}" attrs="{'invisible': [('skill_type', '!=', 'language')]}"/>
+                    <field name='lang_type' attrs="{'invisible': [('skill_type', '!=', 'language')]}"/>
+
+                    <field name='program_id' options="{'no_create':True, 'no_open':True}" attrs="{'invisible': [('skill_type', '!=', 'specialization')]}"/>
+                    <field name='course_ids' options="{'no_create':True}" widget='many2many_tags' domain="[('program_id','=',program_id)]" attrs="{'invisible': [('skill_type', '!=', 'specialization')]}"/>
+                    <field name='topic_ids' options="{'no_create':True}" widget='many2many_tags' attrs="{'invisible': [('skill_type', '!=', 'specialization')]}"/>
+
+                    <field name='education' attrs="{'invisible': [('skill_type', '!=', 'education')]}"/>
+                    <field name='major_id' attrs="{'invisible': [('skill_type', '!=', 'education')]}"/>
+                    <field name='unversity_id' attrs="{'invisible': [('skill_type', '!=', 'education')]}"/>
+
+                    <field name='company' attrs="{'invisible': [('skill_type', '!=', 'experience')]}"/>
+                    <field name='job_title' attrs="{'invisible': [('skill_type', '!=', 'experience')]}"/>
+                    <field name='years_of_experience' attrs="{'invisible': [('skill_type', '!=', 'experience')]}"/>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

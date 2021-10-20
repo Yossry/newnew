@@ -1,0 +1,182 @@
+<odoo>
+    <data>
+        <menuitem id="training_operations_menu1" name="Academy" web_icon="event,static/description/icon.png"
+                  sequence="1"/>
+        <menuitem id="training_operation_management" name="Operations Management" parent="training_operations_menu1"
+                  sequence="1"/>
+
+        <record id="certificate_action" model="ir.actions.act_window">
+            <field name="name">Certificates</field>
+            <field name="res_model">certificate</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="website_event_track.action_event_track_location" model="ir.actions.act_window">
+            <field name="name">Class Rooms</field>
+        </record>
+        <menuitem
+                id="website_event_track.menu_event_track_location"
+                name="Class Rooms"
+                action="website_event_track.action_event_track_location"
+                parent="event.menu_event_configuration"/>
+        <record id="training_course_window" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="res_model">course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="attempts_window" model="ir.actions.act_window">
+            <field name="name">Attempts</field>
+            <field name="res_model">attempt</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="attempt_menu" name="Attempts" parent="training_operation_management" sequence="3"
+                  action="attempts_window"/>
+        <record model="ir.actions.act_window" id="students_window">
+            <field name="name">Students</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_id" ref="education.student_tree"/>
+            <field name="domain">[('is_student', '=', True)]</field>
+            <field name="context">{'default_is_student':True, 'default_name':'Test', 'default_stage': 'active', 'form_view_ref': 'education.student_form', 'default_account_type':'b2c'}
+            </field>
+        </record>
+
+        <record id="instructor_window" model="ir.actions.act_window">
+            <field name="name">Instructors</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('is_instructor', '=', True)]</field>
+            <field name='context'>{'default_is_instructor': 1}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="timesheet_window">
+            <field name="name">Timesheets</field>
+            <field name="res_model">purchase.order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_id" ref="education.timesheet_tree"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="timesheet_menu" name="Instructors timesheets" parent="training_operation_management" sequence="6"
+                  action="timesheet_window"/>
+        <record id="reporting_window" model="ir.actions.act_window">
+            <field name="name">Targeted Terms</field>
+            <field name="res_model">term</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="operation_configuration" name="Configuration" parent="training_operations_menu1" sequence="2"/>
+        <menuitem id="reporting_period_menu" name="Targeted Terms" parent="operation_configuration" sequence="2"
+                  action="reporting_window"/>
+        <record model="ir.actions.act_window" id="configuration_supplier_window">
+            <field name="name">Suppliers</field>
+            <field name="res_model">res.partner</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('supplier', '=', True)]</field>
+            <field name="context">{'form_view_ref':'education.supplier_form_view', 'default_supplier': 1,'default_customer': 0}
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="locations_window">
+            <field name="name">Locations</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form,map,kanban</field>
+            <field name="domain">[('type', '=' , 'training')]</field>
+            <field name="context">{'form_view_ref':'education.location_form', 'default_type':'training'}</field>
+        </record>
+
+
+        <record id="exam_window" model="ir.actions.act_window">
+            <field name="name">Exams</field>
+            <field name="res_model">exam</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="exam_menu" name="Exams" parent="operation_configuration" sequence="3" action="exam_window"/>
+        <record id="program_window" model="ir.actions.act_window">
+            <field name="name">Programs</field>
+            <field name="res_model">program</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="event_period_window" model="ir.actions.act_window">
+            <field name="name">Event Periods</field>
+            <field name="res_model">event.period</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="instructor_major_window" model="ir.actions.act_window">
+            <field name="name">Instructor Majors</field>
+            <field name="res_model">instructor.major</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="unversity_window" model="ir.actions.act_window">
+            <field name="name">Universities</field>
+            <field name="res_model">university</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="event.menu_reporting_events" parent="education.training_operations_menu1" sequence="2"
+                  name="Reporting"/>
+        <menuitem id="event.menu_event_global_settings" parent="education.operation_configuration" sequence="1"
+                  name="Settings"/>
+        <menuitem id="event.menu_event_type" parent="education.operation_configuration" sequence="2"
+                  name="Event Categories"/>
+        <menuitem id="event.menu_event_mail_schedulers" parent="education.operation_configuration" sequence="3"
+                  name="Mail Schedulers"/>
+        <menuitem id="website_event_track.menu_event_track_location" parent="education.operation_configuration"
+                  sequence="4" name="Locations"/>
+        <menuitem id="website_event_track.menu_event_sponsor_type" parent="education.operation_configuration"
+                  sequence="5" name="Sponsor Types"/>
+        <menuitem id="website_event_track.menu_event_track_tag" parent="education.operation_configuration" sequence="6"
+                  name="Session Tags"/>
+        <menuitem id="website_event_track.event_track_stage_menu" parent="education.operation_configuration"
+                  sequence="7" name="Session Stages"/>
+        <menuitem id="program_menu" name="Programs" parent="operation_configuration" sequence="8"
+                  action="program_window"/>
+
+        <menuitem id="event_period_menu" name="Event Periods" parent="operation_configuration" sequence="9"
+                  action="event_period_window"/>
+
+        <menuitem id="training_course_menu" name="Courses" parent="operation_configuration" sequence="10"
+                  action="training_course_window"/>
+        <menuitem id="operations_contacts_menu" name="Contacts" parent="education.training_operation_management"
+                  sequence="2" action="configuration_supplier_window"/>
+        <menuitem id="training_student_menu" name="Students" parent="education.operations_contacts_menu" sequence="1"
+                  action="students_window"/>
+        <menuitem id="training_instructor_menu" name="Instructors" parent="education.operations_contacts_menu"
+                  sequence="2" action="instructor_window"/>
+        <menuitem id="supplier_menu" name="Suppliers" parent="education.operations_contacts_menu" sequence="3"
+                  action="configuration_supplier_window"/>
+        <menuitem id="event.event_main_menu" name="Events" parent="education.training_operation_management" sequence="1"/>
+
+        <menuitem id="certificates" name="Certificates" parent="education.training_operation_management" sequence="4" action="certificate_action"/>
+
+        <menuitem id="website_event_track.menu_event_track" parent="event.event_main_menu"
+                  action="website_event_track.action_event_track" sequence="11" name="Sessions"
+                  groups="event.group_event_user"/>
+
+
+        <menuitem id="training_locations_menu" name="Locations" parent="education.operation_configuration" sequence="14"
+                  action="locations_window"/>
+
+        <menuitem id="instructor_major_menu" name="Instructor Majors" parent="education.operation_configuration"
+                  sequence="15" action="instructor_major_window"/>
+
+        <menuitem id="unversity_menu" name="Universities" parent="education.operation_configuration" sequence="16"
+                  action="unversity_window"/>
+        <record id="website_event_track.action_event_track" model="ir.actions.act_window">
+            <field name="name">Sessions</field>
+        </record>
+        <record id="factor_decisions_window" model="ir.actions.act_window">
+            <field name="name">Factor of Decision</field>
+            <field name="res_model">factor.decision</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <record id="website_event_track.event_track_stage_action" model="ir.actions.act_window">
+            <field name="name">Session Stages</field>
+        </record>
+        <record id="website_event_track.action_event_track_tag" model="ir.actions.act_window">
+            <field name="name">Session tags</field>
+        </record>
+    </data>
+</odoo>

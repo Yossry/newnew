@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        
+        <record id="slide_form_inherit" model="ir.ui.view">
+            <field name="name">slide.form.inherit</field>
+            <field name="model">slide.slide</field>
+            <field name="inherit_id" ref="website_slides.view_slide_slide_form" />
+            <field name="arch" type="xml">
+              <data>
+                <xpath expr="//field[@name='mime_type']" position="after">
+                  <field name="is_vimeo" invisible='1'/>
+                </xpath>
+              </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,183 @@
+<odoo>
+    <data>
+        <record id="lead_view_form_inherit" model="ir.ui.view">
+            <field name="name">lead.view.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form" />
+            <field name="arch" type="xml">
+
+    <xpath expr="//field[@name='partner_id']" position="after">
+      <field name='company_id' options="{'no_create': True, 'no_quick_create': True}" attrs="{&quot;invisible&quot;: [[&quot;type&quot;,&quot;!=&quot;,&quot;lead&quot;]]}" required='1' />
+    </xpath>
+
+   <xpath expr="//field[@name='phone']" position="after">
+    <field name="program_id" options="{'no_create': True, 'no_quick_create': True}" />
+    <field name="expiration" readonly="1" />
+  </xpath>
+  
+  <xpath expr="//field[@name='stage_id']" position="attributes">
+    <attribute name="attrs">{"invisible": ["|",["active","=",False],["type","=","lead"]]}</attribute>
+  </xpath>
+
+  <xpath expr="//field[@name='planned_revenue']" position="attributes">
+    <attribute name="attrs">{"readonly": [["quotation_count",">",0]]}</attribute>
+  </xpath>
+  
+  <xpath expr="//button[@name='action_sale_quotations_new']" position="attributes">
+    <attribute name="attrs">{'invisible': ['|', ('type', '=', 'lead'), '|', ('probability', '=', 100), '&amp;', ('probability', '=', 0), ('active', '=', False)]}</attribute>
+
+    <attribute name="context">{'default_event_id': event_id}</attribute>
+  </xpath>
+
+  <xpath expr="//form[1]/sheet[1]/group[1]/group[2]/field[@name='phone']" position="after">
+    <xpath expr="//form[1]/sheet[1]/group[1]/group[not(@name)][6]/field[@name='company_id']" position="move"/>
+  </xpath>
+
+  
+  <xpath expr="//form[1]/sheet[1]/group[1]/group[3]/label[1]" position="attributes">
+    <attribute name="string">Title</attribute>
+  </xpath>
+  <xpath expr="//form[1]/sheet[1]/group[1]/group[3]/div[1]/field[@name='contact_name']" position="attributes">
+    <attribute name="attrs">{}</attribute>
+    <attribute name="invisible">1</attribute>
+  </xpath>
+
+  <xpath expr="//h2[hasclass('no-gutters')]" position="after">
+
+    <h2 class="o_row row no-gutters d-flex">
+          <div class="col" attrs="{'invisible': [('type', '=', 'lead')]}">
+              <label for="quotation_revenue" class="oe_edit_only"/>
+              <div class="o_row">
+                  <field name="company_currency" invisible="1"/>
+                  <field name="quotation_revenue" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                  <span class="oe_grey p-2">  </span>
+              </div>
+          </div>
+          <div class="col">
+              <span class="oe_edit_only o_pls_probability">
+                  <label for="simulated_revenue"/>
+                  </span>
+              <div id="simulated_revenue" class="o_row d-flex">
+                  <field name="simulated_revenue" readonly='1' widget="monetary" options="{'currency_field': 'company_currency'}" class="oe_inline"/>
+              </div>
+          </div>
+      </h2>
+
+  </xpath>
+
+     <xpath expr="//field[@name='user_id']" position="before">
+    <field name="industry_id" />
+    <field name='event_id' invisible='1'/>
+  </xpath>
+
+  <!--<xpath expr="//button[@name='action_redirect_to_livechat_sessions']" position="after">
+    <button class="oe_stat_button" icon="fa-phone" type="object" name="show_related_calls">
+      <field name="call_count" string="Calls" widget="statinfo"/>
+    </button>
+
+    <button class="oe_stat_button" icon="fa-user" type="object" name="show_related_visits">
+      <field name="visit_count" string="Office Visits" widget="statinfo"/>
+    </button>
+  </xpath>-->
+
+  
+  
+
+
+
+</field>
+</record>
+
+       <record id="crm_lead_inherit_form" model="ir.ui.view">
+            <field name="name">lead.view.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form" />
+            <field name="arch" type="xml">
+<data>
+
+ 
+  <xpath expr="//field[@name='program_id']" position="after">
+	<field name="study_format"/>
+    <field name="course_ids" domain="[('region_ids', 'in', company_id), '&amp;', ('program_id', '=', program_id), ('type_id.study_format', '=', study_format)]" options="{ 'no_open': True, 'no_quick_create': True, 'no_create_edit' : True}" widget="many2many_tags"/>
+    <field name='event_id' domain="[('company_id', '=', company_id),('course_id','in',course_ids)]" options="{ 'no_open': True, 'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible':['|',('study_format','=','self'),('study_format','=',False)]}"/>
+
+    <field name='product_ids' widget="many2many_tags" options="{'no_open': True, 'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible':[('study_format','!=','self'),('study_format','!=','multiple')]}"/>
+  </xpath>
+  <xpath expr="//field[@name='date_deadline']" position="before">
+    <xpath expr="//field[@name='expiration']" position="move"/>
+    <field name="reporting_period" options="{'no_open':True, 'no_create':True}"/>
+    <field name="exam_id" attrs="{'required': [('exam', '=', True), ('stage_id','=', %(crm.stage_lead3)d)]}"/>
+    <field name="factor_of_decision"/>
+    <field name="cpf"/>
+    <field name='exam' invisible='1'/>
+  </xpath>
+</data>
+
+
+
+
+</field>
+</record>
+
+ <record id="lead_form_view_inherit" model="ir.ui.view">
+            <field name="name">lead.view.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form" />
+            <field name="arch" type="xml">
+
+   <data>
+  <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='website']" position="after">
+    <field name="program_id" ooptions="{'no_open': True, 'no_quick_create': True, 'no_create_edit' : True}" />
+  </xpath>
+  <xpath expr="//form[1]/sheet[1]/group[1]/group[3]/label[1]" position="before">
+    <field name="first_name"/>
+    <field name="last_name"/>
+    <field name="middle_name"/>
+  </xpath>
+</data>
+
+
+
+</field>
+</record>
+
+    <record id="lead_view_search_inherit" model="ir.ui.view">
+            <field name="name">lead.view.search.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+            <field name="arch" type="xml">
+
+  <data>
+  <xpath expr="//filter[@name='assigned_to_me']" position="after">
+    <filter name="48_hours" string="48 Hours" domain="[('stage','=', 'fourtyeight')]"/>
+    <filter name="1_week" string="Up To 1 Week" domain="[('stage','=', 'gptoweek')]"/>
+    <filter name="90_days" string="Up To 90 Days" domain="[('stage','=', 'htop1months')]"/>
+    <filter name="over_three_months" string="Over 3 Months" domain="[('stage','=', 'overthree')]"/>
+  </xpath>
+</data>
+</field>
+</record>
+
+ <record id="oppor_disable_draggable_kanban" model="ir.ui.view">
+            <field name="name">crm.lead.inherit.kanban</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+            <field name="arch" type="xml">
+
+   <data>
+ <xpath expr="//kanban" position="attributes">
+                <attribute name="disable_sort_column">true</attribute>
+                <attribute name="disable_sort_record">true</attribute>
+                <attribute name="disable_drag_drop_record">true</attribute>
+            </xpath>
+</data>
+
+
+
+</field>
+</record>
+
+
+</data>
+</odoo>
+

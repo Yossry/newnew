@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <record id="website_event_track.event_track_stage0" model="event.track.stage">
+            <field name="name">Pending</field>
+        </record>
+        <record id="website_event_track.event_track_stage1" model="event.track.stage">
+            <field name="name">Done</field>
+        </record>
+        
+        <record id="website_event_track.event_track_stage2" model="event.track.stage">
+            <field name="fold" eval="True" />
+        </record>
+        <record id="website_event_track.event_track_stage3" model="event.track.stage">
+            <field name="fold" eval="True" />
+        </record>
+        <record id="website_event_track.event_track_stage4" model="event.track.stage">
+            <field name="fold" eval="True" />
+        </record>
+        
+        <record model="ir.actions.act_window" id="website_event_track.action_event_track_from_event">
+            <field name="res_model">event.track</field>
+            <field name="name">Sessions</field>
+            <field name="view_mode">kanban,tree,form,calendar,graph,activity</field>
+            <field name="context">{'search_default_event_id': active_id, 'default_event_id': active_id, 'group_by': 'stage_id'}</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Add a new session
+              </p><p>
+                Sessions define the schedule of your event. These can be a class or marketing event.
+              </p>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

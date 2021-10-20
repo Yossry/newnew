@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="resume_line_type_inherit" model="ir.ui.view">
+            <field name="name">hr.resume.line.type.tree.view.ineherit</field>
+            <field name="model">hr.resume.line.type</field>
+            <field name="inherit_id" ref="hr_skills.hr_resume_line_type_tree_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="skill_type" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

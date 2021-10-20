@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <report
+	        id="session_attendance_report"
+		        model="event.track"
+			    string="Attendance sheet"
+			    report_type="qweb-pdf"
+			    file="education.event_track_attendance" 
+			    name="education.event_track_attendance"
+        />
+        <report
+	        id="event_report"
+		        model="event.event"
+			    string="Event Details"
+			    report_type="qweb-pdf"
+			    file="education.event_details" 
+			    name="education.event_details"
+        />
+        <report
+	        id="certificate_report"
+		        model="certificate"
+			    string="Certificate"
+			    report_type="qweb-pdf"
+			    file="education.certificate_print" 
+			    name="education.certificate_print"
+			    paperformat="education.landscape_paper"
+        />
+        <report
+	        id="student_attendance_report"
+		        model="event.registration"
+			    string="Attendance sheet"
+			    report_type="qweb-pdf"
+			    file="education.student_sheet" 
+			    name="education.student_sheet"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="mass_mailing_inherit_form" model="ir.ui.view">
+          <field name="name">mailing.mailing.form.inherited</field>
+		  <field name="model">mailing.mailing</field>
+		  <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_form" />
+          <field name="arch" type="xml">
+	          <xpath expr="//button[@name='action_view_replied']" position="after">
+		          <button name="action_view_clicked" type="object" context="{'search_default_filter_clicked': True}" attrs="{'invisible': [('state', 'in', ('draft','test'))]}" class="oe_stat_button">
+			          <field name="clicks_ratio" string="Clicked" widget="percentpie"/>
+		          </button>
+	          </xpath>
+          </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,134 @@
+<odoo>
+    <data>
+        <!--<record id="purchase_form_inhrit" model="ir.ui.view">
+            <field name="name">purchase.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='state']" position="attributes">
+                    <attribute name='statusbar_visible'>draft,pendingbm,pendingcm,pendingacc,pendingops,purchase,received,rejected,cancel</attribute>
+                </xpath>
+                <xpath expr="//button[@name='button_approve']" position="attributes">
+                    <attribute name='groups'>education.ps_group</attribute>
+                    <attribute name='string'>Order Placement Form</attribute>
+                    <attribute name='name'>%(education.purchase_comment_action)d</attribute>
+                    <attribute name='context'>{'default_type': 'approve','default_purchase_id': id}</attribute>
+                    <attribute name='type'>action</attribute>
+                    <attribute name='states'>pendingops</attribute>
+                </xpath>
+
+                <xpath expr="//button[@name='button_confirm']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_rfq_send']" position="attributes">
+                    <attribute name='invisible'>1</attribute>
+                </xpath>
+
+                  <xpath expr="//form[1]/header[1]/button[@name='button_confirm'][2]" position="replace"/>
+                    <xpath expr="//form[1]/header[1]/button[@name='print_quotation']" position="replace"/>
+
+                <xpath expr="//button[@name='button_cancel']" position="after">
+                    <button groups='education.ps_group' name="submit_order" attrs="{'invisible':['|',('state', 'not in', ('draft')),('id','=',False)]}" type='object'  states='draft' string="Submit"/>
+
+                    <button groups='education.bm_group' context="{'default_type': 'approve','default_purchase_id': active_id}" name="%(education.purchase_comment_action)d" type="action" states="pendingbm" string="Approve" />
+
+                    <button groups='education.country_management' context="{'default_type': 'approve','default_purchase_id': active_id}" name="%(education.purchase_comment_action)d" type="action" states="pendingcm" string="Approve" />
+
+                    <button groups='education.accounting_management' name="%(education.purchase_comment_action)d"  context="{'default_type': 'approve','default_purchase_id': active_id}" type="action" states="pendingacc" string="Approve" />
+
+                    <button name="%(education.purchase_comment_action)d" type="action" context="{'default_type': 'return','default_purchase_id': id}" states="pendingbm,pendingcm,pendingacc" string="Return"/>
+                  <button name="%(education.purchase_comment_action)d" type="action" context="{'default_type': 'reject','default_purchase_id': id}" states="pendingbm,pendingcm,pendingacc" string="Reject"/>
+
+                </xpath>
+
+                <xpath expr="//field[@name='date_order']" position="after">
+                    <field name="region_id" domain="[('is_region','=','true')]" />
+                </xpath>
+
+                <xpath expr="//field[@name='region_id']" position="after">
+                    <field name="date_planned" />
+                </xpath>
+                <xpath expr="//field[@name='partner_ref']" position="after">
+                    <field name="currency_id" />
+                </xpath>
+                <xpath expr="//field[@name='currency_id']" position="after">
+                    <field name="comment" />
+                </xpath>
+            </field>
+        </record>
+            -->
+
+        <record id="product_template_form_inhrit" model="ir.ui.view">
+            <field name="name">product.tempalte.form.iherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view" />
+            <field name="arch" type="xml">
+<data><xpath expr="//field[@name='barcode']" position="after">
+                    <field name="uom_id"/>
+                </xpath>
+                <xpath expr="//field[@name='uom_id']" position="after">
+                    <field name="program_id"/>
+                    <field name="product_tmpl_ids" options="{'no_create':1}" widget="many2many_tags"/>
+                </xpath>
+
+                <xpath expr="//button[@name='action_view_stock_move_lines']" position="before">
+                  <button class="oe_stat_button" icon="fa-users" type="object" name="show_related_registrations">
+                    <field name="registration_count" widget="statinfo" string="Registrations"/>
+                  </button>
+                </xpath>
+
+                  <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
+                    <page name="pricing" string="Pricing">
+
+                        <button name="generate_price" type="object" string="Generate Prices" class="oe_highlight"/>
+
+                        <group name="company_prices" string="Company Prices">
+                          <field name="company_prices"  nolabel='1' context="{'form_view_ref':'education.company_price_product_form_view', 'default_product_tmpl_id': active_id}">
+                            <tree>
+                              <field name="company_id" options="{'no_create': True, 'no_quick_create': True}"/>
+                              <field name="tax_ids" widget="many2many_tags"/>
+                              <field name='currency_id' invisible='1'/>
+                              <field name='company_currency' invisible='1'/>
+                              <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                              <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                              </tree>
+                                </field>
+                        
+                      </group>
+
+                        <group name="region_prices" string="Prices">
+                                <field name="region_prices"  nolabel='1' context="{'form_view_ref': 'education.company_price_product_form_view', 'default_product_tmpl_region_id': active_id}">
+                                    <tree>
+                                        <field name="company_id" string='Region'/>
+                                        <field name="tax_ids" widget="many2many_tags"/>
+                                        <field name='currency_id' invisible='1'/>
+                                        <field name='company_currency' invisible='1'/>
+                                        <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                        <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                                    </tree>
+                                </field>
+                        
+                      </group>
+
+                    </page>
+
+                    <page string="Statistics">
+                      <group>
+                        
+                        <group string="Attempts">
+                            <field name="attempt_count"/>
+                            <field name="passing_rate"/>
+                        </group>
+                        </group>
+                    </page>
+
+                  </xpath>
+
+            </data>
+
+            </field>
+        </record>
+        
+    </data>
+</odoo>

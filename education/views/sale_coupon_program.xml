@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+
+        <record id="sale_coupon_promotion_program_form" model="ir.ui.view">
+            <field name="name">sale.coupon.promotion.program.form</field>
+            <field name="model">coupon.program</field>
+            <field name="inherit_id" ref="sale_coupon.sale_coupon_program_view_promo_program_form" />
+            <field name="arch" type="xml">
+                <data>
+                  <xpath expr="//field[@name='rule_products_domain']" position="after">
+                    <field name="rule_events_domain" widget="domain" options="{'model': 'event.event', 'in_dialog': true}"/>
+                    <field name="rule_sales_domain" widget="domain" options="{'model': 'sale.order.line', 'in_dialog': true}"/>
+                  </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="sale_coupon_program_form" model="ir.ui.view">
+            <field name="name">sale.coupon.program.form</field>
+            <field name="model">coupon.program</field>
+            <field name="inherit_id" ref="coupon.coupon_program_view_form_common" />
+            <field name="arch" type="xml">
+                <data>
+                  <xpath expr="//field[@name='rule_products_domain']" position="after">
+                    <field name="rule_events_domain" widget="domain" options="{'model': 'event.event', 'in_dialog': true}"/>
+                    <field name="rule_sales_domain" widget="domain" options="{'model': 'sale.order.line', 'in_dialog': true}"/>
+                  </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_calendar_promotion" model="ir.ui.view">
+            <field name="name">sale.coupon.program.calendar</field>
+            <field name="model">coupon.program</field>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+            <calendar string="Promotions" date_start="rule_date_from" date_stop="rule_date_to" event_open_popup="true">
+                <field name="name"/>
+                <field name="discount_type"/>
+                <field name='discount_max_amount' attrs="{'invisible': [['discount_type','!=','percentage']]}"/>
+                <field name='discount_fixed_amount' attrs="{'invisible': [['discount_type','=','percentage']]}"/>
+            </calendar>
+            </field>
+        </record>
+
+        <record id="coupon.coupon_program_action_coupon_program" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form,calendar</field>
+        </record>
+
+        <record id="sale_coupon.sale_order_action" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form,calendar</field>
+        </record>
+
+        
+    </data>
+</odoo>

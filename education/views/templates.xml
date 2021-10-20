@@ -1,0 +1,412 @@
+<odoo>
+    <template id="website_event_track.event_track_template_new">
+	    <p>New session <a href="#" t-att-data-oe-model="track._name" t-att-data-oe-id="track.id"> <t t-esc="track.name"/></a></p>
+	    <ul>
+	        <li><b>Instructor</b>: <t t-esc="track.partner_name or track.partner_email"/></li>
+	        <li><b>Mail</b>: <a t-attf-href="mailto:#{track.partner_email}"><t t-esc="track.partner_email"/></a></li>
+	        <li><b>Phone</b>: <t t-esc="track.partner_phone"/></li>
+	        <li><b>Date</b>: <t t-esc="track.date"/></li>
+	    </ul>
+	</template>
+	
+	<template id="event_track_attendance">
+			<t t-call="web.html_container">
+				
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<h2>Attendance Sheet</h2>
+						
+						<table class="table table-sm table-bordered">
+                        	<tr>
+	                        	<td><strong>Program</strong></td>
+	                        	<td><span t-field="o.event_id.program_id.name"/></td>
+	                        	
+	                        	<td><strong>Course</strong></td>
+	                        	<td><span t-field="o.event_id.course_id.name"/></td>
+							</tr>
+							
+							<tr>
+	                        	<td><strong>Session</strong></td>
+	                        	<td><span t-field="o.name"/></td>
+	                        	
+	                        	<td><strong>Instructor</strong></td>
+	                        	<td><span t-field="o.employee_id.name"/></td>
+							</tr>
+							
+							<tr>
+	                        	<td><strong>Date</strong></td>
+	                        	<td><span t-field="o.date" t-options="{&quot;widget&quot;: &quot;date&quot;}"/></td>
+	                        	
+	                        	<td><strong>Schedule</strong></td>
+	                        	<td><span t-field="o.track_from" t-options="{&quot;widget&quot;: &quot;float_time&quot;}"/> -  <span t-field="o.to" t-options="{&quot;widget&quot;: &quot;float_time&quot;}"/></td>
+							</tr>
+							
+						</table>
+						
+		
+		<table class="table table-sm o_main_table">
+			<thead>
+				<tr>
+					<th class="text-left"><span>Ref</span></th>
+					<th class="text-left"><span>Name</span></th>
+					<th class="text-left"><span>Signature</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<t t-foreach="o.registration_ids" t-as="reg">
+					<t t-if="reg.state == 'open'">
+						<tr>
+							<td class="text-left"><span t-field="reg.id"/></td>
+							<td class="text-left"><span t-field="reg.name"/></td>
+							<td class="text-left"></td>
+						</tr>
+					</t>
+				</t>
+				<t t-foreach="o.event_id.registration_ids" t-as="reg">
+					<t t-if="reg.state == 'open'">
+						<tr>
+							<td class="text-left"><span t-field="reg.id"/></td>
+							<td class="text-left"><span t-field="reg.name"/></td>
+							<td class="text-left"></td>
+						</tr>
+					</t>
+				</t>
+			</tbody>				
+		</table>
+		
+		<div class="offset-8">
+			<strong>Instructor Signature</strong>
+		</div>
+		
+	</div>
+				</t>
+			</t>
+</t>
+        </template>
+        
+<template id="event_details">
+			<t t-call="web.html_container">
+				
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<h2><span t-field="o.name"/></h2>
+						
+						<table class="table table-sm table-bordered" style="margin-top:30px;">
+                        	<tr>
+	                        	<td><strong>Company</strong></td>
+	                        	<td>
+		                        	<t t-if="o.company_id.parent_id">
+		                        		<span t-field="o.company_id.parent_id.name"/> /
+		                        	</t>
+		                        	<span t-field="o.company_id.name"/>
+		                        </td>
+	                        	
+	                        	<td><strong>Class Room</strong></td>
+	                        	<td><span t-field="o.location_id.name"/></td>
+							</tr>
+							
+							<tr>
+								
+								<td><strong>From</strong></td>
+	                        	<td><span t-field="o.date_begin" t-options="{&quot;widget&quot;: &quot;date&quot;}" /></td>
+	                        	
+	                        	<td><strong>To</strong></td>
+	                        	<td><span t-field="o.date_end" t-options="{&quot;widget&quot;: &quot;date&quot;}"/></td>
+	                        	
+							</tr>
+							
+							<tr>
+	                        	<td><strong>Duration</strong></td>
+	                        	<td><span t-field="o.track_count"/> sessions</td>
+	                        	
+	                        	<td><strong>Type</strong></td>
+	                        	<td><span t-field="o.event_type_id.name"/></td>
+							</tr>
+							
+							<tr>
+	                        	<td><strong>Location</strong></td>
+	                        	<td>
+		                        	<t t-if="o.location_id.location_id.country_id.name">
+		                        		<span t-field="o.location_id.location_id.country_id.name"/>
+		                        	</t>
+		                        	<t t-if="o.location_id.location_id.country_id.name and o.location_id.location_id.city">
+		                        		 / 
+		                        	</t>
+		                        	<t t-if="o.location_id.location_id.city">
+		                        		<span t-field="o.location_id.location_id.city"/>
+		                        	</t>
+		                        </td>
+	                        	
+	                        	<td><strong>Address</strong></td>
+	                        	<td>
+		                        	<t t-if="o.location_id.location_id.street">
+			                        	<span t-field="o.location_id.location_id.street"/>
+		                        	</t>
+		                        </td>
+							</tr>
+							
+							<tr>
+	                        	<td><strong>Phone</strong></td>
+	                        	<td>
+		                        	<t t-if="o.location_id.location_id.phone">
+		                        		<span t-field="o.location_id.location_id.phone"/>
+		                        	</t>
+	                        	</td>
+	                        	
+	                        	<td><strong>Email</strong></td>
+	                        	<td>
+		                        	<t t-if="o.location_id.location_id.email">
+		                        		<span t-field="o.location_id.location_id.email"/>
+		                        	</t>
+	                        	</td>
+							</tr>
+							
+						</table>
+						
+						<h5 style="margin-top:30px;">Subject Area</h5>
+						<p t-field="o.course_id.subject_area" t-options='{"widget": "html"}' />
+						
+						<h5 style="margin-top:30px;">Schedule</h5>
+						<table class="table table-sm o_main_table">
+							<thead>
+								<tr>
+									<th class="text-left"><span>Day</span></th>
+									<th class="text-left"><span>Date</span></th>
+									<th class="text-left"><span>Time</span></th>
+									<th class="text-left"><span>Session Title</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="o.track_ids" t-as="session">
+									<t t-if="session.stage_id.is_cancel == false">
+										<tr>
+											<td class="text-left">
+												<t t-if="session.day">
+													<t t-esc="dict(session.fields_get(allfields=['day'])['day']['selection'])[session.day]"/>
+												</t>
+											</td>
+											<td class="text-left">
+												<t t-if="session.date">
+													<span t-field="session.date" t-options="{&quot;widget&quot;: &quot;date&quot;}" />
+												</t>
+											</td>
+											<td class="text-left">
+												<t t-if="session.track_from and session.to">
+													<t t-esc="'%02d:%02d' % (int(str(session.track_from).split('.')[0]), int(float(str('%.2f' % session.track_from).split('.')[1])/100*60))" /> - 
+													<t t-esc="'%02d:%02d' % (int(str(session.to).split('.')[0]), int(float(str('%.2f' % session.to).split('.')[1])/100*60))" />
+												</t>
+											</td>
+											
+											<td class="text-left"><span t-field="session.name"/></td>
+										</tr>
+									</t>
+								</t>
+							</tbody>				
+						</table>
+						
+						<h5 style="margin-top:30px;">Pricing</h5>
+						
+						<table class="table table-sm o_main_table">
+							<thead>
+								<tr>
+									<th class="text-left"><span>Item</span></th>
+									<th class="text-left"><span>Unit Price</span></th>
+									<th class="text-left"><span>Taxes</span></th>
+									<th class="text-left"><span>Total</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-set="currency" t-value="o.company_id.main_pricelist_id.currency_id"/>
+								<t t-foreach="o.event_ticket_ids" t-as="ticket">
+									<tr>
+										<td class="text-left">
+											Tuition Fees - <b><span t-field="ticket.name"/></b>
+<!--											<t t-if="ticket.deadline">-->
+<!--												<br />-->
+<!--												<small>Sales end: <span t-field="ticket.deadline" t-options="{&quot;widget&quot;: &quot;date&quot;}" /></small>-->
+<!--											</t>-->
+										</td>
+										<td class="text-left"><span t-field="ticket.price" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+										<td class="text-left">
+											<t t-foreach="ticket.tax_ids" t-as="tax">
+												<span t-field="tax.name"/>
+											</t>
+										</td>
+										<td class="text-left"><span t-field="ticket.amount_taxed" t-options='{"widget": "monetary", "display_currency": currency}'/></td>
+									</tr>
+									
+									<t t-if="ticket.mapped_item_ids">
+										<tr>
+											<td colspan="4"><strong>Mapped Items</strong></td>
+										</tr>
+										
+										<t t-foreach="ticket.mapped_item_ids" t-as="item">
+											<tr style="background: rgba(0,0,0,0.1);">
+												<td class="text-left">
+													<span t-field="item.name"/>
+												</td>
+												<t t-set="main_pricelist" t-value="o.company_id.main_pricelist_id" />
+												<t t-set="item_price" t-value="main_pricelist.get_product_price(item,1,False)" />
+												<td class="text-left">
+													<span t-esc="item_price"
+														  t-options='{"widget": "monetary", "display_currency": currency}'/>
+												</td>
+												<td class="text-left">
+													<t t-foreach="item.taxes_id" t-as="tax">
+														<t t-if="tax.company_id == o.company_id or tax.company_id == o.company_id.parent_id">
+															<span t-field="tax.name"/>
+														</t>
+													</t>
+												</td>
+												<td class="text-left">
+													<span t-esc="item.taxes_id.compute_all(item_price)['total_included']"
+														  t-options='{"widget": "monetary", "display_currency": currency}'/>
+												</td>
+											</tr>
+										</t>
+										
+									</t>
+									
+								</t>
+								
+									
+							</tbody>
+						</table>
+							
+					</div>
+				</t>
+			</t>
+		</t>
+    </template>
+    
+    <template id="certificate_print">
+			<t t-call="web.html_container">
+				
+				<t t-foreach="docs" t-as="o">
+						<div class="page" style="margin-right:-15px; margin-left:-15px; background-color:#f3f4ee;">	
+							<div style="background: #2b4463; height: 30mm; width: 100%; display: table; box-shadow: 0px 8px 5px rgba(0, 0, 0, .3);">
+								<h1 style="text-align: center; font-weight:100; vertical-align: middle; color: white; font-family: 'Lato, Lucida Grande, Helvetica neue, Helvetica, Verdana, Arial, sans-serif'; font-size: 42.5pt; display: table-cell;">CERTIFICATE OF ATTENDANCE</h1>
+							</div>
+							<div style="margin-top: 35.7mm;">
+								<h2 style="color: #666; font-style: italic; font-size: 14pt; text-align: center; font: 'Georgia'; font-weight: normal;">This is to certify that</h2>
+								<h1 style="margin-top: 8mm; color: #666666; font-style: italic; font-size: 36pt; text-align: center; font: 'Georgia'; font-weight: bold; ">
+									<span t-field="o.registration_id.name"/>
+								</h1>
+								<h2 style="margin-top: 8mm; color: #666; font-style: italic; font-size: 14pt; text-align: center; font: 'Georgia'; font-weight: normal;">has successfully completed the</h2>
+								<h3 style="margin-top: 8mm;color: #666; font-style: italic; font-size: 21pt; text-align: center; font: 'Georgia'; line-height: 150%; font-weight: bold;"><span t-field="o.event_id.course_id.name"/> Course</h3>
+								<br/>
+			
+								<h2 style="margin-top: 8mm; color: #666; font-style: italic; font-size: 14pt; text-align: center; font: 'Georgia'; font-weight: normal;">at 
+									<t t-if="o.company_id.parent_id">
+		                        		<span t-field="o.event_id.company_id.parent_id.name"/> /
+		                        	</t>
+		                        	<span t-field="o.event_id.company_id.name"/>
+								</h2>
+								<div class="content-bottom" style=" padding-left: 22.5mm; padding-right: 22.5mm;">
+									<div class="company-logo margin-top-20">
+									<table width="100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="100%">
+												<div style="text-align: center;">
+													<p style="color: #666;  text-align: center; font: 'Georgia'; font-size: 14pt; font-style: italic; vertical-align: middle; font-weight: normal; padding-top: 5mm;">
+														<t t-if="o.event_id.company_id.logo">
+															<b>
+																<img t-if="o.event_id.company_id.logo" t-att-src="'data:image/png;base64,%s' % to_text(o.event_id.company_id.logo)"/>
+															</b>
+														</t>
+													</p>
+												</div>
+											</td>
+											<td width="40%">
+												<div style="float: right;text-align: left;">
+													<img t-if="o.event_id.company_id.signature" t-att-src="'data:image/png;base64,%s' % to_text(o.event_id.company_id.signature)"/>
+													<p style="color: #666; text-align: center; font: 'Georgia'; font-size: 14pt; font-style: italic; vertical-align: middle; font-weight: normal;">
+														<t t-if="o.event_id.company_id.signature">
+															<b>
+																<span t-field="o.event_id.company_id.signature_name"/>
+															</b>
+														</t>
+													</p>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+								</div>
+							</div>
+							<div style="background-color: #2b4463; border-top: 0.7mm solid #939595; margin-bottom: 0px; display: table; width: 100%; padding-top: 5mm; padding-bottom: 5mm;">
+								<h4 style=" color: white; text-align: center; display: table-cell; font: 'Georgia'; font-size: 14pt; font-style: italic; vertical-align: middle; font-weight: normal;">
+									<b>Date:</b> <span t-field="o.create_date" t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+								</h4>
+							</div>
+						</div>
+				</t>
+			</t>
+    </template>
+    
+    <template id="student_sheet">
+			<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<h2>Attendance Sheet</h2>
+						
+						<table class="table table-sm table-bordered" style="margin-top:30px;">
+                        	<tr>
+	                        	<td><strong>Company</strong></td>
+	                        	<td>
+		                        	<t t-if="o.event_id.company_id.parent_id">
+		                        		<span t-field="o.event_id.company_id.parent_id.name"/> /
+		                        	</t>
+		                        	<span t-field="o.event_id.company_id.name"/>
+		                        </td>
+		                        
+	                        	<td><strong>Course</strong></td>
+	                        	<td><span t-field="o.event_id.course_id.name"/></td>
+							</tr>
+							<tr>
+								<td><strong>Student</strong></td>
+	                        	<td><span t-field="o.name" /></td>
+	                        	
+	                        	<td><strong>Ref</strong></td>
+	                        	<td><span t-field="o.id"/></td>	
+							</tr>
+						</table>
+						
+						<h5 style="margin-top:30px;">Schedule</h5>
+						<table class="table table-sm o_main_table">
+							<thead>
+								<tr>
+									<th class="text-left"><span>Session</span></th>
+									<th class="text-left"><span>Date</span></th>
+									<th class="text-left"><span>Student Signature</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								
+								<t t-foreach="o.event_id.track_ids" t-as="session">
+									<t t-if="session.stage_id.is_cancel == false">
+										<tr style="height:60px;">
+											<td class="text-left" style="vertical-align: middle;"><span t-field="session.name"/></td>
+											<td class="text-left" style="vertical-align: middle;">
+												<t t-if="session.date">
+													<span t-field="session.date" t-options="{&quot;widget&quot;: &quot;date&quot;}" />
+												</t>
+											</td>
+											<td class="text-left"></td>
+										</tr>
+									</t>
+								</t>
+								
+							</tbody>				
+						</table>
+							
+					</div>
+				</t>
+			</t>
+		</t>
+    </template>
+    
+</odoo>

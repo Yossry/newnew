@@ -1,0 +1,1021 @@
+<odoo>
+    <data>
+       
+        <!-- certificate form view -->
+        <record id="certificate_form" model="ir.ui.view">
+            <field name="name">certificate.form</field>
+            <field name="model">certificate</field>
+            <field name="arch" type="xml">
+                <form string="Certificate">
+                    <sheet>
+                        <group>
+                            <field name="id" invisible="1" />
+                            <field name="student_id" />
+                            <field name="event_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- certificates tree view -->
+        <record id="certificates_tree_view" model="ir.ui.view">
+            <field name="name">certificates.tree</field>
+            <field name="model">certificate</field>
+            <field name="arch" type="xml">
+                <tree string="Certificate" create="0" edit="0">
+                    <field name="id" invisible="1" />
+                    <field name="student_id" />
+                    <field name="event_id" />
+                    <field name="company_id" options="{'no_create': True, 'no_quick_create': True}" />
+                </tree>
+            </field>
+        </record>
+        <!-- attempts form view -->
+        <record id="attempt_form" model="ir.ui.view">
+            <field name="name">attempt.form</field>
+            <field name="model">attempt</field>
+            <field name="arch" type="xml">
+                <form string="Attempts">
+                    <sheet>
+                        <group>
+                            <field name='order_id' options="{'no_create':True, 'no_open':True}"/>
+                            <field name='sale_order_line' options="{'no_create':True, 'no_open':True}" domain="[('order_id','=',order_id)]"/>
+                            <field name="attempt_date" />
+                            <field name="passing_status" />
+                            <field name="score" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="attempt_search_view">
+            <field name="name">attempt.search</field>
+            <field name="model">attempt</field>
+            <field name="arch" type="xml">
+                <search string="Attempt">
+                    <field name="event_id" string="Event"/>
+                    <filter string="Is self study" name="is_self_study" domain="[('is_self_study','=',True)]"/>
+                   
+                </search>
+            </field>
+        </record>
+
+
+        <!--attempt tree view -->
+        <record id="attempt_view_tree" model="ir.ui.view">
+            <field name="name">attempt.tree</field>
+            <field name="model">attempt</field>
+            <field name="arch" type="xml">
+                <tree string="Attempts">
+                    <field name="name" />
+                    <field name="student_id" />
+                    <field name="event_id" />
+                    <field name="course_id" />
+                    <field name="attempt_date" />
+                    <field name="passing_status" />
+                    <field name="score" />
+                </tree>
+            </field>
+        </record>
+        <!-- Student Form -->
+        <record id="student_form" model="ir.ui.view">
+            <field name="name">student.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Partners">
+                    <header>
+                        <field name="customer_status" widget="statusbar" attrs="{'invisible': [('account_type', '=', 'b2c')]}" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}" />
+                            </button>
+                        </div>
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}" />
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                                <field name="name" placeholder="Student Name" />
+                            </h1>
+                            <field name="is_company" invisible="1" />
+                            <field name="customer" invisible="1" />
+                            <field name="supplier" invisible="1" />
+                            <div class="o_row">
+                                <field name="parent_id" invisible="1" placeholder="Company" domain="[('is_company', '=', True)]" context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': ['|', '&amp;', ('is_company','=', True),('parent_id', '=', False),('company_name', '!=', False),('company_name', '!=', '')]}" />
+                                <field name="company_name" attrs="{'invisible': ['|', '|', ('company_name', '=', False), ('company_name', '=', ''), ('is_company', '=', True)]}" />
+                                <button name="create_company" type="object" string="Create company" class="btn btn-sm oe_edit_only fa fa-external-link btn btn-link " attrs="{'invisible': ['|', '|', ('is_company','=', True), ('company_name', '=', ''), ('company_name', '=', False)]}" />
+                            </div>
+                        </div>
+                        <group>
+                            <field name="number_of_orders" invisible="1" />
+                            <group>
+                                <field name="account_type" attrs="{'readonly' : [('number_of_orders', '&gt;', 0)]}" widget="radio" options="{'horizontal': true}" />
+                                <field name="is_decision_maker" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="gender" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="company_legal_name" />
+                                <field name="type" attrs="{'invisible': [('parent_id','=', False)]}" groups="base.group_no_one" />
+                                <label for="street" string="Address" />
+                                <div class="o_address_format">
+                                    <div class="oe_edit_only">
+                                        <button name="open_parent" type="object" string="(edit)" class="oe_link" attrs="{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}" />
+                                    </div>
+                                    <field name="street" placeholder="Street..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)],'required':[('account_type','!=','b2c')]}" />
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)],'required':[('account_type','!=','b2c')]}" />
+                                    <field name="city" placeholder="City" class="o_address_city" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)],'required':[('account_type','!=','b2c')]}" />
+                                    <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'country_id': country_id, 'zip': zip}" />
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+                                    <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+                                </div>
+                                <field name="vat" string="Tax Registration Number" />
+                                <field name="maker_decision" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="other_decision_maker" attrs="{'invisible' : [('maker_decision', '!=', 'other')]}" />
+                                <field name="category_id" />
+                                <field name="vat" string="Tax Registration Number" invisible="1" placeholder="e.g. BE0477472701" />
+                                <field name="birth_date" attrs="{'invisible':[('account_type','!=','b2c')]}" />
+                                <field name="age_group" attrs="{'invisible':[('account_type','!=','b2c')]}" />
+                                <field name="is_alumni" />
+                                <field name="account_owner" attrs="{'invisible':[('account_type','!=','b2c')]}" />
+                            </group>
+                            <group>
+                                <field name="nationality" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="fax" />
+                                <field name="postal_code" />
+                                <field name="function" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="years_of_experience" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="extension" attrs="{'invisible':[('account_type','!=','b2c')]}" />
+                                <field name="phone" widget="phone" attrs="{'required' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="mobile" widget="phone" attrs="{'invisible' : [('account_type', '!=', 'b2c'),('account_type', '!=', False)],'required':[('account_type','=','b2c')]}" />
+                                <field name="user_ids" invisible="1" />
+                                <field name="email" widget="email" string="Company Email" context="{'gravatar_image': True}" attrs="{'invisible' : [('account_type', '=', 'b2c')]}" />
+                                <field name="primary_email" widget="email" context="{'gravatar_image': True}" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="second_email" widget="email" context="{'gravatar_image': True}" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="website" widget="url" attrs="{'invisible' : [('account_type', '=', 'b2c')]}" />
+                                <field name="number_departments" attrs="{'invisible' : [('account_type', '=', 'b2c')]}" />
+                                <field name="number_employees" attrs="{'invisible' : [('account_type', '=', 'b2c')]}" />
+                                <field name="title" options="{&quot;no_open&quot;: True}" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}" />
+                                <field name="lang" invisible="1" />
+                                <field name="is_student" invisible="1" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="social_media" string="Social Media">
+                                <group>
+                                    <field name="facebook" placeholder="Facebook Account..." widget="url" />
+                                    <field name="twitter" placeholder="Twitter Account..." widget="url" />
+                                    <field name="instagram" placeholder="Instagram Account..." widget="url" />
+                                    <field name="linkedin" placeholder="Linked In Account..." widget="url" />
+                                </group>
+                            </page>
+                            <page name="internal_notes" string="Internal Notes">
+                                <field name="comment" placeholder="Internal note..." />
+                            </page>
+                            <page string="Education" attrs="{'invisible' : [('account_type', '!=', 'b2c')]}">
+                                <group string="Education">
+                                    <field name="education_ids" nolabel="1">
+                                        <tree>
+                                            <field name="major_id" />
+                                            <field name="level_id" />
+                                            <field name="university_id" />
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="education_form_view" model="ir.ui.view">
+            <field name="name">education.form</field>
+            <field name="model">education.account</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Education">
+                    <sheet>
+                        <group>
+                            <field name="partner_id" invisible="1" />
+                            <field name="major_id" />
+                            <field name="level_id" />
+                            <field name="university_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- student tree -->
+        <record id="student_tree" model="ir.ui.view">
+            <field name="name">student.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Students">
+                    <field name="name" />
+                    <field name="account_type" string="Account Type" />
+                    <field name="phone" string="Phone" />
+                    <field name="mobile" string="Mobile" />
+                    <field name="primary_email" string="Email" />
+                    <field name="course_id" />
+                </tree>
+            </field>
+        </record>
+        <!--student kanban view -->
+        
+        
+        <!--instructor form -->
+        <!--instructor tree view -->
+        <record id="instructor_tree" model="ir.ui.view">
+            <field name="name">instructor.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Instructors">
+                    <field name="name" />
+                    <field name="instructor_date" string="Joining Date" widget="date" />
+                    <field name="nationality" string="Nationality" />
+                    <field name="instructor_status" string="Status" />
+                    <field name="mobile" string="Mobile" />
+                    <field name="email" />
+                </tree>
+            </field>
+        </record>
+        <!--instructor kanban view -->
+
+        <!-- timesheet Form -->
+        <record id="timesheet_form_view" model="ir.ui.view">
+            <field name="name">timesheet.form</field>
+            <field name="model">purchase.order</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Purchase Order">
+                    <header>
+                        <field name="state" invisible="1" widget="statusbar" statusbar_visible="draft,sent,purchase" readonly="1" />
+                        <field name="stage" statusbar_visible="pending,approved" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" name="action_view_invoice" class="oe_stat_button" icon="fa-pencil-square-o" attrs="{'invisible':['|', ('invoice_count', '=', 0), ('state', 'in', ('draft','sent','to approve'))]}">
+                                <field name="invoice_count" widget="statinfo" string="Vendor Bills" />
+                                <field name="invoice_ids" invisible="1" />
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <span class="o_form_label" attrs="{'invisible': [('state','not in',('draft','sent'))]}">Request for Quotation </span>
+                            <span class="o_form_label" attrs="{'invisible': [('state','in',('draft','sent'))]}">Purchase Order </span>
+                            <h1>
+                                <field name="name" readonly="1" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" widget="res_partner_many2one" context="{'res_partner_search_mode': 'supplier', 'show_vat': True}" placeholder="Name, TIN, Email, or Reference" />
+                                <field name="partner_ref" />
+                                <field name="currency_id" groups="base.group_multi_currency" force_save="1" />
+                            </group>
+                            <group>
+                                <field name="date_order" attrs="{'invisible': [('state','=','purchase')]}" />
+                                <field name="date_approve" attrs="{'invisible': [('state','!=','purchase')]}" />
+                                <field name="origin" attrs="{'invisible': [('origin','=',False)]}" />
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Products">
+                                <field name="order_line" widget="section_and_note_one2many" mode="tree,kanban" attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}">
+                                    <tree string="Purchase Order Lines" editable="bottom">
+                                        <control>
+                                            <create name="add_product_control" string="Add a product" />
+                                            <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}" />
+                                            <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}" />
+                                        </control>
+                                        <field name="display_type" invisible="1" />
+                                        <field name="currency_id" invisible="1" />
+                                        <field name="state" invisible="1" />
+                                        <field name="product_type" invisible="1" />
+                                        <field name="product_uom_category_id" invisible="1" />
+                                        <field name="sequence" widget="handle" />
+                                        <field name="product_id" attrs="{                                             'readonly': [('state', 'in', ('purchase', 'to approve','done', 'cancel'))],                                             'required': [('display_type', '=', False)],                                         }" context="{'partner_id':parent.partner_id, 'quantity':product_qty,'uom':product_uom, 'company_id': parent.company_id}" force_save="1" domain="[('purchase_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]" />
+                                        <field name="name" widget="section_and_note_text" />
+                                        <field name="date_planned" optional="hide" attrs="{'required': [('display_type', '=', False)], 'readonly': [('parent.date_planned', '!=', False)]}" />
+                                        <field name="account_analytic_id" optional="hide" context="{'default_partner_id':parent.partner_id}" groups="analytic.group_analytic_accounting" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]" />
+                                        <field name="analytic_tag_ids" optional="hide" groups="analytic.group_analytic_tags" widget="many2many_tags" options="{'color_field': 'color'}" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]" />
+                                        <field name="product_qty" />
+                                        <field name="qty_received_manual" invisible="1" />
+                                        <field name="qty_received_method" invisible="1" />
+                                        <field name="qty_received" string="Received" attrs="{'column_invisible': [('parent.state', 'not in', ('purchase', 'done'))], 'readonly': [('qty_received_method', '!=', 'manual')]}" optional="show" />
+                                        <field name="qty_invoiced" string="Billed" attrs="{'column_invisible': [('parent.state', 'not in', ('purchase', 'done'))]}" optional="show" />
+                                        <field name="product_uom" string="UoM" groups="uom.group_uom" attrs="{                                             'readonly': [('state', 'in', ('purchase', 'done', 'cancel'))],                                             'required': [('display_type', '=', False)]                                         }" force_save="1" optional="show" />
+                                        <field name="price_unit" />
+                                        <field name="taxes_id" widget="many2many_tags" domain="[('type_tax_use','=','purchase'), ('company_id', '=', parent.company_id)]" context="{'default_type_tax_use': 'purchase', 'search_view_ref': 'account.account_tax_view_search'}" options="{'no_create': True}" optional="show" />
+                                        <field name="price_subtotal" widget="monetary" />
+                                    </tree>
+                                    <form string="Purchase Order Line">
+                                        <field name="state" invisible="1" />
+                                        <field name="display_type" invisible="1" />
+                                        <group attrs="{'invisible': [('display_type', '!=', False)]}">
+                                            <group>
+                                                <field name="product_uom_category_id" invisible="1" />
+                                                <field name="product_id" context="{'partner_id': parent.partner_id}" widget="many2one_barcode" domain="[('purchase_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]" />
+                                                <label for="product_qty" />
+                                                <div class="o_row">
+                                                    <field name="product_qty" />
+                                                    <field name="product_uom" groups="uom.group_uom" attrs="{'required': [('display_type', '=', False)]}" />
+                                                </div>
+                                                <field name="qty_received_method" invisible="1" />
+                                                <field name="qty_received" string="Received Quantity" attrs="{'invisible': [('parent.state', 'not in', ('purchase', 'done'))], 'readonly': [('qty_received_method', '!=', 'manual')]}" />
+                                                <field name="qty_invoiced" string="Billed Quantity" attrs="{'invisible': [('parent.state', 'not in', ('purchase', 'done'))]}" />
+                                                <field name="price_unit" />
+                                                <field name="taxes_id" widget="many2many_tags" domain="[('type_tax_use', '=', 'purchase'), ('company_id', '=', parent.company_id)]" options="{'no_create': True}" />
+                                            </group>
+                                            <group>
+                                                <field name="date_planned" widget="date" attrs="{'required': [('display_type', '=', False)]}" />
+                                                <field name="account_analytic_id" colspan="2" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]" groups="analytic.group_analytic_accounting" />
+                                                <field name="analytic_tag_ids" groups="analytic.group_analytic_accounting" domain="['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]" widget="many2many_tags" options="{'color_field': 'color'}" />
+                                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                                            </group>
+                                            <group colspan="12">
+                                                <notebook>
+                                                    <page string="Notes">
+                                                        <field name="name" />
+                                                    </page>
+                                                    <page string="Invoices and Incoming Shipments">
+                                                        <field name="invoice_lines" />
+                                                    </page>
+                                                </notebook>
+                                            </group>
+                                        </group>
+                                        <label for="name" string="Section Name (eg. Products, Services)" attrs="{'invisible': [('display_type', '!=', 'line_section')]}" />
+                                        <label for="name" string="Note" attrs="{'invisible': [('display_type', '!=', 'line_note')]}" />
+                                        <field name="name" nolabel="1" attrs="{'invisible': [('display_type', '=', False)]}" />
+                                    </form>
+                                    <kanban class="o_kanban_mobile">
+                                        <field name="name" />
+                                        <field name="product_id" />
+                                        <field name="product_qty" />
+                                        <field name="product_uom" groups="uom.group_uom" />
+                                        <field name="price_subtotal" />
+                                        <field name="price_tax" invisible="1" />
+                                        <field name="price_total" invisible="1" />
+                                        <field name="price_unit" />
+                                        <field name="display_type" />
+                                        <field name="taxes_id" invisible="1" />
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <div t-attf-class="oe_kanban_card oe_kanban_global_click {{ record.display_type.raw_value ? 'o_is_' + record.display_type.raw_value : '' }}">
+                                                    <t t-if="!record.display_type.raw_value">
+                                                        <div class="row">
+                                                            <div class="col-8">
+                                                                <strong>
+                                                                    <span t-esc="record.product_id.value" />
+                                                                </strong>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <strong>
+                                                                    <span t-esc="record.price_subtotal.value" class="float-right text-right" />
+                                                                </strong>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 text-muted">
+                                                                <span>
+                                                                 Quantity:
+                                                                 <t t-esc="record.product_qty.value" /><t t-esc="record.product_uom.value" /></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 text-muted">
+                                                                <span>
+                                                                 Unit Price:
+                                                                 <t t-esc="record.price_unit.value" /></span>
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                    <div t-elif="record.display_type.raw_value === 'line_section' || record.display_type.raw_value === 'line_note'" class="row">
+                                                        <div class="col-12">
+                                                            <span t-esc="record.name.value" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="amount_untaxed" widget="monetary" options="{'currency_field': 'currency_id'}" />
+                                    <field name="amount_tax" widget="monetary" options="{'currency_field': 'currency_id'}" />
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="amount_total" />
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" options="{'currency_field': 'currency_id'}" />
+                                </group>
+                                <field name="notes" class="oe_inline" placeholder="Define your terms and conditions ..." />
+                                <div class="oe_clear" />
+                            </page>
+                            <page string="Other Information" name="purchase_delivery_invoice">
+                                <group>
+                                    <group name="planning">
+                                        <label for="date_planned" />
+                                        <div>
+                                            <field name="date_planned" attrs="{'readonly': [('state', 'not in', ('draft', 'sent'))]}" />
+                                        </div>
+                                    </group>
+                                    <group name="other_info">
+                                        <field name="user_id" />
+                                        <field name="invoice_status" attrs="{'invisible': [('state', 'in', ('draft', 'sent', 'to approve', 'cancel'))]}" />
+                                        <field name="payment_term_id" attrs="{'readonly': ['|', ('invoice_status','=', 'invoiced'), ('state', '=', 'done')]}" options="{'no_create': True}" />
+                                        <field name="fiscal_position_id" options="{'no_create': True}" attrs="{'readonly': ['|', ('invoice_status','=', 'invoiced'), ('state', '=', 'done')]}" />
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!--timesheet tree -->
+        <record id="timesheet_tree" model="ir.ui.view">
+            <field name="name">timesheet.tree</field>
+            <field name="model">purchase.order</field>
+            <field name="arch" type="xml">
+                <tree decoration-bf="message_unread==True" decoration-muted="state=='cancel'" decoration-info="state in ('wait','confirmed')" string="Purchase Order">
+                    <field name="message_unread" invisible="1" />
+                    <field name="name" string="Reference" />
+                    <field name="date_order"/>
+                    <field name="partner_id" string="Instructor" />
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                    <field name="date_planned" invisible="context.get('quotation_only', False)" />
+                    <field name="origin" />
+                    <field name="amount_untaxed" sum="Total Untaxed amount" string="Untaxed" widget="monetary" />
+                    <field name="amount_total" sum="Total amount" widget="monetary" />
+                    <field name="currency_id" invisible="1" />
+                    <field name="state" invisible="1" />
+                    <field name="stage" />
+                    <field name="invoice_status" invisible="not context.get('show_purchase', True)" />
+                </tree>
+            </field>
+        </record>
+        <!-- Targeted Term form view -->
+        <record id="reporting_period_form_view" model="ir.ui.view">
+            <field name="name">reporting.period.form</field>
+            <field name="model">term</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Terms">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                                <field name="name" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <label for="start_date" string="Date" />
+                                <div class="o_row">
+                                    <field name="start_date" widget="daterange" nolabel="1" class="oe_inline" options="{'related_end_date': 'end_date'}" />
+                                    <i class="fa fa-long-arrow-right mx-2" aria-label="Arrow icon" title="Arrow" />
+                                    <field name="end_date" widget="daterange" nolabel="1" class="oe_inline" options="{'related_start_date': 'start_date'}" />
+                                </div>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}" />
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!-- Targeted Term tree -->
+        <record id="reporting_period_tree" model="ir.ui.view">
+            <field name="name">reporting.period.tree</field>
+            <field name="model">term</field>
+            <field name="arch" type="xml">
+                <tree string="Terms">
+                    <field name="name" />
+                    <field name="start_date" widget="date" />
+                    <field name="end_date" widget="date" />
+                </tree>
+            </field>
+        </record>
+        <!--supplier Form view -->
+        <record id="supplier_form_view" model="ir.ui.view">
+            <field name="name">supplier.form</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Partners">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}" />
+                            </button>
+                        </div>
+                        <field name="image" string="Image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}" />
+                        <div>
+                            <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}" />
+                        </div>
+                        <field name="id" invisible="1" />
+                        <div class="oe_title">
+                            <field name="is_company" invisible="1" />
+                            <field name="commercial_partner_id" invisible="1" />
+                            <field name="company_type" invisible="1" widget="radio" class="oe_edit_only" options="{'horizontal': true}" />
+                            <h1>
+                                <field name="name" default_focus="1" placeholder="Name" attrs="{'required' : [('type', '=', 'contact')]}" />
+                            </h1>
+                            <div class="o_row">
+                                <field name="parent_id" placeholder="Company" domain="[('is_company', '=', True)]" context="{'default_is_company': True, 'default_supplier': supplier, 'default_customer': customer}" attrs="{'invisible': ['|', '&amp;', ('is_company','=', True),('parent_id', '=', False),('company_name', '!=', False),('company_name', '!=', '')]}" />
+                                <field name="company_name" attrs="{'invisible': ['|', '|', ('company_name', '=', False), ('company_name', '=', ''), ('is_company', '=', True)]}" />
+                                <button name="create_company" type="object" string="Create company" class="btn btn-sm oe_edit_only fa fa-external-link btn btn-link " attrs="{'invisible': ['|', '|', ('is_company','=', True), ('company_name', '=', ''), ('company_name', '=', False)]}" />
+                            </div>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="is_instructor" invisible="1" />
+                                <field name="is_student" invisible="1" />
+                                <field name="type" attrs="{'invisible': [('parent_id','=', False)]}" groups="base.group_no_one" />
+                                <label for="street" string="Address" />
+                                <div class="o_address_format">
+                                    <div class="oe_edit_only">
+                                        <button name="open_parent" type="object" string="(edit)" class="oe_link" attrs="{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}" />
+                                    </div>
+                                    <field name="street" placeholder="Street..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+                                    <field name="city" placeholder="City" class="o_address_city" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+                                    <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" context="{'country_id': country_id, 'zip': zip}" />
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+                                    <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+                                </div>
+                                <field name="vat" placeholder="e.g. BE0477472701" attrs="{'readonly': [('parent_id','!=',False)]}" />
+                                <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags..." invisible="1" />
+                                <field name="program_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create': True}" />
+                            </group>
+                            <group>
+                                <field name="function" placeholder="e.g. Sales Director" attrs="{'invisible': [('is_company','=', True)]}" />
+                                <field name="phone" widget="phone" />
+                                <field name="mobile" widget="phone" />
+                                <field name="user_ids" invisible="1" />
+                                <field name="email" widget="email" context="{'gravatar_image': True}" attrs="{'required': [('user_ids','!=', [])]}" />
+                                <field name="website" widget="url" placeholder="www.bsa-me.com" />
+                                <field name="title" options="{&quot;no_open&quot;: True}" attrs="{'invisible': [('is_company', '=', True)]}" />
+                                <field name="lang" />
+                                <field name="is_student" invisible="1" />
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page string="Contacts &amp; Addresses">
+                                <field name="child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_supplier': supplier, 'default_customer': customer, 'default_lang': lang,}">
+                                    <kanban>
+                                        <field name="color" />
+                                        <field name="name" />
+                                        <field name="title" />
+                                        <field name="type" />
+                                        <field name="email" />
+                                        <field name="parent_id" />
+                                        <field name="is_company" />
+                                        <field name="function" />
+                                        <field name="phone" />
+                                        <field name="street" />
+                                        <field name="street2" />
+                                        <field name="zip" />
+                                        <field name="city" />
+                                        <field name="country_id" />
+                                        <field name="mobile" />
+                                        <field name="state_id" />
+                                        <field name="image_small" />
+                                        <field name="lang" />
+                                        <!-- fields in form x2many view to diminish requests -->
+                                        <field name="comment" />
+                                        <field name="customer" />
+                                        <field name="display_name" />
+                                        <field name="supplier" />
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <t t-set="color" t-value="kanban_color(record.color.raw_value)" />
+                                                <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+                                                    <a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right" />
+                                                    <div class="o_kanban_image">
+                                                        <img t-if="record.image_small.raw_value" t-att-src="'data:image/png;base64,'+record.image_small.raw_value" />
+                                                        <t t-if="!record.image_small.raw_value">
+                                                            <img t-if="record.type.raw_value === 'delivery'" t-att-src="_s + &quot;/base/static/src/img/truck.png&quot;" />
+                                                            <img t-if="record.type.raw_value === 'invoice'" t-att-src="_s + &quot;/base/static/src/img/money.png&quot;" />
+                                                            <t t-if="record.type.raw_value !== 'invoice' &amp;&amp; record.type.raw_value !== 'delivery'">
+                                                                <img t-if="record.is_company.raw_value === true" t-att-src="_s + &quot;/base/static/src/img/company_image.png&quot;" />
+                                                                <img t-if="record.is_company.raw_value === false" t-att-src="_s + &quot;/base/static/src/img/avatar.png&quot;" />
+                                                            </t>
+                                                        </t>
+                                                    </div>
+                                                    <div class="oe_kanban_details">
+                                                        <field name="name" />
+                                                        <div t-if="record.function.raw_value">
+                                                            <field name="function" />
+                                                        </div>
+                                                        <div t-if="record.email.raw_value">
+                                                            <field name="email" widget="email" />
+                                                        </div>
+                                                        <div t-if="record.type.raw_value != 'contact'">
+                                                            <div>
+                                                                <field name="zip" />
+                                                                <field name="city" />
+                                                            </div>
+                                                            <field t-if="record.state_id.raw_value" name="state_id" />
+                                                            <field name="country_id" />
+                                                        </div>
+                                                        <div t-if="record.phone.raw_value">Phone: <field name="phone" /></div>
+                                                        <div t-if="record.mobile.raw_value">Mobile: <field name="mobile" /></div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                    <form string="Contact / Address">
+                                        <sheet>
+                                            <field name="type" required="1" widget="radio" options="{'horizontal': true}" />
+                                            <field name="parent_id" invisible="1" />
+                                            <hr />
+                                            <group>
+                                                <group attrs="{'invisible': [('type','=', 'contact')]}">
+                                                    <label for="street" string="Address" />
+                                                    <div>
+                                                        <div class="o_address_format" name="div_address">
+                                                            <field name="street" placeholder="Street..." class="o_address_street" />
+                                                            <field name="street2" placeholder="Street 2..." class="o_address_street" />
+                                                            <field name="city" placeholder="City" class="o_address_city" />
+                                                            <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True}" context="{'country_id': country_id, 'zip': zip}" />
+                                                            <field name="zip" placeholder="ZIP" class="o_address_zip" />
+                                                            <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" />
+                                                        </div>
+                                                    </div>
+                                                </group>
+                                                <group>
+                                                    <field name="name" string="Contact Name" attrs="{'required' : [('type', '=', 'contact')]}" />
+                                                    <field name="title" placeholder="e.g. Mr." attrs="{'invisible': [('type','!=', 'contact')]}" />
+                                                    <field name="function" placeholder="e.g. Sales Director" attrs="{'invisible': [('type','!=', 'contact')]}" />
+                                                    <field name="email" />
+                                                    <field name="phone" widget="phone" />
+                                                    <field name="mobile" widget="phone" />
+                                                    <field name="comment" placeholder="internal note..." />
+                                                </group>
+                                            </group>
+                                            <field name="supplier" invisible="True" />
+                                            <field name="customer" invisible="True" />
+                                            <field name="lang" invisible="True" />
+                                            <field name="image" invisible="True" />
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name="internal_notes" string="Internal Notes">
+                                <field name="comment" placeholder="Internal note..." />
+                            </page>
+                            <page name="sales_purchases" string="Sales &amp; Purchases">
+                                <group name="container_row_2">
+                                    <group string="Sale" name="sale">
+                                        <field name="customer" attrs="{'invisible': [('is_student', '=', True)]}" />
+                                        <field name="user_id" />
+                                        <field name="is_vendor" attrs="{'invisible': [('is_student', '=', False)]}" />
+                                    </group>
+                                    <group string="Purchase" name="purchase" attrs="{'invisible': [('is_student', '=', True)]}">
+                                        <field name="supplier" attrs="{'invisible': [('is_student', '=', True)]}" />
+                                    </group>
+                                    <group string="Misc">
+                                        <field name="ref" />
+                                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                                        <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)]}" options="{'no_create': True}" />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Description">
+                                <group>
+                                    <field name="description_one" widget="html" />
+                                    <field name="description_two" widget="html" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- exam form view -->
+        <record id="exam_form_view" model="ir.ui.view">
+            <field name="name">exam.form</field>
+            <field name="model">exam</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Exam">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <label for="start_date" string="Date"/>
+                                <div class="o_row">
+                                    <field name="start_date" widget="daterange" nolabel="1" class="oe_inline" options="{'related_end_date': 'end_date'}"/>
+                                    <i class="fa fa-long-arrow-right mx-2" aria-label="Arrow icon" title="Arrow"/>
+                                    <field name="end_date" widget="daterange" nolabel="1" class="oe_inline" options="{'related_start_date': 'start_date'}"/>
+                                </div>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!-- exam tree -->
+        <record id="exam_tree" model="ir.ui.view">
+            <field name="name">exam.tree</field>
+            <field name="model">exam</field>
+            <field name="arch" type="xml">
+                <tree string="exams">
+                    <field name="name" />
+                    <field name="start_date" />
+                    <field name="end_date" />
+                </tree>
+            </field>
+        </record>
+        <!-- company price view form -->
+        <record id="company_price_form_view" model="ir.ui.view">
+            <field name="name">company.price.form</field>
+            <field name="model">company.price</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Prices">
+                    <sheet>
+                        <group>
+                            <field name="company_id" domain="[('parent_id', '=', False)]" options="{'no_create': True, 'no_quick_create': True}" string="Company" />
+                            <field name="tax_ids" widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name="ticket_ids" context="{'default_company_id': company_id }" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="company_price_product_form_view" model="ir.ui.view">
+            <field name="name">company.price.product.form</field>
+            <field name="model">company.price</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Prices">
+                    <sheet>
+                        <group>
+                            <field name='currency_id' invisible='1'/>
+                            <field name='company_currency' invisible='1'/>
+                            <field name="company_id" domain="[('parent_id', '=', False)]" options="{'no_create': True, 'no_quick_create': True}" string="Company" />
+                            <field name="tax_ids" widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- company price view form -->
+        <record id="region_price_form_view" model="ir.ui.view">
+            <field name="name">company.price.form</field>
+            <field name="model">company.price</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Prices">
+                    <sheet>
+                        <group>
+                            <field name="company_id" domain="[('is_region', '=', True)]" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name="tax_ids" widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name="ticket_ids" context="{'default_company_id': company_id }" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- company topic price view form -->
+        <record id="company_topic_price_form_view" model="ir.ui.view">
+            <field name="name">company.price.form</field>
+            <field name="model">company.topic.price</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Prices">
+                    <sheet>
+                        <group>
+                            <field name="company_id" domain="[('is_region', '=', False)]" options="{'no_create': True, 'no_quick_create': True}" string="Company" />
+                            <field name="tax_ids" widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name='currency_id' invisible='1'/>
+                            <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- region topic price view form -->
+        <record id="region_topic_price_form_view" model="ir.ui.view">
+            <field name="name">company.price.form</field>
+            <field name="model">company.topic.price</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Prices">
+                    <sheet>
+                        <group>
+                            <field name="company_id" domain="[('is_region', '=', True)]" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name="tax_ids" widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name='currency_id' invisible='1'/>
+                            <field name='company_currency' invisible='1'/>
+                            <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- ticket price view form -->
+        <record id="ticket_price_form_view" model="ir.ui.view">
+            <field name="name">ticket.price.form</field>
+            <field name="model">course.ticket.price</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Prices">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name='company_id' invisible='1'/>
+                            <field name='is_region' invisible='1'/>
+                            <field name='currency_id' invisible='1'/>
+                            <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+
+                            <field name='company_currency' invisible='1'/>
+                            <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}" />
+                            <field name="deadline" />
+                            <field name="mapped_item_ids" widget="many2many_tags" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="ticket_price_tree_view" model="ir.ui.view">
+            <field name="name">ticket.price.tree</field>
+            <field name="model">course.ticket.price</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name='currency_id' invisible='1'/>
+                    <field name='company_currency' invisible='1'/>
+                    <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                    <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}" />
+                    <field name="deadline" />
+                </tree>
+            </field>
+        </record>
+        <!-- program form view -->
+        <record id="program_form_view" model="ir.ui.view">
+            <field name="name">program.form</field>
+            <field name="model">program</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Terms">
+                    <sheet>
+	                    <div class="oe_button_box" name="button_box">
+                            <button name="action_view_courses" type="object" class="oe_stat_button" icon="fa-slideshare" help="Related courses">
+                                <field name="courses_count" widget="statinfo" string="Courses"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                                <field name="name" placeholder="Name" />
+                            </h1>
+                            <field name="id" invisible="1" />
+                        </div>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}" />
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!-- program tree view -->
+        <record id="program_tree" model="ir.ui.view">
+            <field name="name">program.tree</field>
+            <field name="model">program</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="course_ids" widget="many2many_tags" />
+                </tree>
+            </field>
+        </record>
+        <!-- course topic view -->
+        <record id="course_topic_form_view" model="ir.ui.view">
+            <field name="name">topic.form</field>
+            <field name="model">course.topic</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Topics">
+                    <header>
+                    	<button name="generate_price" type="object" class="oe_highlight" string="Generate Price" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="nb_sessions" required="1" />
+                            <field name="company_price_ids" context="{'form_view_ref':'education.company_topic_price_form_view'}">
+                                <tree editable="bottom">
+                                    <field name="company_id" domain="[('parent_id', '=', False)]" options="{'no_create': True, 'no_quick_create': True}" />
+                                    <field name='currency_id' invisible='1'/>
+                                    <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name='company_currency' invisible='1'/>
+                                    <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}" />
+                                    <field name="tax_ids" widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+                                </tree>
+                            </field>
+                            <field name="region_price_ids" string="Prices" context="{'form_view_ref':'education.region_topic_price_form_view'}">
+                                <tree editable="bottom">
+                                    <field name="company_id" domain="[('is_region', '=', True)]" options="{'no_create': True, 'no_quick_create': True}" />
+                                    <field name='currency_id' invisible='1'/>
+                                    <field name='company_currency' invisible='1'/>
+                                    <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="local_price" widget="monetary" options="{'currency_field': 'company_currency'}" />
+                                    <field name="tax_ids" widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- course topic view -->
+        <record id="session_price_form_view" model="ir.ui.view">
+            <field name="name">price.form</field>
+            <field name="model">event.price</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Prices">
+                    <sheet>
+                        <group>
+                            <field name="id" invisible="1" />
+                            <field name="company_id" options="{'no_create': True, 'no_quick_create': True}" />
+                            <field name="price" string="Price($)" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="attendance_tree_view" model="ir.ui.view">
+            <field name="name">attendance.tree</field>
+            <field name="model">attendance</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance" decoration-danger="attended==False" decoration-success="attended==True" create="0" edit="1" editable='bottom'>
+                    <field name="id" invisible="1" />
+                    <field name='registration_id' readonly='1'/>
+                    <field name="partner_id" readonly='1'/>
+                    <field name="event_id" readonly='1'/>
+                    <field name="session_id" readonly='1'/>
+                    <field name='attended'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="event_registration_inherit_form" model="ir.ui.view">
+            <field name="name">event.registration.inherit.form</field>
+            <field name="model">event.registration</field>
+            <field name='inherit_id' ref='event.view_event_registration_form'/>
+            <field name="arch" type="xml">
+                <data>
+                  <xpath expr="//field[@name='state']" position="attributes">
+                    <attribute name='statusbar_visible'>draft,open</attribute>
+                  </xpath>
+<!--                  <xpath expr="//button[@name='button_reg_close']" position="replace"/>-->
+                </data>
+            </field>
+        </record>
+        
+        
+        <record id="factor_decision_tree_view" model="ir.ui.view">
+            <field name="name">factor.decision.tree</field>
+            <field name="model">factor.decision</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+	                <field name="name" />
+	            </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

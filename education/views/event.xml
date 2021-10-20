@@ -1,0 +1,723 @@
+<odoo>
+    <data>
+        <record id="event_view_form_inherit" model="ir.ui.view">
+            <field name="name">event.form</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="options">{"no_create":true}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='event_type_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='stage_id']" position="before">
+                    <button name="generate_sessions" type="object" string="Generate Sessions" class="oe_highlight"
+                            attrs="{'invisible': [('track_count', '&gt;', 0)]}"/>
+                    <button name="generate_certificates" type="object" string="Generate Certificates"
+                            attrs="{'invisible': [('certificates_count', '&gt;', 0)]}"/>
+                </xpath>
+
+                <div name="button_box" position="inside">
+                    <button name="action_view_certificates" type="object" class="oe_stat_button"
+                            icon="fa-graduation-cap">
+                        <field name="certificates_count" widget="statinfo" string="Certificates"/>
+                    </button>
+                </div>
+
+
+                <xpath expr="//button[@name='%(event.act_event_registration_from_event)d']" position="before">
+                    <xpath expr="//field[@name='is_published']" position="move"/>
+                </xpath>
+
+
+                <!--                <xpath expr="//button[@name='button_done']" position="attributes">-->
+                <!--                    <attribute name="invisible">1</attribute>-->
+                <!--                </xpath>-->
+                <div name="button_box" position="inside"/>
+                <xpath expr="//field[@name='organizer_id']" position="before">
+                    <field name="organizer_ids" string="Instructors" widget="many2many_tags"/>
+                    <field name="program_id" options="{'no_create': True, 'no_quick_create': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='address_id']" position="after">
+                    <xpath expr="//field[@name='organizer_ids']" position="move"/>
+                </xpath>
+                <xpath expr="//field[@name='address_id']" position="after">
+                    <xpath expr="//field[@name='organizer_ids']" position="move"/>
+                </xpath>
+                <xpath expr="//field[@name='program_id']" position="after">
+                    <field name="course_id" domain="[('program_id', '=', program_id)]"
+                           options="{'no_create': True, 'no_quick_create': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='course_id']" position="after">
+                    <field name="term_id" options="{'no_create': True, 'no_quick_create': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='term_id']" position="after">
+                    <field name="period_id" options="{'no_create': True, 'no_open':True, 'no_quick_create': True}"/>
+                    <field name="location_id" options="{'no_create': True, 'no_quick_create': True}"/>
+                    <field name='currency_usd' invisible='1'/>
+                </xpath>
+                <xpath expr="//field[@name='seats_expected']" position="attributes">
+                    <attribute name="string">Registrations</attribute>
+                </xpath>
+                <xpath expr="//field[@name='track_count']" position="attributes">
+                    <attribute name="string">Sessions</attribute>
+                </xpath>
+                <xpath expr="//field[@name='organizer_id']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!--                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='event_ticket_ids']/tree[1]/field[@name='product_id']"-->
+                <!--                       position="attributes">-->
+                <!--                    <attribute name="optional">hide</attribute>-->
+                <!--                    <attribute name="options">{"no_create":true,"no_open":true}</attribute>-->
+                <!--                </xpath>-->
+                <!--                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='event_ticket_ids']/tree[1]/field[@name='product_id']"-->
+                <!--                       position="after">-->
+                <!--                    <field name="mapped_item_ids" widget="many2many_tags" optional="hide"-->
+                <!--                           options="{'no_create': True, 'no_open':True, 'no_quick_create': True}"/>-->
+                <!--                    <field name="tax_ids" widget="many2many_tags" optional="hide"-->
+                <!--                           options="{'no_create': True, 'no_open':True, 'no_quick_create': True}"/>-->
+                <!--                    <field name="amount_taxed" optional="hide"/>-->
+                <!--                </xpath>-->
+
+                <!--                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='event_ticket_ids']/tree[1]/field[@name='price']"-->
+                <!--                       position="after">-->
+                <!--                    <field name='currency_id' invisible='1'/>-->
+                <!--                </xpath>-->
+
+                <!--                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='event_ticket_ids']/tree[1]/field[@name='price']"-->
+                <!--                       position="attributes">-->
+                <!--                    <attribute name="widget">monetary</attribute>-->
+                <!--                    <attribute name="options">{'currency_field': 'currency_id'}</attribute>-->
+                <!--                </xpath>-->
+
+                <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                    <page string="Schedule">
+                        <group>
+                            <field name="schedule_ids" context="{'default_event_id': id}" nolabel="1">
+                                <tree>
+                                    <field name="day"/>
+                                    <field name="schedule_from" widget="float_time"/>
+                                    <field name="schedule_to" widget="float_time"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="Surveys">
+                        <group>
+                            <field name="survey_ids" context="{'default_events': id}" nolabel="1">
+                                <tree>
+                                    <field name="id"/>
+                                    <field name="title"/>
+                                    <field name="survey_type"/>
+                                    <field name="answer_score_avg" avg="Average Score"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+
+                    <page string="Sales">
+                        <group>
+                            <group>
+                                <field name="target" string='Target' widget="monetary"
+                                       options="{'currency_field': 'currency_usd'}"/>
+                            </group>
+                            <group>
+                                <field name="actual_sales" widget="monetary"
+                                       options="{'currency_field': 'currency_usd'}"/>
+                            </group>
+                            <group>
+                                <field name="actual_vs_target"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <div>
+                                    <b>
+                                        <label for="total_opportunities" readonly="1"/>
+                                    </b>
+                                    <div class="o_row">
+                                        <field name="total_opportunities" readonly="1"/>
+
+                                    </div>
+
+                                </div>
+                            </group>
+                        </group>
+
+
+                        <group string="Actual Sales">
+
+                            <field name="order_line_ids" context="{'default_event': id}" nolabel="1" readonly="1">
+                                <tree>
+                                    <field name="order_id" string="Ref"/>
+                                    <field name="product_uom_qty"/>
+                                    <field name="price_unit" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name='currency_id' invisible='1'/>
+                                    <field name="discount" string="Discount Rate(%)"/>
+                                    <field name="price_subtotal"/>
+                                </tree>
+                            </field>
+                        </group>
+
+                    </page>
+
+                    <page string="Profit And Loss">
+
+                        <group>
+                            <field name='total_revenue' widget="monetary" options="{'currency_field': 'currency_usd'}"/>
+                            <field name='total_expenses' widget="monetary"
+                                   options="{'currency_field': 'currency_usd'}"/>
+                            <field name='total_instructor_rates' widget="monetary"
+                                   options="{'currency_field': 'currency_usd'}"/>
+                            <field name='total' widget="monetary" options="{'currency_field': 'currency_usd'}"/>
+                            <p>
+                                <i>Total is revenue - (expenses + instructor rates)</i>
+                            </p>
+                        </group>
+
+                    </page>
+
+                    <page string="Expenses">
+                        <group string="Expenses">
+                            <field name="expense_ids" nolabel="1">
+                                <tree string="Expenses">
+                                    <field name="currency_id" invisible="True"/>
+                                    <field name="attachment_number" invisible="True"/>
+                                    <field name="date"/>
+                                    <field name="name"/>
+                                    <field name="employee_id"/>
+                                    <field name="sheet_id" invisible="not context.get('show_report', False)"/>
+                                    <field name="total_amount" sum="Total Amount" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+
+                    <page string="Meta Keywords">
+                        <group>
+                            <field name="meta_key_words" nolabel="1" placeholder="Meta keywords"/>
+                        </group>
+                    </page>
+                    <page string="Description">
+                        <group>
+                            <field name="description" nolabel="1" widget="html"/>
+                        </group>
+                    </page>
+                    <page string="Statistics">
+                        <group>
+                            <group string="Attendance" groups='education.manage_attendance'>
+                                <field name="attendance_count"/>
+                                <field name="nb_attendance"/>
+                                <field name="avg_attendance"/>
+                            </group>
+
+                            <group string="Attempts">
+                                <field name="attempt_count"/>
+                                <field name="passing_rate"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='website_id']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='address_id']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='sponsor_count']" position="attributes">
+                    <attribute name="string">Partners</attribute>
+                </xpath>
+                <xpath expr="//button[@name='%(website_event_track.event_sponsor_action_from_event)d']"
+                       position="attributes">
+                    <attribute name="icon">fa-institution</attribute>
+                </xpath>
+                <xpath expr="//button[@name='%(website_event_track.action_event_track_from_event)d']"
+                       position="attributes">
+                    <attribute name="icon">fa-calendar-check-o</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='auto_confirm']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="event_tree_inherit" model="ir.ui.view">
+            <field name="name">event.track.inherit.tree</field>
+            <field name="model">event.track</field>
+            <field name="inherit_id" ref="website_event_track.view_event_track_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree[1]/field[@name='name']" position="after">
+                    <field name="employee_id"/>
+                    <field name="user_id"/>
+                    <field name="date" string="Date" widget="date"/>
+                    <field name="company_id"/>
+                    <field name="duration" widget="float_time"/>
+                    <field name="course_id"/>
+                    <field name="location_id"/>
+                    <field name="price"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="editable_event_track" model="ir.ui.view">
+            <field name="name">editable.event.track.tree</field>
+            <field name="model">event.track</field>
+            <field name="priority">17</field>
+            <field name="arch" type="xml">
+                <tree string="Sessions" editable="bottom" create="0" delete="0">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="user_id"/>
+                    <field name="date" string="Date" widget="date"/>
+                    <field name="company_id"/>
+                    <field name="duration" widget="float_time"/>
+                    <field name="course_id"/>
+                    <field name="location_id"/>
+                    <field name="price"/>
+                    <field name="active" invisible="1"/>
+                    <field name="event_id"/>
+                    <field name="activity_exception_decoration" widget="activity_exception"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="event_calendar_inherit" model="ir.ui.view">
+            <field name="name">event.track.inherit.calendar</field>
+            <field name="model">event.track</field>
+            <field name="inherit_id" ref="website_event_track.view_event_track_calendar"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='event_id']" position="after">
+                    <field name="course_id"/>
+                    <field name="seats_expected" string="Registrations"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- EVENT.REGISTRATION ACTIONS -->
+        <record id="act_event_registration_from_session" model="ir.actions.act_window">
+            <field name="res_model">event.registration</field>
+            <field name="name">Registrations</field>
+            <field name="view_mode">kanban,tree,form,calendar,graph</field>
+            <field name="domain">['|', ('session_id', '=', active_id), ('event_id', '=', event_id)]</field>
+            <field name="context">{'search_default_session_id': active_id, 'default_session_id': active_id,
+                'search_default_expected': True}
+            </field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new Registration
+                </p>
+            </field>
+        </record>
+
+        <!-- EVENT.REGISTRATION VIEWS -->
+        <record model="ir.ui.view" id="view_session_registration_tree">
+            <field name="name">session.registration.tree</field>
+            <field name="model">session.registration</field>
+            <field name="arch" type="xml">
+                <tree string="Registration" decoration-bf="message_needaction==True">
+                    <field name="create_date"/>
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="session_id"/>
+                    <field name="state"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="message_needaction" invisible="1"/>
+                    <button name="confirm_registration" string="Confirm Registration" states="draft" type="object"
+                            icon="fa-check text-success"/>
+                    <button name="button_reg_close" string="Attended the Session" states="open" type="object"
+                            icon="fa-level-down text-success"/>
+                    <button name="button_reg_cancel" string="Cancel Registration" states="draft,open" type="object"
+                            icon="fa-times-circle text-danger"/>
+                    <field name="activity_exception_decoration" widget="activity_exception"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_session_registration_form">
+            <field name="name">session.registration.form</field>
+            <field name="model">session.registration</field>
+            <field name="arch" type="xml">
+                <form string="Session Registration">
+                    <header>
+                        <button name="action_send_badge_email" string="Send by Email" type="object" states="open,done"
+                                class="oe_highlight"/>
+                        <button name="confirm_registration" string="Confirm" states="draft" type="object"
+                                class="oe_highlight"/>
+                        <button name="button_reg_close" string="Attended" states="open" type="object"
+                                class="oe_highlight"/>
+                        <button string="Set To Unconfirmed" name="do_draft" states="cancel,done" type="object"/>
+                        <button name="button_reg_cancel" string="Cancel Registration" states="draft,open"
+                                type="object"/>
+                        <field name="state" nolabel="1" colspan="2" widget="statusbar"
+                               statusbar_visible="draft,open,done"/>
+                    </header>
+                    <sheet string="Registration">
+                        <group>
+                            <group string="Attendee" name="attendee">
+                                <field name="partner_id" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="name"/>
+                                <field name="email"/>
+                                <field name="phone"/>
+                                <field name="mobile"/>
+                            </group>
+                            <group string="Session Information" name="event">
+                                <field name="session_id" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create': True}"/>
+                                <field name="date_open" groups="base.group_no_one"/>
+                                <field name="date_closed" groups="base.group_no_one"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="session_registration_view_kanban" model="ir.ui.view">
+            <field name="name">session.registration.kanban</field>
+            <field name="model">session.registration</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <kanban class="o_event_attendee_kanban">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="state"/>
+                    <field name="email"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <div class="o_kanban_record_top">
+                                        <div class="o_kanban_record_headings">
+                                            <strong class="o_kanban_record_title">
+                                                <field name="name"/>
+                                            </strong>
+                                        </div>
+                                        <div class="float-right">
+                                            <a class="btn btn-sm btn-success" string="Confirm Registration"
+                                               name="confirm_registration" type="object" states="draft" role="button">
+                                                <i class="fa fa-check" role="img" aria-label="Confirm button"
+                                                   title="Confirm Registration"/>
+                                            </a>
+                                            <a class="btn btn-sm btn-success" string="Attended the Session"
+                                               name="button_reg_close" type="object" states="open" role="button">
+                                                <i class="fa fa-level-down" role="img" aria-label="Attended button"
+                                                   title="Attended the Session"/>
+                                            </a>
+                                            <a class="btn btn-sm btn-danger" string="Cancel Registration"
+                                               name="button_reg_cancel" type="object" states="draft,open" role="button">
+                                                <i class="fa fa-times" role="img" aria-label="Cancel button"
+                                                   title="Cancel Registration"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <field name="partner_id"/>
+                                        </li>
+                                        <li>
+                                            <field name="email"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_session_registration_calendar" model="ir.ui.view">
+            <field name="name">session.registration.calendar</field>
+            <field name="model">session.registration</field>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+                <calendar date_start="date_open" string="Session Registration" color="session_id" event_limit="5">
+                    <field name="session_id"/>
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_session_registration_pivot">
+            <field name="name">session.registration.pivot</field>
+            <field name="model">session.registration</field>
+            <field name="arch" type="xml">
+                <pivot string="Registration" display_quantity="True">
+                    <field name="session_id" type="row"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_session_registration_graph">
+            <field name="name">session.registration.graph</field>
+            <field name="model">session.registration</field>
+            <field name="arch" type="xml">
+                <graph string="Registration">
+                    <field name="session_id"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_session_registration_search">
+            <field name="name">session.registration.search</field>
+            <field name="model">session.registration</field>
+            <field name="arch" type="xml">
+                <search string="Session Registration">
+                    <field name="id" string="Registration ID"/>
+                    <field name="name" string="Participant"
+                           filter_domain="['|', '|', ('name', 'ilike', self), ('email', 'ilike', self), ('origin', 'ilike', self)]"/>
+                    <filter string="Unread Messages" name="message_needaction"
+                            domain="[('message_needaction','=',True)]"/>
+                    <filter string="Expected" name="expected" domain="[('state', 'in', ['draft', 'open', 'done'])]"/>
+                    <separator/>
+                    <filter string="Unconfirmed" name="unconfirmed" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Confirmed" name="confirmed" domain="[('state', '=', 'open')]"/>
+                    <filter string="Attended" name="attended" domain="[('state', '=', 'done')]"/>
+                    <separator/>
+                    <filter string="Registration Date" name="filter_date_open" date="date_open"/>
+                    <filter string="Session Date" name="filter_session_begin_date" date="session_date"/>
+                    <filter string="Attended Date" name="filter_date_closed" date="date_closed"/>
+                    <field name="session_id"/>
+                    <field name="partner_id"/>
+                    <field name="company_id"/>
+                    <filter invisible="1" string="Late Activities" name="activities_overdue"
+                            domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                            help="Show all records which has next action date is before today"/>
+                    <filter invisible="1" string="Today Activities" name="activities_today"
+                            domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter invisible="1" string="Future Activities" name="activities_upcoming_all"
+                            domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Partner" name="partner" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Session" name="group_session" domain="[]" context="{'group_by':'session_id'}"/>
+                        <filter string="Status" name="status" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Registration Date" name="createmonth" domain="[]"
+                                context="{'group_by': 'create_date:month'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="event_form_inherit" model="ir.ui.view">
+            <field name="name">event.track.inherit.form</field>
+            <field name="model">event.track</field>
+            <field name="inherit_id" ref="website_event_track.view_event_track_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="attributes">
+                    <attribute name="widget">date</attribute>
+                </xpath>
+                <xpath expr="//field[@name='stage_id']" position="before">
+                    <field name="timesheet_timer_start" widget="timesheet_timer"
+                           class="text-danger pull-left oe_left h2 mr-4 font-weight-bold"
+                           attrs="{'invisible': [('display_timesheet_timer', '=', False)]}"/>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <field name="display_timesheet_timer" invisible="1"/>
+                    <field name="display_start_button" invisible="1"/>
+                    <field name="display_stop_button" invisible="1"/>
+                    <field name="display_timsheets" invisible="1"/>
+                    <field name="timesheet_timer_pause" invisible="1"/>
+                    <field name="active" invisible="1"/>
+
+                    <button name="%(education.act_event_registration_from_session)d" context="{'event_id':event_id}"
+                            type="action" class="oe_stat_button" icon="fa-users" help="Registrations for this session">
+                        <field name="seats_expected" widget="statinfo" string="Registrations"/>
+                    </button>
+
+                    <button groups='education.manage_attendance' class="oe_stat_button" icon="fa-clock-o" type="object"
+                            name="show_related_attendaces">
+                        <field widget="statinfo" name="attendance_count" string="Attendances"/>
+                    </button>
+
+
+                    <button class="oe_stat_button" name="action_timer_start" type="object" icon="fa-play"
+                            help="Launch the Timer" attrs="{'invisible': [('display_start_button', '=', False)]}">
+                        <div class="o_stat_info">
+                            Start
+                        </div>
+                    </button>
+                    <button class="oe_stat_button" name="action_timer_stop" type="object" icon="fa-stop"
+                            help="Stop the Timer" attrs="{'invisible': [('display_stop_button', '=', False)]}">
+                        <div class="o_stat_info">
+                            Stop
+                        </div>
+                    </button>
+                    <button class="oe_stat_button" name="action_view_timesheets" type="object" icon="fa-clock-o"
+                            help="Time recorded on this task"
+                            attrs="{'invisible': [('display_timsheets', '=', False)]}">
+                        <div class="o_stat_info">
+                            <div>Time</div>
+                            <span class="o_stat_value">
+                                <field name="total_hours_spent" widget="float_time" nolabel="1" class="mr-1"/>
+                            </span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='event_id']" position="after">
+                    <field name="day" invisible="1"/>
+                    <field name="employee_id" domain="[('course_ids', 'in', course_id)]"/>
+                </xpath>
+                <xpath expr="//field[@name='day']" position="after">
+                    <field name="track_from" widget="float_time"/>
+                    <field name="to" widget="float_time"/>
+                </xpath>
+                <xpath expr="//field[@name='location_id']" position="after">
+                    <xpath expr="//field[@name='employee_id']" position="move"/>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="after">
+                    <field name="start_date" widget="daterange" invisible="1"/>
+                    <field name="end_date" widget="daterange" invisible="1"/>
+                    <field name="price"/>
+                    <field name="tax_ids" widget="many2many_tags"/>
+                </xpath>
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="course_id" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="nb_attendance" groups='education.manage_attendance'/>
+                    <field name='avg_attendance' groups='education.manage_attendance'/>
+                </xpath>
+            </field>
+        </record>
+        <record id="event_loctaion_form_inhrit" model="ir.ui.view">
+            <field name="name">event.loctaion.form</field>
+            <field name="model">event.track.location</field>
+            <field name="inherit_id" ref="website_event_track.view_event_location_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="region_id"/>
+                </xpath>
+                <xpath expr="//field[@name='region_id']" position="before">
+                    <field name="location_id"/>
+                </xpath>
+                <xpath expr="//field[@name='region_id']" position="after">
+                    <field name="capacity"/>
+                </xpath>
+                <xpath expr="//field[@name='capacity']" position="after">
+                    <field name="on_premises"/>
+                </xpath>
+                <xpath expr="//field[@name='on_premises']" position="after">
+                    <label for="street" string="Address"/>
+                    <div class="o_address_format">
+                        <div class="oe_edit_only"></div>
+                        <field name="street" placeholder="Street..." class="o_address_street"/>
+                        <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                        <field name="city" placeholder="City" class="o_address_city"/>
+                        <field name="state_id" class="o_address_state" placeholder="State"
+                               options="{&quot;no_open&quot;: True}"
+                               context="{'country_id': country_id, 'zip_id': zip_id}"/>
+                        <field name="zip_id" placeholder="ZIP" class="o_address_zip"/>
+                        <field name="country_id" placeholder="Country_id" class="o_address_country_id"
+                               options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                    </div>
+                    <field name="longtitude"/>
+                    <field name="latitude"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="locatiom_tree_inherit" model="ir.ui.view">
+            <field name="name">event.track.inherit.tree</field>
+            <field name="model">event.track.location</field>
+            <field name="inherit_id" ref="website_event_track.view_event_location_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree[1]/field[@name='name']" position="after">
+                    <field name="region_id" options="{'no_create': True, 'no_quick_create': True}"/>
+                    <field name="location_id" domain="[('type', '=' , 'training')]"
+                           options="{'no_create': True, 'no_quick_create': True}"/>
+                    <field name="capacity"/>
+                    <field name="on_premises"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="event_schedule_form" model="ir.ui.view">
+            <field name="name">event.schedule.form</field>
+            <field name="model">event.schedule</field>
+            <field name="arch" type="xml">
+                <form string="Schedule">
+                    <header></header>
+                    <sheet>
+                        <field name="name" invisible="1"/>
+                        <field name="event_id" invisible="1"/>
+                        <field name="id" invisible="1"/>
+                        <field name="course_id" invisible="1"/>
+                        <group>
+                            <field name="instructor_id" domain="[('course_ids', 'in', course_id)]"
+                                   options="{'no_create': True, 'no_open':True, 'no_quick_create': True}"/>
+                            <field name="day"/>
+                            <field name="schedule_from" widget="float_time"/>
+                            <field name="schedule_to" widget="float_time"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="event_registration_view_form_inhrit" model="ir.ui.view">
+            <field name="name">event.registration.form</field>
+            <field name="model">event.registration</field>
+            <field name="inherit_id" ref="event.view_event_registration_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
+                    <field name="attempt_ids">
+                        <tree>
+                            <field name="name" string="Attempt"/>
+                            <field name="attempt_date"/>
+                            <field name="passing_status"/>
+                            <field name="score" avg="Average score"/>
+                        </tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+        <record id="website_event_view_form_inhrit" model="ir.ui.view">
+            <field name="name">event.website.form</field>
+            <field name="model">event.type</field>
+            <field name="inherit_id" ref="website_event.event_type_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[1]/sheet[1]/div[@name='event_type_visibility']/div[@name='event_type_visibility_website']/div[2]/label[1]"
+                       position="replace"/>
+                <xpath expr="//field[@name='website_menu']" position="attributes">
+                    <attribute name="attrs">{}</attribute>
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="event_type_view_form_inherit" model="ir.ui.view">
+            <field name="name">event.type.inherit</field>
+            <field name="model">event.type</field>
+            <field name="inherit_id" ref="event.view_event_type_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_title')]" position="after">
+                    <div class="oe_title">
+                        <label for="study_format" class="oe_edit_only"/>
+                        <h4>
+                            <field name="study_format"/>
+                        </h4>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,231 @@
+<odoo>
+    <data>
+        <record id="hr_payslip_inherit_form" model="ir.ui.view">
+            <field name="name">hr.payslip.form.inherit</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+
+                <data>
+                    <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='worked_days_line_ids']/tree[1]/field[@name='name']"
+                           position="after">
+                        <field name="contract_id" readonly='1'/>
+                        <field name="date"/>
+                    </xpath>
+
+                    <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='worked_days_line_ids']/tree[1]/field[@name='number_of_days']"
+                           position="replace"/>
+
+                </data>
+
+            </field>
+        </record>
+
+        <template id="report_payslip_custom" inherit_id="hr_payroll.report_payslip">
+<!--            <xpath expr="//t[@t-call='web.internal_layout']" position="attributes">-->
+<!--                <attribute name="t-call">web.external_layout</attribute>-->
+<!--            </xpath>-->
+            <xpath expr="//div[@class='page']" position="replace">
+                <div class="page">
+                    <h2 t-field="o.name"/>
+
+                    <table class="table table-sm table-bordered">
+                        <tr>
+                            <td>
+                                <strong>Company Information</strong>
+                            </td>
+                            <td>
+                                <div>
+                                    <span t-field="o.company_id.name"/>
+                                </div>
+                                <div>
+                                    <span t-field="o.company_id.street"/>
+                                </div>
+                                <div>
+                                    <span t-field="o.company_id.street2" t-if="o.company_id.street2"/>
+                                </div>
+                                <div>
+                                    <span t-field="o.company_id.city"/>
+                                    <span t-field="o.company_id.state_id"/>
+                                    <span t-field="o.company_id.zip"/>
+                                </div>
+                                <div>
+                                    <span t-field="o.company_id.country_id"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table name="employee-infos" class="table table-sm table-bordered">
+                        <tr>
+                            <td>
+                                <strong>Name</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.employee_id"/>
+                            </td>
+                            <td>
+                                <strong>Designation</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.employee_id.job_id"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Address</strong>
+                            </td>
+                            <td colspan="3">
+                                <div t-field="o.employee_id.address_home_id"
+                                     t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Email</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.employee_id.work_email"/>
+                            </td>
+                            <td>
+                                <strong>Identification No</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.employee_id.identification_id"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Reference</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.number"/>
+                            </td>
+                            <td>
+                                <strong>Bank Account</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.employee_id.bank_account_id"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Date From</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.date_from"/>
+                            </td>
+                            <td>
+                                <strong>Date To</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.date_to"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Computed On</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.compute_date"/>
+                            </td>
+                            <td>
+                                <strong>Registration Number</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.employee_id.registration_number"/>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br/>
+                    <h3>Summary</h3>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    <strong>Code</strong>
+                                </th>
+                                <th>
+                                    <strong>Amount</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="o.line_ids" t-as="payslip_line">
+                                <td>
+                                    <span t-field="payslip_line.code"/>
+                                </td>
+                                <td>
+                                    <span t-esc="payslip_line.total" digits="[42, 2]"
+                                          t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.company_id.currency_id}"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br/>
+                    <h3>Sessions</h3>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+
+                                <th>Name</th>
+                                <th>Number of Hours</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="o.worked_days_line_ids" t-as="worked_days">
+
+                                <td>
+                                    <span t-field="worked_days.name"/>
+                                </td>
+                                <td>
+                                    <span t-field="worked_days.number_of_hours"/>
+                                </td>
+                                <td>
+                                    <span t-field="worked_days.date"/>
+                                </td>
+                                <td>
+                                    <span t-esc="worked_days.amount" digits="[42, 2]"
+                                          t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.company_id.currency_id}"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br/>
+                    <br/>
+                    <h3>Other Inputs</h3>
+
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="o.input_line_ids" t-as="input">
+                                <td>
+                                    <span t-field="input.input_type_id.name"/>
+                                </td>
+                                <td>
+                                    <span t-field="input.amount"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="text-right">
+                        <strong>Authorized signature</strong>
+                    </p>
+                </div>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>

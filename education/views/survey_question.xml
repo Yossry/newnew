@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="survey_question_view_form_inhrit" model="ir.ui.view">
+            <field name="name">survey.question.form</field>
+            <field name="model">survey.question</field>
+            <field name="inherit_id" ref="survey.survey_question_form" />
+            <field name="arch" type="xml">
+                <data>
+                  <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='labels_ids']/tree[1]" position="attributes">
+                    <attribute name="editable"/>
+                  </xpath>
+                </data>
+
+            </field>
+        </record>
+    </data>
+</odoo>

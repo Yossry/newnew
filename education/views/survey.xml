@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="survey_view_form_inhrit" model="ir.ui.view">
+            <field name="name">survey.form</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="before">
+                    <field name="survey_type" />
+                    <field name="instructor_id" />
+                    <field name="event_id" />
+                    <field name="session_id" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

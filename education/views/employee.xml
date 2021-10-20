@@ -1,0 +1,159 @@
+<odoo>
+    <data>
+        <record id="employee_view_form_inherit" model="ir.ui.view">
+            <field name="name">employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form" />
+            <field name="arch" type="xml">
+<!--                <div name="button_box" position="inside">-->
+<!--                <button class="oe_stat_button" icon="fa-file" type="object" name="show_related_documents" attrs="{'invisible': [('is_instructor', '=', False)]}">-->
+<!--                  -->
+<!--                </button>-->
+<!--                </div>-->
+              <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='personal_information']/group[1]/group[not(@name)][6]" position="replace"/>
+
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="joining_date" attrs="{'invisible': [['is_instructor','=',False]]}"/>
+                    <field name="manager" attrs="{'invisible': [['is_instructor','=',False]]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='timesheet_manager_id']" position="after">
+                    <field name="registration_number" attrs="{'invisible': [['is_instructor','=',False]]}"/>
+                </xpath>
+
+                <data>
+                  <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="attrs">{"invisible": [["is_instructor","=",True]]}</attribute>
+                  </xpath>
+                  <xpath expr="//field[@name='job_id']" position="attributes">
+                    <attribute name="attrs">{"invisible": [["is_instructor","=",True]]}</attribute>
+                  </xpath>
+                  <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="is_instructor" invisible='1'/>
+                  </xpath>
+
+                  <xpath expr="//field[@name='manager']" position="after">
+                    <field name='is_student'/>
+                    
+                    <field name='recruiting_city_id' options="{'no_create':True, 'no_open':True}"/>
+                  </xpath>
+                  
+                  <xpath expr="//field[@name='manager']" position="attributes">
+                    <attribute name="attrs">{"invisible": [["is_instructor","=",True]]}</attribute>
+                  </xpath>
+                  <xpath expr="//field[@name='parent_id']" position="attributes">
+	                  <attribute name="attrs">{"invisible": [["is_instructor","=",True]]}</attribute>
+                  </xpath>
+
+                  <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='public']/div[1]/div[1]/group[1]" position="attributes">
+                    <attribute name="attrs">{"invisible": [["is_instructor","=",True]]}</attribute>
+                  </xpath>
+                  
+                  <xpath expr="//group[@name='work_permit']" position="after">
+	                <group string="Social Media" name="social_media">
+	                    <field name="social_twitter" widget="url" />
+	                    <field name="social_facebook" widget="url" />
+	                    <field name="social_linkedin" widget="url" />
+	                    <field name="social_youtube" widget="url" />
+	                    <field name="social_instagram" widget="url" />
+	                </group>
+                  </xpath>
+                  
+                  <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+				    <page string="Biography" name="biography">
+				      <group>
+				        <field name="biography" nolabel="1" />
+				      </group>
+				    </page>
+                  </xpath>
+                  <xpath expr="//field[@name='birthday']" position="after">
+                  	<field name="age_group" />
+                  </xpath>
+            
+                </data>
+            </field>
+        </record>
+
+        <record id="employee_view_search_inherit" model="ir.ui.view">
+            <field name="name">employee.search</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter" />
+            <field name="arch" type="xml">
+                <data>
+                <xpath expr="//filter[@name='inactive']" position="attributes">
+                    <attribute name='string'>Suspended</attribute>
+                </xpath>
+                <xpath expr="//filter[@name='inactive']" position="before">
+                    <filter name='potential' string='Potential' domain="[('instructor_status', '=', 'draft')]"/>
+                    <filter name='active' string='Active' domain="[('instructor_status', '=', 'active')]"/>
+                    <filter name='dormant' string='Dormant' domain="[('instructor_status', '=', 'dormant')]"/>
+                </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="employee_contract_view_form_inhrit" model="ir.ui.view">
+            <field name="name">employee.contract.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_start']" position="before">
+	                <field name="display_partner_id" invisible="1" />
+                    <field name="event_type_id" options="{'no_create': True, 'no_open':True, 'no_quick_create': True}" />
+                    <field name="partner_id" attrs="{'invisible': [('display_partner_id', '=', False)]}" options="{'no_create': True, 'no_quick_create': True}" />
+                    <field name="program_id" options="{'no_create': True, 'no_quick_create': True}"/>
+                    <field name="course_ids" domain="[('program_id', '=', program_id), ('type_id', '=', event_type_id)]" options="{'no_create': True, 'no_quick_create': True}"  widget='many2many_tags'/>
+                    <field name='first_session_id'/>
+                </xpath>
+<!--                <xpath expr="//field[@name='department_id']" position="after">-->
+<!--	                <field name="signed_agreement"  invisible='1'/>-->
+<!--	            </xpath>-->
+            </field>
+        </record>
+        
+        <record id="employee_contract_view_tree_inherit" model="ir.ui.view">
+            <field name="name">employee.contract.tree</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//tree[1]/field[@name='name']" position="attributes">
+				    <attribute name="attrs">{}</attribute>
+				    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="after">
+                <xpath expr="//field[@name='company_id']" position="move"/>
+				    <field name="event_type_id"/>
+				    <field name="program_id"/>
+				    <field name="course_ids" widget='many2many_tags'/>
+				    <field name="hourly_wage" string="Rate"/>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="attributes">
+				    <attribute name="attrs">{}</attribute>
+				    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='resource_calendar_id']" position="attributes">
+				    <attribute name="attrs">{}</attribute>
+				    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='kanban_state']" position="attributes">
+				    <attribute name="attrs">{}</attribute>
+				    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="res_partner_biography" model="ir.ui.view">
+            <field name="name">partner.biography</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+	            <page name="sales_purchases" position="before">
+	                 <page name="biography" string="Biography">
+		                 <field name="website_description" nolabel="1" widget="html" />
+	                </page>
+	            </page>
+            </field>
+        </record>
+
+    </data>
+</odoo>

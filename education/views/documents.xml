@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+      <record id="document_inherit_form" model="ir.ui.view">
+            <field name="name">documents.document.form.inherited</field>
+            <field name="model">documents.document</field>
+            <field name="inherit_id" ref="documents.document_view_form" />
+            <field name="arch" type="xml">
+			<data>
+
+			  <xpath expr="//form" position="attributes">
+			    <attribute name='create'>true</attribute>
+			  </xpath>
+
+			  <xpath expr="//field[@name='create_uid']" position="after">
+			    <field name="employee_id" options="{'no_create':True, 'no_open':True}"/>
+			  </xpath>
+			</data>
+
+            </field>
+        </record>
+
+              <record id="document_inherit_tree" model="ir.ui.view">
+            <field name="name">documents.document.tree.inherited</field>
+            <field name="model">documents.document</field>
+            <field name="inherit_id" ref="documents.documents_view_list" />
+            <field name="arch" type="xml">
+			<data>
+			  <xpath expr="//tree" position="attributes">
+			    <attribute name='create'>true</attribute>
+			    <attribute name='edit'>true</attribute>
+			  </xpath>
+			</data>
+
+            </field>
+        </record>
+        
+    </data>
+</odoo>

@@ -1,0 +1,169 @@
+<odoo>
+    <data>
+        <record id="calendar_event_call_vist_form" model="ir.ui.view">
+            <field name="name">calendar.event.call.visit.form</field>
+            <field name="model">calendar.event</field>
+            <field name='type'>form</field>
+            <field name='priority' eval='32'/> 
+            <field name="arch" type="xml">
+<form string="Meetings">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <button string="Document" class="oe_stat_button float-right" icon="fa-bars" type="object" name="action_open_calendar_event" attrs="{'invisible': ['|', ('res_model', '=', False), ('res_id', '=', False)]}"/>
+                    <field name="res_model" invisible="1"/>
+                    <field name="res_id" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                    <field name="is_attendee" invisible="1"/>
+                    <field name="attendee_status" invisible="1"/>
+                    <field name='is_call' invisible='1'/>
+                    <field name='is_visit' invisible='1'/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" string='Call subject' attrs="{'invisible': [('is_call','=',False)]}"/>
+                            <label for="name" string='Visit subject' attrs="{'invisible': [('is_visit','=',False)]}"/>
+                        </div>
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                        <label for="partner_ids" string="Attendees" class="oe_edit_only" invisible='1'/>
+                        <h2>
+                            <field name="partner_ids" widget="many2manyattendee" placeholder="Select attendees..." context="{'force_email':True}" class="oe_inline" invisible='1'/>
+                        </h2>
+                    </div>
+                    <notebook>
+                        <page name="page_details" string="Details">
+                            <group attrs="{'invisible': [('recurrency','==',False)]}" class="oe_edit_only ">
+                                <p class="alert alert-warning" role="status"> This event is linked to a recurrence...<br/>
+                                    <button type="object" name="action_detach_recurring_event" string="Update only this instance" help="Click here to update only this instance and not all recurrences. " class="oe_link"/>
+                                </p>
+                            </group>
+                            <group>
+                                <group>
+                                    <field name="start" attrs="{'invisible': True}"/>
+                                    <field name="stop" attrs="{'invisible': True}"/>
+                                    <field name="id" attrs="{'invisible': True}"/>
+
+                                    <field name="start_date" string="Starting at" attrs="{'required': [('allday','=',True)], 'invisible': [('allday','=',False)], 'readonly': [('id', '!=', False), ('recurrency','=',True)]}" force_save="1"/>
+                                    <field name="stop_date" string="Ending at" attrs="{'required': [('allday','=',True)],'invisible': [('allday','=',False)], 'readonly': [('id', '!=', False), ('recurrency','=',True)]}" force_save="1"/>
+
+                                    <field name="start_datetime" string="Starting at" attrs="{'required': [('allday','=',False)], 'invisible': [('allday','=',True)], 'readonly': [('id', '!=', False), ('recurrency','=',True)]}"/>
+                                    <field name="stop_datetime" invisible="1"/>
+                                    <label for="duration" attrs="{'invisible': [('allday','=',True)]}"/>
+                                    <div attrs="{'invisible': [('allday','=',True)]}">
+                                        <field name="duration" widget="float_time" string="Duration" class="oe_inline" attrs="{'readonly': [('id', '!=', False), ('recurrency','=',True)]}"/>
+                                        <span> hours</span>
+                                    </div>
+                                    <field name="allday" invisible='1' force_save="1"/>
+                                </group>
+                                <group>
+                                    <field name="categ_ids" widget="many2many_tags" options="                                     {'no_create_edit': True}" invisible='1'/>
+                                    <field name="alarm_ids" widget="many2many_tags" invisible='1'/>
+                                    <field name="location" invisible='1'/>
+                                    <field name="event_tz" invisible='1'/>
+                                </group>
+
+                            </group>
+                            <label for="description"/>
+                            <field name="description"/>
+                        </page>
+                        <page name="page_options" string="Options" invisible='1'>
+                            <group>
+                                <div>
+                                    <group>
+                                        <field name="recurrency"/>
+                                    </group>
+                                    <div attrs="{'invisible': [('recurrency', '=', False)]}">
+                                        <group>
+                                            <label for="interval"/>
+                                            <div class="o_row">
+                                                <field name="interval" attrs="{'required': [('recurrency', '=', True)]}"/>
+                                                <field name="rrule_type" attrs="{'required': [('recurrency', '=', True)]}"/>
+                                            </div>
+                                            <label string="Until" for="end_type"/>
+                                            <div class="o_row">
+                                                <field name="end_type" attrs="{'required': [('recurrency', '=', True)]}"/>
+                                                <field name="count" attrs="{'invisible': [('end_type', '!=', 'count')], 'required': [('recurrency', '=', True)]}"/>
+                                                <field name="final_date" attrs="{'invisible': [('end_type', '!=', 'end_date')], 'required': [('end_type', '=', 'end_date'), ('recurrency', '=', True)]}"/>
+                                            </div>
+                                        </group>
+                                        <group attrs="{'invisible': [('rrule_type', '!=', 'weekly')]}" name="weekdays">
+                                            <field name="mo"/>
+                                            <field name="tu"/>
+                                            <field name="we"/>
+                                            <field name="th"/>
+                                            <field name="fr"/>
+                                            <field name="sa"/>
+                                            <field name="su"/>
+                                        </group>
+                                        <group attrs="{'invisible': [('rrule_type', '!=', 'monthly')]}">
+                                            <label string="Day of Month" for="month_by"/>
+                                            <div class="o_row">
+                                                <field name="month_by"/>
+                                                <field name="day" attrs="{'required': [('month_by', '=', 'date'), ('rrule_type', '=', 'monthly')],                                                             'invisible': [('month_by', '!=', 'date')]}"/>
+                                                <field name="byday" string="The" attrs="{'required': [('recurrency', '=', True), ('month_by', '=', 'day'), ('rrule_type', '=', 'monthly')],                                                             'invisible': [('month_by', '!=', 'day')]}"/>
+                                                <field name="week_list" nolabel="1" attrs="{'required': [('recurrency', '=', True), ('month_by', '=', 'day'), ('rrule_type', '=', 'monthly')],                                                             'invisible': [('month_by', '!=', 'day')]}"/>
+                                            </div>
+                                        </group>
+                                    </div>
+                                </div>
+                                <group>
+                                    <field name="privacy"/>
+                                    <field name="show_as"/>
+                                    <field name="recurrent_id" invisible="1"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page name="page_invitations" string="Invitations" groups="base.group_no_one" invisible='1'>
+                            <button name="action_sendmail" type="object" string="Send mail" icon="fa-envelope" class="oe_link"/>
+                            <field name="attendee_ids" widget="one2many" mode="tree,kanban">
+                                <tree string="Invitation details" editable="top" create="false" delete="false">
+                                    <field name="partner_id"/>
+                                    <field name="state"/>
+                                    <field name="email" widget="email"/>
+
+                                    <button name="do_tentative" states="needsAction,declined,accepted" string="Uncertain" type="object" icon="fa-asterisk"/>
+                                    <button name="do_accept" string="Accept" states="needsAction,tentative,declined" type="object" icon="fa-check text-success"/>
+                                    <button name="do_decline" string="Decline" states="needsAction,tentative,accepted" type="object" icon="fa-times-circle text-danger"/>
+                                </tree>
+                                <kanban class="o_kanban_mobile" create="false" delete="false">
+                                    <field name="partner_id"/>
+                                    <field name="state"/>
+                                    <field name="email" widget="email"/>
+
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div class="d-flex flex-column justify-content-between">
+                                                <field name="partner_id"/>
+                                                <field name="email" widget="email"/>
+                                                <span>Status: <field name="state"/></span>
+
+                                                <div class="text-right">
+                                                    <button name="do_tentative" states="needsAction,declined,accepted" string="Uncertain" type="object" class="btn fa fa-asterisk"/>
+                                                    <button name="do_accept" states="needsAction,tentative,declined" string="Accept" type="object" class="btn fa fa-check text-success"/>
+                                                    <button name="do_decline" states="needsAction,tentative,accepted" string="Decline" type="object" class="btn fa fa-times-circle text-danger"/>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                        <page name="page_misc" string="Misc" groups="base.group_no_one">
+                            <group>
+                                <label for="user_id" string="Owner"/>
+                                <field name="user_id" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+            </field>
+        </record>
+    </data>
+</odoo>
