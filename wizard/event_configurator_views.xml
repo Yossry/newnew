@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="session_configurator_view_form" model="ir.ui.view">
+        <field name="name">session.configurator.view.form</field>
+        <field name="model">event.track.configurator</field>
+        <field name="arch" type="xml">
+            <form js_class="session_configurator_form">
+                <group>
+	                <field
+	                	name="event_id"
+	                	domain="[
+                            ('date_end','&gt;=',time.strftime('%Y-%m-%d 00:00:00'))
+                        ]"
+                        required="1"
+	                	options="{'no_open': True, 'no_create': True}" />
+                    <field
+                        name="session_id"
+                        domain="[
+	                        ('event_id','=',event_id),
+	                        ('price', '!=', 0),
+                            ('date','&gt;=',time.strftime('%Y-%m-%d 00:00:00'))
+                        ]"
+                        required="1"
+                        options="{'no_open': True, 'no_create': True}"
+                    />
+                    <field name="product_id" invisible="1"/>
+                </group>
+                <footer>
+                    <button string="Ok" confirm="Are you sure you want to do this? Did the candidate sign on EA?" class="btn-primary o_education_js_session_configurator_ok" special="save"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="session_configurator_action" model="ir.actions.act_window">
+        <field name="name">Configure a session</field>
+        <field name="res_model">event.track.configurator</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="session_configurator_view_form"/>
+    </record>
+</odoo>

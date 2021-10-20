@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_accounting_comment_form" model="ir.ui.view">
+        <field name="name">purchase.accounting.comment.form</field>
+        <field name="model">purchase.comment.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+              <sheet>
+                <group>
+                  <field name='type' invisible='1'/>
+                  <field name='purchase_id' invisible='1'/>
+                  <field name='comment' widget='html'/>
+                </group>
+              </sheet>
+              <footer>
+                <button string="Validate" name="validate_comment" type="object" class="btn-primary"/>
+                <button string="Cancel" class="btn-default" special="cancel"/>
+              </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="purchase_comment_action" model="ir.actions.act_window">
+        <field name="name">Comment</field>
+        <field name="res_model">purchase.comment.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="purchase_accounting_comment_form"/>
+    </record>
+</odoo>
