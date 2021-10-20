@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="nmc_field_service_form" model="ir.ui.view">
+            <field name="name">nmc.field.service.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="industry_fsm.view_task_form2_inherit"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name='date_deadline'/>
+                        <field name="categ_id"/>
+                        <field name="bought_from"/>
+                    </xpath>
+                    <xpath expr="//field[@name='project_id']" position="after">
+                        <field name="received_images" widget='many2many_binary'/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

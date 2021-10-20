@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_nmc_repair_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.repair</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="2"/>
+            <field name="inherit_id" ref="industry_fsm.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@data-key='industry_fsm']" position="inside">
+                    <div class="row mt16 o_settings_container" id="jc_service">
+                        <div class="col-xs-12 col-md-12 o_setting_box">
+
+                            <div class="">
+                                <label for="jc_contact" string="Service Center Contact"/>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="jc_contact" class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-12 o_setting_box">
+                            <div class="">
+                                <label for="jc_opening_hours" string="Service Center opening hours"/>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="jc_opening_hours" class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-12 o_setting_box">
+                            <div class="">
+                                <label for="jc_tc" string="Service Center Terms Conditions"/>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="jc_tc" class="o_light_label"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_nmc_repair_config" model="ir.actions.act_window">
+            <field name="name">Configure NMC Service Center</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_id" ref="res_config_settings_view_nmc_repair_form"/>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+
+        <menuitem name="Configuration" id="nmc_repair_configuration" parent="industry_fsm.fsm_menu_settings"
+                  sequence="99"/>
+
+        <menuitem name="Settings"
+                  id="menu_nmc_repair_config"
+                  parent="nmc_repair.nmc_repair_configuration"
+                  action="nmc_repair.action_nmc_repair_config" sequence="1"/>
+
+    </data>
+</odoo>
