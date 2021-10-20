@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="warranty_product_form">
+            <field name="name">product.warranty.form</field>
+            <field name="model">product.warranty</field>
+            <field name='type'>form</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form create='false' edit='false'>
+                    <sheet>
+                        <group>
+                            <field name='partner_id'
+                                   options="{'no_create': True, 'no_open':True, 'no_quick_create': True}"/>
+                            <field name='product_id'
+                                   options="{'no_create': True, 'no_open':True, 'no_quick_create': True}"/>
+                            <field name='start_date'/>
+                            <field name='expiry_date'/>
+                            <field name='lot_id'/>
+                            <field name='warranty_type_id'/>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="product_warranty_tree">
+            <field name="name">product.warranty.tree</field>
+            <field name="model">product.warranty</field>
+            <field name='type'>tree</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+
+                <tree create='false' edit='false'>
+                    <field name='partner_id'/>
+                    <field name='product_id'/>
+                    <field name='start_date'/>
+                    <field name='expiry_date'/>
+                    <field name='lot_id'/>
+                    <field name='warranty_type_id'/>
+                </tree>
+
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="product_warranty_action">
+            <field name="name">Product Warranty</field>
+            <field name="res_model">product.warranty</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">current</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        <menuitem id="menu_product_warranty" name="Product Warranty" parent="sale.menu_sales_config"-->
+<!--                  action="product_warranty_action"/>-->
+
+    </data>
+</odoo>

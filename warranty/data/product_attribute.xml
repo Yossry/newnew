@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="warranty_period" model="product.attribute">
+            <field name="name">Warranty Period</field>
+        </record>
+           <record id="warranty_type" model="product.attribute">
+            <field name="name">Warranty Type</field>
+        </record>
+    </data>
+</odoo>

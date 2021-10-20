@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="warranty_product_type_form">
+            <field name="name">product.warranty.type.form</field>
+            <field name="model">product.warranty.type</field>
+            <field name='type'>form</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form create='false'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="years"/>
+                                <field name="type" widget="radio"/>
+                                <label for="value"/>
+                                <div class="o_row">
+                                    <field name="value"/>
+                                    <span attrs="{'invisible':[('type', '!=', 'percentage')]}">%</span>
+                                    <span attrs="{'invisible':[('type', '!=', 'fixed')]}">
+                                        <field name='currency_id' options="{'no_create':True, 'no_open': True}"
+                                               readonly='1'/>
+                                    </span>
+                                </div>
+
+                                <field name="variant_id" options="{'no_create':True, 'no_open': True}" invisible='1'/>
+                                <field name="number_of_days"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_warranty_type_tree">
+            <field name="name">product.warranty.type.tree</field>
+            <field name="model">product.warranty.type</field>
+            <field name='type'>tree</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree create='false'>
+                    <field name='name'/>
+                    <field name='years'/>
+                    <field name='type'/>
+                    <field name='value'/>
+                    <field name='variant_id' invisible='1'/>
+                    <field name='number_of_days'/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="product_warranty_type_action">
+            <field name="name">Product Warranty Types</field>
+            <field name="res_model">product.warranty.type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">current</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        <menuitem id="menu_product_warranty_type" name="Product Warranty Types" parent="sale.menu_sales_config"-->
+<!--                  action="product_warranty_type_action"/>-->
+    </data>
+</odoo>

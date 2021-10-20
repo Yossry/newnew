@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record id="warranty_one_year" model="product.attribute.value">
+            <field name="name">1 Year</field>
+            <field name="attribute_id" ref='warranty.warranty_period'/>
+        </record>
+
+           <record id="warranty_two_years" model="product.attribute.value">
+            <field name="name">2 Years</field>
+            <field name="attribute_id" ref='warranty.warranty_period'/>
+        </record>
+
+         <record id="warranty_three_years" model="product.attribute.value">
+            <field name="name">3 Years</field>
+            <field name="attribute_id" ref='warranty.warranty_period'/>
+        </record>
+
+
+         <record id="warranty_accidental" model="product.attribute.value">
+            <field name="name">Accidental</field>
+            <field name="attribute_id" ref='warranty.warranty_type'/>
+        </record>
+
+         <record id="warranty_not_accidental" model="product.attribute.value">
+            <field name="name">Not Accidental</field>
+            <field name="attribute_id" ref='warranty.warranty_type'/>
+        </record>
+
+    </data>
+</odoo>

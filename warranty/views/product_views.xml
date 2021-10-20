@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_has_warranty_form">
+            <field name="name">product.haswarranty.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref='product.product_template_form_view'/>
+            <field name="priority">15</field>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']" position="after">
+                    <div name="warranty_div" groups="point_of_sale.group_pos_manager">
+                        <div>
+                            <field name="has_warranty"/>
+                            <label for="has_warranty" string="Has Warranty"/>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+product_warranty,product_warranty_manager,warranty.model_product_warranty,base.group_erp_manager,1,1,1,1
+product_warranty_type,product_warranty_type_manager,warranty.model_product_warranty_type,base.group_erp_manager,1,1,1,1
