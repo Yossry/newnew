@@ -1,0 +1,582 @@
+<odoo>
+  <data>
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'sale'), ('name', '=', 'sale_order_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+
+   <record model="ir.rule" id="sale.sale_order_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+
+
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'event'), ('name', '=', 'event_event_company_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+
+    <record model="ir.rule" id="event.event_event_company_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+
+
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'sale'), ('name', '=', 'sale_order_line_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="sale.sale_order_line_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'event'), ('name', '=', 'event_registration_company_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="event.event_registration_company_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'crm'), ('name', '=', 'crm_lead_company_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="crm.crm_lead_company_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'account'), ('name', '=', 'journal_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="account.journal_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'sales_team'), ('name', '=', 'sale_team_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="sales_team.sale_team_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'sales_team'), ('name', '=', 'sale_team_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="sales_team.sale_team_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'base'), ('name', '=', 'res_currency_rate_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="base.res_currency_rate_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+    <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'account'), ('name', '=', 'account_payment_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="account.account_payment_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+        <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'stock_warehouse_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.stock_warehouse_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+        <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'account'), ('name', '=', 'account_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="account.account_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+        <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'account'), ('name', '=', 'account_move_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="account.account_move_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+        <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'account'), ('name', '=', 'account_move_line_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="account.account_move_line_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+            <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'base'), ('name', '=', 'res_partner_bank_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="base.res_partner_bank_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+            <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'account'), ('name', '=', 'tax_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="account.tax_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+            <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'product_pulled_flow_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.product_pulled_flow_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+            <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'delivery'), ('name', '=', 'delivery_carrier_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="delivery.delivery_carrier_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'sale'), ('name', '=', 'sale_order_report_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="sale.sale_order_report_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'sale_management'), ('name', '=', 'sale_order_template_rule_company')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="sale_management.sale_order_template_rule_company">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'stock_quant_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.stock_quant_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'stock_putaway_rule_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.stock_putaway_rule_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'purchase'), ('name', '=', 'purchase_bill_union_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="purchase.purchase_bill_union_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'purchase'), ('name', '=', 'purchase_order_line_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="purchase.purchase_order_line_comp_rule">
+      <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'stock_move_line_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.stock_move_line_rule">
+      <field name="domain_force">['|','|',('company_id','=',False),('company_id', 'in', company_ids),('location_dest_id.company_id', '=', False)]</field>
+    </record>
+
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'stock_picking_type_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.stock_picking_type_rule">
+    <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'stock_quant_package_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.stock_quant_package_comp_rule">
+    <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'stock'), ('name', '=', 'stock_warehouse_orderpoint_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="stock.stock_warehouse_orderpoint_rule">
+    <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+           <function name="write" model="ir.model.data">
+
+            <function name="search" model="ir.model.data">
+
+                <value
+
+                  eval="[('module', '=', 'account'), ('name', '=', 'invoice_analysis_comp_rule')]"
+
+                  />
+
+            </function>
+
+            <value eval="{'noupdate': False}" />
+
+        </function>
+   <record model="ir.rule" id="account.invoice_analysis_comp_rule">
+    <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'in', user.company_ids.ids)]</field>
+    </record>
+
+
+
+
+  </data>
+</odoo>

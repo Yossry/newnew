@@ -1,0 +1,107 @@
+<odoo>
+  <data>
+    <record model="res.groups" id="manage_instructor_rate">
+      <field name="name">Manage Instructor Rates</field>
+    </record>
+
+    <record model="res.groups" id="manage_course">
+      <field name="name">Manage Course</field>
+
+
+    </record>
+
+    <record model="res.groups" id="manage_programs">
+      <field name="name">Manage Programs</field>
+    </record>
+
+    <record model="res.groups" id="manage_term">
+      <field name="name">Manage Term</field>
+    </record>
+
+    <record model="res.groups" id="manage_company_price">
+      <field name="name">Manage Company Price</field>
+    </record>
+
+    <record model="res.groups" id="manage_event_period">
+      <field name="name">Manage Event Period</field>
+    </record>
+
+    <record model="res.groups" id="manage_students">
+      <field name="name">Manage Students</field>
+    </record>
+
+    <record model="res.groups" id="manage_suppliers">
+      <field name="name">Manage Suppliers</field>
+    </record>
+
+
+    <record model="res.groups" id="manage_instructors">
+      <field name="name">Manage Instructors</field>
+
+    </record>
+
+    
+
+    <record model="res.groups" id="manage_attempts">
+      <field name="name">Manage Attempts</field>
+    </record>
+
+    <record model="res.groups" id="manage_certificates">
+      <field name="name">Manage Certificates</field>
+    </record>
+
+    <record model="res.groups" id="manage_event_schedule">
+      <field name="name">Manage Event Scedule</field>
+    </record>
+
+    <record model="res.groups" id="manage_course_topic">
+      <field name="name">Manage Course Topic </field>
+    </record>
+
+    <record model="res.groups" id="manage_program_attachment">
+      <field name="name">Manage Program Attachment </field>
+    </record>
+
+    <record model="res.groups" id="manage_sessions">
+      <field name="name">Manage Sessions </field>
+    </record>
+
+    <record model="res.groups" id="manage_industries">
+      <field name="name">Manage Industries </field>
+    </record>
+    
+    <record model="res.groups" id="manage_exams">
+      <field name="name">Manage Exams </field>
+    </record>
+
+    <record model="res.groups" id="ps_group">
+      <field name="name">Purchase PS</field>
+    </record>
+
+    <record model="res.groups" id="bm_group">
+      <field name="name">Purchase BM</field>
+    </record>
+
+    <record model="res.groups" id="country_management">
+      <field name="name">Country Management</field>
+    </record>
+
+    <record model="res.groups" id="pos_group">
+      <field name="name">Purchase POS Group</field>
+    </record>
+
+
+    <record model="res.groups" id="accounting_management">
+      <field name="name">Accounting Management</field>
+    </record>
+
+        <record model="res.groups" id="manage_attendance">
+      <field name="name">Manage Attendance</field>
+    </record>
+    
+
+
+
+
+  </data>
+</odoo>
