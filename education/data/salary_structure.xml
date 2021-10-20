@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+
+        <record id="hr_instructors_account_journal" model="account.journal">
+            <field name="name">Instructors Payments</field>
+            <field name="code">INST</field>
+            <field name="type">general</field>
+            <!-- avoid being selected as default journal -->
+            <field name="sequence">99</field>
+        </record>
+
+
+        <record id="structure_type_instructor" model="hr.payroll.structure.type">
+            <field name="name">Instructor</field>
+            <field name="country_id" eval="False"/>
+            <field name="wage_type">hourly</field>
+        </record>
+
+
+        <record id="structure_instructor_001" model="hr.payroll.structure">
+            <field name="name">Instructor Pay</field>
+            <field name="type_id" ref="structure_type_instructor"/>
+            <field name="country_id" eval="False"/>
+        </record>
+
+        <record id="structure_instructor_001" model="hr.payroll.structure">
+            <field name="journal_id" ref="education.hr_instructors_account_journal"/>
+        </record>
+
+        <record id="hr_salary_rule_instructor_basic" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">amount = 0
+                if payslip.worked_days_line_ids:
+                for sessions_done in payslip.worked_days_line_ids:
+                amount += sessions_done.amount
+                result = amount
+            </field>
+            <field name="code">BASIC</field>
+            <field name="category_id" ref="hr_payroll.BASIC"/>
+            <field name="name">Basic</field>
+            <field name="sequence" eval="1"/>
+            <field name="struct_id" ref="structure_instructor_001"/>
+        </record>
+
+        <record id="hr_salary_rule_instructor_others" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+                amount = 0
+                if payslip.input_line_ids:
+                for other_input in payslip.input_line_ids:
+                amount += other_input.amount
+                result = amount
+            </field>
+            <field name="code">OTHERS</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Others</field>
+            <field name="sequence" eval="3"/>
+            <field name="struct_id" ref="structure_instructor_001"/>
+        </record>
+
+
+    </data>
+</odoo>

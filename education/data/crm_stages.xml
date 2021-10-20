@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+	    <record id="crm.stage_lead2" model="crm.stage">
+            <field name='name'>seek advice</field>
+        </record>   
+
+         <record id="crm.stage_lead3" model="crm.stage">
+            <field name='name'>evaluate option</field>
+        </record>   
+
+
+         <record id="stage_lead5" model="crm.stage">
+            <field name='name'>corporate awaiting legal papers</field>
+            <field name='sequence'>71</field>
+        </record>   
+
+
+
+    </data>
+</odoo>

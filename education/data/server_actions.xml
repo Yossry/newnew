@@ -1,0 +1,25 @@
+<odoo>
+  <data>
+    <record model="ir.actions.server" id="edit_sessions">
+	      <field name="name">Edit Sessions</field>
+	      <field name="model_id" ref="website_event_track.model_event_track" />
+	      <field name="binding_model_id" ref="website_event_track.model_event_track" />
+	      <field name="state">code</field>
+	      <field name="code">
+ids = []
+for record in records:
+	ids.append(record.id)
+if(ids):
+	action = {
+		'type': 'ir.actions.act_window',
+		'name': 'Edit Sessions', 
+		'view_mode': 'tree',
+		'res_model': 'event.track',
+		'domain': [('id', 'in', ids)],
+		'target': 'new',
+		'view_id': env.ref('education.editable_event_track').id
+	}
+	      </field>
+    </record>
+  </data>
+</odoo>

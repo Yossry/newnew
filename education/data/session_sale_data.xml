@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="product_category_sessions" model="product.category">
+            <field name="parent_id" ref="event_sale.product_category_events"/>
+            <field name="name">Session</field>
+        </record>
+
+        <record id="product_product_session" model="product.product">
+            <field name="list_price">10.0</field>
+            <field name="session_ok" eval="True"/>
+            <field name="standard_price">30.0</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="name">Session Registration</field>
+            <field name="default_code">SESSION_REG</field>
+            <field name="categ_id" ref="product_category_sessions"/>
+            <field name="type">service</field>
+        </record>
+        
+    </data>
+</odoo>

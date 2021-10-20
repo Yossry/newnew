@@ -1,0 +1,27 @@
+<odoo> 
+  <data>
+
+ <record model="ir.cron" id="save_data">
+      <field name="name">Update Leads Stages</field>
+      <field name="model_id" ref="crm.model_crm_lead"/>
+      <field name='user_id' ref='base.user_admin'/>
+      <field name='interval_number' eval='1'/>
+      <field name='numbercall' eval='-1'/>
+      <field name='interval_type'>days</field>
+      <field name='active'>True</field>
+      <field name='state'>code</field>
+      <field name='code'>
+records = env['crm.lead'].search([('type', '=', 'lead')])
+for record in records:
+  if(record.days &lt;= 2):
+    env.cr.execute("UPDATE crm_lead set stage = 'fourtyeight' WHERE id = " + str(record.id))
+  if(record.days > 2 and record.days &lt;= 7):
+    env.cr.execute("UPDATE crm_lead set stage = 'gptoweek' WHERE id = " + str(record.id))
+  if(record.days > 7 and record.days &lt;= 90):
+    env.cr.execute("UPDATE crm_lead set stage = 'htop1months' WHERE id = " + str(record.id))
+  if(record.days > 91):
+    env.cr.execute("UPDATE crm_lead set stage = 'overthree' WHERE id = " + str(record.id))
+      </field>
+    </record>
+  </data>
+</odoo>
