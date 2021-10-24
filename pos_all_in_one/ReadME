@@ -1,0 +1,86 @@
+Date 25th jan 2021
+version :- 14.0.0.1
+issue solve:-
+	- disable payment module functionality change , now when enable authorize employee selected then access according to employee or if its disable then its working according to user access.
+
+
+Version 14.0.1.1 : (26-01-21)
+		- Update Loyalty code.
+		- Update code for discount in receipt.
+		- Remove warnings,update module name in js files and remove console.logs.
+
+Version 14.0.1.2 : (26-01-21)
+		- Made loyalty and pay later functionality compatible.
+
+version 14.0.1.3(12/02/21)
+	- Stock Location Configuration -> Current Session Warehouse -> setting any stock location attached traceback comes on start of pos.
+	- Allow POS Invoice Payment and Validation -> Invoice payment -> On click of refresh button due amount not get refreshed until you go back to pos screen and click invoice button again. [ either do payment from back end or do register payment from pos invoice button ]
+	- Order Summary report -> On printing report it shows blank result in all state and sessions.
+
+
+Version 14.0.1.4 : (19-02-21)
+		- Update Loyalty code.
+		- Update Code for product screen,detail/edit/create popup.
+
+=> 14.0.1.5 : Add French, Spanish , Arabic and Dutch translation in module also improved an index.
+
+Version 14.0.1.6 : (06/04/21)
+		- Solve issue of product template load when "Restrict Available Product Categories" is set.
+		- Solve pos_internal_transfer load js issue.
+		- Solve Backend reports printing issue for same date.
+
+Version 14.0.1.7 : (27/04/21)
+		- Solve product edit from pos front side issue.
+
+Version 14.0.1.8 : (28/04/21)
+		- Update code for remove orderline for loyalty redemption.
+		- Add warning to restrict user to change customer after redeem in pos.
+
+Version 14.0.1.9 : (06/05/21)
+		- Solved multiple config archive issue.
+		- Add warning to restrict user to change customer from payment screen, after redeem in pos.
+
+Version 14.0.2.0 : (24/05/21)
+		- Hide/Show 'action buttons',update css and also made compatible with mobile view. 
+
+date 04/06/21
+version 14.0.2.1
+issue solve:-
+	when control button show (qty , price , disc and backspace) working , when hide buttons is not working issue solve
+
+date 08/06/21
+version 14.0.2.2
+issue solve:-
+	session close traceback issue resolve
+
+
+date 01/07/21
+version 14.0.2.3
+issue solve:-
+	While install module indentation traceback issue resolve in pos_pay_later.py. 
+
+
+date 07/07/21
+version 14.0.2.4
+	-- Solved traceback while update variant product from the pos.
+	-- Solved Internal Transfer -> after creating internal transfer from pos if you select products for next order/transfer without refreshing pos then it does not show products in orderline until either you select any variant product or refresh the pos screen.
+	-- Show Errorpopup while redeem negative.
+	-- Solved redeem loyalty point related issue while printing in the reciept  if a new/earned loyalty point is not added then in total loyalty point it shows point without deducting currently used loyalty point. now it is deduct from the loyalty points. 
+
+
+date 17/07/21
+version 14.0.2.5
+	-- Update method for edit variant product from pos.
+	-- Currency conversion option overlapping the Payment test. adjust the alignment.
+	-- if we set fixed discount 100 then it will raise error solved it.
+
+date 21/07/21
+version 14.0.2.6
+	-- While searching attribute of the product relplace id with ids.
+
+Version 14.0.2.7 : (02-08-2021)	
+		-  allow to enter amount 0.00 and pay whole order later on.
+		-  Solved error while editing list price of variant product from the pos.
+
+Version 14.0.2.8 : (07-10-2021)
+		- if products are more than 10000 on the custom product screen. those are show error solved it.	
