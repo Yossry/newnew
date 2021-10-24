@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="assets_for_pos_orders_all" inherit_id="point_of_sale.assets">
+			<xpath expr="." position="inside">
+				<link rel="stylesheet" href="/pos_orders_all/static/src/css/pos.css" />
+				<link rel="stylesheet" href="/pos_orders_all/static/src/css/custom.css" />
+				<!-- - - - - - - Misc- - - - - - - -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Misc/models.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Misc/jquery-barcode.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Misc/SyncStock.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Misc/Chrome.js"/>
+				
+				<!-- Popups -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/PosOrdersDetail.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/ReturnOrderPopup.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/ReOrderPopup.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/SODetail.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/ImportSaleOrder.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/PosBagPopup.js"></script>
+					<!-- - - - - Coupon - - - - -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/GiftCoupon/AfterCreateCouponPopup.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/GiftCoupon/CouponConfigPopup.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/GiftCoupon/CreateCouponPopup.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Popups/GiftCoupon/SelectExistingCouponPopup.js"></script>
+
+				<!-- - - - - - - - - -  Screens - - - - - - - - - - -->
+				<!-- - - - - Base - - - - -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/Base/ClientListScreen.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/Base/OrderReceipt.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/Base/OrderWidget.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/Base/PaymentScreen.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/Base/ProductScreen.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/Base/ProductsWidget.js"/>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/Base/ReceiptScreen.js"/>
+				
+				<!-- Control Buttons -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/ControlButtons/ReturnOrderButton.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/ControlButtons/SeePOSOrdersButton.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/ControlButtons/OpenSOButton.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/ControlButtons/PosBagButton.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/ControlButtons/CreateSale.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/ControlButtons/GiftCouponButton.js"></script>
+
+				<!-- pos_orders functionality -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/pos_orders/OrderReprintReceipt.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/pos_orders/OrderReprintScreen.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/pos_orders/POSOrders.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/pos_orders/POSOrdersScreen.js"></script>
+				
+				<!-- sales functionality -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/sales/SaleOrderScreen.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/sales/SaleOrders.js"></script>
+
+				<!-- Gift Coupon functionality -->
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/GiftCoupon/CouponPrint.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/GiftCoupon/CouponReceiptScreen.js"></script>
+				<script type="text/javascript" src="/pos_orders_all/static/src/js/Screens/GiftCoupon/multiselect.js"></script>
+				
+			</xpath>
+		</template>
+	</data>
+</odoo>
