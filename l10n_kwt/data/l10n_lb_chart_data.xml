@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+
+  	<!-- Chart template -->
+    <record id="kwt_chart_template_standard" model="account.chart.template">
+        <field name="name">Kuwait Charts of Accounts</field>
+        <field name="currency_id" ref="base.KWD"/>
+        <field name="code_digits" eval="2" />
+        <field name="bank_account_code_prefix">512</field>
+        <field name="transfer_account_code_prefix">58</field>
+        <field name="cash_account_code_prefix">53</field>
+        <field name="property_account_receivable_id" ref="l10n_kwt.1_conf_a_recv"/>
+        <field name="property_account_expense_categ_id" ref="l10n_kwt.1_conf_a_expense"/>
+        <field name="property_account_payable_id" ref="l10n_kwt.1_conf_a_pay"/>
+        <field name="property_account_income_categ_id" ref="l10n_kwt.1_conf_a_sale"/>
+        <field name="default_pos_receivable_account_id" ref="l10n_kwt.1_conf_a_recv" />
+        <field name="complete_tax_set" eval="True" />
+        <field name="visible" eval="True" />
+    </record>
+    
+</odoo>

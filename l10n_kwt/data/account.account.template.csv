@@ -1,0 +1,224 @@
+id,code,name,user_type_id,reconcile,chart_template_id/id
+1_conf_xfa,100001,Cars,Fixed Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_34,10002,Accumulated Deprecation - Cars,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_35,10003,Furniture & Fitting ,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+1_conf_stk,10004,Accumulated Deprecation - Furniture & Fitting ,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_39,10005,"Machine, Equipment & Program ",Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_40,10006,"Accumulated Deprecation  - Machine, Equipment & Program ",Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_41,10007,Decoration,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_42,10008,Accumulated Deprecation -  Decoration,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_43,10009,Vacancy Falcon RC,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_44,10010,Accumulated Deprecation - Vacancy Falcon RC,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_45,10011,Other Assets,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_46,10012,Accumulated Deprecation - Other Assets,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_213,10013,Drones Ecommerce Website,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_214,10014,Accumulated Depreciation - Drones Ecommerce Website,Fixed Assets,False,l10n_kwt.kwt_chart_template_standard
+1_conf_cas,101110,Stock Valuation Account,Current Assets,False,l10n_kwt.kwt_chart_template_standard
+1_conf_cas_interim1,101120,Stock Interim Account (Received),Current Assets,False,l10n_kwt.kwt_chart_template_standard
+1_conf_cas_interim2,101130,Stock Interim Account (Delivered),Current Assets,False,l10n_kwt.kwt_chart_template_standard
+1_conf_a_recv,101200,Account Receivable,Receivable,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_30,101201,Advance Payment,Current Liabilities,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_47,101202,Staff Receivable - Nezar Beidas,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_48,101203,Staff Receivable - Ridwan Aljabaly,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_49,101204,Staff Receivable - Mohamed Abdussalam,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_50,101205,Staff Receivable - Farag Al Rehany,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_51,101206,Staff Receivable - Al Amin Rashed,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_52,101207,Staff Receivable - Mina Nashat,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_53,101208,Staff Receivable - Khalifa Salih,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_54,101209,Staff Receivable - Hazem Abusareeh,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_55,101210,Staff Receivable - Abdullah Khalaf,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_56,101211,Staff Receivable - Emad Abdul Haleem,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_57,101212,Staff Receivable - Abdulfatah Mohamed,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_58,101213,Staff Receivable - Hanan Mahmoud,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_59,101214,Staff Receivable - Hatem Mahmoud,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_60,101215,Staff Receivable - Ali Yousefi,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_61,101216,Staff Receivable - Melchor,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_138,101217,Staff Receivable - Nermin Yosri,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_162,101218,Staff Receivable - Ali Younis,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_165,101219,Staff Receivable - MESHAL GHASSAN IBRAHIM,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_166,101220,Staff Receivable - Hussein Ezzadine,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_187,101221,Staff Receivable - MOHAMED JERAQ,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_189,101222,Staff Receivable - Ahmed Samir Ibrahim,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_195,101223,Staff Receivable - Baha Rajab,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_196,101224,Staff Receivable - Ahmad Harash,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_197,101225,Staff Receivable - Ashraf Bader,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_198,101226,Staff Receivable - Mohamed Abdul Hadi,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_199,101227,Staff Receivable - Mastan,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_207,101228,Staff Receivable - Rafat Abd elmanem,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_215,101229,Staff Receivable - Mohamed Mahmoud,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_216,101230,Staff Receivable - EMAN SAMIR,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_232,101231,Staff Receivable - MAHMOUD AMIN,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_241,101232,Staff Receivable - FADI ANTOAN BOSALEH,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_242,101233,Staff Receivable - Shito Labor,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_245,101234,Staff Receivable - Hudefa sheikh,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_246,101235,Staff Receivable - Mina safwat,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_248,101236,Staff Receivable - Hadeer Abu Alillah,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_273,101237,Staff Receivable - MOHAMAD GAMAL,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_66,101250,Petty Cash - Falcon 1,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_67,101251,Petty Cash - Ridwan Ali Aljabli,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_68,101252,Petty Cash - Ahmed Harash,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_69,101253,Petty Cash - Ali Al Yousufi,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_70,101254,Petty Cash - Hatem Mahmoud,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_71,101255,Petty Cash - Nezar Beidas,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_72,101256,Petty Cash - Khalifa Salih,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_73,101257,Petty Cash - DjI Shop,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_176,101258,Petty Cash - MESHAL GHASSAN IBRAHIM,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_203,101259,Petty Cash - Amin Rasheed,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_212,101260,Petty Cash - Mohamed Khaleel,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_261,101261,Petty Cash - Ahmad Yousef Jassim,Current Assets,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_127,101291,Prepaid electricity charges,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_128,101292,Prepaid Rent,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_167,101293,Prepaid Car parking fee,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_168,101294,Prepaid Telephone charge,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_179,101295,Prepaid Benefit on Bader loan,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_190,101296,Prepaid Medical Insurance,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_194,101297,Prepaid Audit,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_200,101298,Prepaid Other Expenses,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_205,101299,Prepaid Fire Insurance,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+1_conf_ova,101300,Tax Paid,Current Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_28,101401,National Bank Of Kuwait-2011711252,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_62,101402,National Bank Of Kuwait-2011711260,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_63,101403,National Bank Of Kuwait-1006484660,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_186,101404,Gulf Bank DJI 94695120,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_64,101410,Gulf Bank - 93795610,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_209,101411,Gulf bank installment,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_277,101412,Gulf Bank - CREDIT CARD,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_65,101415,Ahli Bank - 0610511590001,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_27,101501,Cash,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_32,101502,TAP,Bank and Cash,False,l10n_kwt.kwt_chart_template_standard
+1_conf_ncas,102000,Workshop - DJI C/A,Non-current Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_74,102001,Sama Alfan company,Non-current Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_75,102002,Dubai Branch C/A,Non-current Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_76,102003,Oman Branch C/A,Non-current Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_169,102004,Price difference Account,Non-current Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_210,102005,Sama Alfan bank - 2011901655,Non-current Assets,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_220,102100,Advance payment to Suppliers,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_221,102101,Advance to DJI,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_222,102102,Advance to Crown Plaza,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_223,102103,Advance to Hebi NXE Electronics co.,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_224,102104,Advance to Hoodman,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_225,102105,Advance to Horizon Hobby LLC,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_226,102106,Advance to HSDJETS,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_227,102107,Advance to HUBSAN,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_228,102108,Advance to PGYTECH,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_229,102109,Advance to POWERVISION ROBOT(HONG KONG) Co.,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_230,102110,Advance to Shenzhen Neway International,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_231,102111,Advance to Go Professional Cases,Prepayments,True,l10n_kwt.kwt_chart_template_standard
+1_conf_prepayments,103000,Refundable Insurance ,Prepayments,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_139,103001,Refundable Insurance for Goods,Prepayments,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_140,103002,Refundable Insurance for Telephone,Prepayments,False,l10n_kwt.kwt_chart_template_standard
+1_current_liabilities,111000,Accrues Salaries ,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_77,111001,NBK Loan 2011711252,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_78,111002,Gulf Bank Loan  93795610,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_79,111003,Loan - Bader Jerraq,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_80,111004,Leave Provision ,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_101,111005,Current Account - Partner1,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_102,111006,Current Account - Partner2,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+1_conf_a_pay,111100,Account Payable,Payable,True,l10n_kwt.kwt_chart_template_standard
+1_conf_iva,111200,Tax Received,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_234,111300,Advance from Customers,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_235,111301,Advance from Al Fuhod Net For Computers ,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_236,111302,Advance from Nadeem Almallah ,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_237,111303,Advance from TRAFALGAR GENERAL TRADING,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+1_cas,112000,Provision for End of Service ,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_201,112001,Cases for DJI,Current Liabilities,True,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_238,112002,Provision for doubtful debts,Current Liabilities,False,l10n_kwt.kwt_chart_template_standard
+1_conf_a_sale,200000,Product Sales,Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_81,200001,Sales Return ,Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_33,200002,Discount Received,Income,False,l10n_kwt.kwt_chart_template_standard
+1_exchange_fx_income,201000,Foreign Exchange Gain or Loss,Other Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_83,201001,Other Income,Other Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_132,201002,Staff penalty,Other Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_134,201003,Training Programme,Other Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_217,201004,Sponsership for KUWAIT AERIAL PHOTOGRAPHY CONTEST,Other Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_239,201005,Provision no longer required,Other Income,False,l10n_kwt.kwt_chart_template_standard
+1_conf_cog,210000,Cost of Revenue,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_84,210001,Sales Commission,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_85,210002,Outlet Rent ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_86,210003,Outlet Maintenance ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_87,210004,Outlet other Expenses,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_88,210005,Staff Salaries - Operational ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_89,210006,Staff Leave Exp  - Operational ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_90,210007,Staff End Of service Exp  - Operational ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_91,210008,Staff Residency Exp  - Operational ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_92,210009,Staff Other Allowances  Exp  - Operational ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_117,21001,Repair in DJI,Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_105,210010,shipping expense,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_106,210011,Outlet Transportation Expenses,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_107,210012,Shipment Charge,Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_108,210013,Anti Drone Expense,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_141,210014,Rent-WAHA W/H,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_163,210015,Sales Discount Allowed,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_185,210016,workshop income,Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_233,210017,Staff Overtime  Exp  - Operational ,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_275,210018,Rental service income,Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_177,21002,Labor - Farrag,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_178,21003,Labor - Nezar Beidas,Cost of Revenue,False,l10n_kwt.kwt_chart_template_standard
+1_exchange_fx_expense,211000,Salaries Exp -HO,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_93,211001,Leave Exp -HO,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_94,211002,End Of Service Exp -HO,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_95,211003,Residency  Exp -HO,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_96,211004,Other Allowance -HO,Expenses,False,l10n_kwt.kwt_chart_template_standard
+1_a_salary_expense,212100,Marketing Expenses,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_37,212101,Complementary Expenses	,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_100,212102,Gift Vouchers ,Expenses,False,l10n_kwt.kwt_chart_template_standard
+1_a_expense_invest,212201,Rent - HO,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_98,212202,Stationary Expenses ,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_103,212203,Car parking Fee,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_104,212204,Telephone and Fax,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_111,212205,Hospitality,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_112,212206,Car expenses,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_118,212207,Printing and Publicity,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_119,212208,Post and Telegram,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_120,212209,Transportation Exp,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_121,212210,Government Exp,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_123,212211,Residence Expenses,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_124,212212,Travelling Expense,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_126,212213,Electricity Expense,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_130,212214,Other Expense,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_131,212215,Exhibition Expense,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_142,212216,Overtime,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_143,212217,Bonus,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_144,212218,Employees Medical Insurance,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_145,212219,Advertising expense,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_146,212220,Penalty and Fine,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_147,212221,Inauguration Expense ,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_148,212222,Service Charge,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_149,212223,Other Accrued expense,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_161,212224,Expense for Training Programme,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_170,212225,Delivery charge,Income,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_180,212226,Expense for Oman,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_181,212227,Salary for Dubai,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_182,212228,Rent for Dubai,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_183,212229,Expense for Dubai,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_206,212230,Fire Insurance,Expenses,False,l10n_kwt.kwt_chart_template_standard
+1_a_expense_finance,212300,Bank Charges,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_99,212301,Benefit on Bank loan,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_122,212302,Benefit on loan - Bader Jerraq,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_193,212303,Audit expenses,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_204,212304,Packing expenses,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_211,212305,KUWAIT AERIAL PHOTOGRAPHY CONTEST,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_218,212306,Installment charge-Gulf Bank,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_240,212307,Expense for Saudi Arabia,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_243,212308,Insurance expense for Sama alfan,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_244,212309,Business plan contract,Expenses,False,l10n_kwt.kwt_chart_template_standard
+1_conf_a_expense,220000,Deprecation Exp - Car,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_172,220001,Deprecation Exp - Furniture and Fittings,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_173,220002,Deprecation Exp - Vacancy for falcon,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_174,220003,Deprecation Exp - Machines and Equipments,Expenses,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_175,220004,Deprecation Exp - Decoration,Expenses,False,l10n_kwt.kwt_chart_template_standard
+1_a_capital,300101,Capital - Partner1 - Bader Jerraq,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_150,300102,Capital - Partner2 - Khaled Jeraq,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_151,300103,Capital - Partner 3 - Ali Younis,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_152,300104,Capital - Partner 4,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_153,300105,Capital - Partner 5 - Ali Yousufi,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_154,300106,Capital - Partner 6 - Nezar Beidas,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_155,300107,Capital - Partner 7 - Hamed Jeraq,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_156,300108,Capital - Partner 8 - Mohamed Jeraq,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_157,300109,Capital - Partner 9 - Ahmed Alsafer,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_158,300110,Capital - Partner 10 - Hamza Alsafer,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_159,300111,Capital - Partner 11 - Jassim Jeraq,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_160,300112,Capital - Partner 12 - Easa Alyousufi,Equity,False,l10n_kwt.kwt_chart_template_standard
+1_a_dividends,300200,Dividends,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_135,300201,Opening Balance,Equity,False,l10n_kwt.kwt_chart_template_standard
+__export__.account_account_29,999999,Undistributed Profits/Losses,Current Year Earnings,False,l10n_kwt.kwt_chart_template_standard

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="kwt_chart_template_standard" model="account.chart.template">
+	        <field name="name">Kuwait Charts of Accounts</field>
+	        <field name="currency_id" ref="base.KWD"/>
+	        <field name="code_digits" eval="6" />
+	        <field name="bank_account_code_prefix">512</field>
+	        <field name="transfer_account_code_prefix">58</field>
+	        <field name="cash_account_code_prefix">53</field>
+	        <field name="complete_tax_set" eval="True" />
+	        <field name="visible" eval="True" />
+		</record>
+	</data>
+     
+</odoo>

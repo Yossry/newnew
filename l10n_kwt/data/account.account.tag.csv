@@ -1,0 +1,74 @@
+id,name,applicability
+lb_account_tag_90,CONTROL ACCOUNT,accounts
+lb_account_tag_903,Inventory,accounts
+lb_account_tag_904,Purchases,accounts
+lb_account_tag_905,Burden,accounts
+lb_account_tag_906,Depreciation and provisions,accounts
+lb_account_tag_907,Operating revenue,accounts
+lb_account_tag_908,Results,accounts
+lb_account_tag_91,PREDETERMINED ACCOUNTS - OPERATING CHARGES,accounts
+lb_account_tag_910,Variable trading charges,accounts
+lb_account_tag_911,Variable production charges,accounts
+lb_account_tag_912,Non-reallocable charges,accounts
+lb_account_tag_913,Non-reallocable charges,accounts
+lb_account_tag_914,Non-reallocable charges,accounts
+lb_account_tag_915,Non-reallocable charges,accounts
+lb_account_tag_916,Non-reallocable charges,accounts
+lb_account_tag_917,Non-reallocable charges,accounts
+lb_account_tag_918,Non-reallocable charges,accounts
+lb_account_tag_919,Operating revenue,accounts
+lb_account_tag_92,COST CENTERS,accounts
+lb_account_tag_920,Administration,accounts
+lb_account_tag_921,Finance,accounts
+lb_account_tag_922,Personnel,accounts
+lb_account_tag_923,Materials,accounts
+lb_account_tag_924,Joint Services,accounts
+lb_account_tag_925,Other materials and consumables,accounts
+lb_account_tag_926,Technical and research studies,accounts
+lb_account_tag_927,Production,accounts
+lb_account_tag_928,Distribution,accounts
+lb_account_tag_929,Other expenses to be reallocated,accounts
+lb_account_tag_93,COST OF PRODUCTION ON HAND,accounts
+lb_account_tag_930,Investment in progress,accounts
+lb_account_tag_931,Services in progress,accounts
+lb_account_tag_932,Goods produced,accounts
+lb_account_tag_933,Work,accounts
+lb_account_tag_934,Services,accounts
+lb_account_tag_94,INVENTORY,accounts
+lb_account_tag_940,Goods,accounts
+lb_account_tag_941,Raw materials,accounts
+lb_account_tag_942,Other materials and consumables,accounts
+lb_account_tag_943,Investment in progress,accounts
+lb_account_tag_944,Services In progress,accounts
+lb_account_tag_945,Production (Semi-finished and finished),accounts
+lb_account_tag_943,Production (Semi-finished and finished),accounts
+lb_account_tag_944,Production (Semi-finished and finished),accounts
+lb_account_tag_945,Production (Semi-finished and finished),accounts
+lb_account_tag_946,Production (Semi-finished and finished),accounts
+lb_account_tag_947,Production (Semi-finished and finished),accounts
+lb_account_tag_948,Production (Semi-finished and finished),accounts
+lb_account_tag_949,Provision for diminution in value of goods and work in progress,accounts
+lb_account_tag_95,COST OF GOODS SOLD,accounts
+lb_account_tag_951,Finished products,accounts
+lb_account_tag_952,Work,accounts
+lb_account_tag_953,Services,accounts
+lb_account_tag_954,Services,accounts
+lb_account_tag_955,Services,accounts
+lb_account_tag_956,Services,accounts
+lb_account_tag_957,Services,accounts
+lb_account_tag_958,Services,accounts
+lb_account_tag_959,Services,accounts
+lb_account_tag_96,VARIANCES ON PREDETERMINED COST,accounts
+lb_account_tag_97,UNDER O OVER ABSORBED ACCOUNTS REALLOCATION DIFFERENCES,accounts
+lb_account_tag_970,Materials,accounts
+lb_account_tag_971,Depreciations and provision,accounts
+lb_account_tag_973,Other burden,accounts
+lb_account_tag_977,Revenue,accounts
+lb_account_tag_974,Physical inventory,accounts
+lb_account_tag_975,Internal reallocation (rate variance),accounts
+lb_account_tag_976,Activity (volume variance),accounts
+lb_account_tag_98,COST ACCOUNTING OPERATING RESULTS,accounts
+lb_account_tag_99,INTERNAL LIAISON ACCOUNTS,accounts
+lb_account_tag_991,Within the same organization,accounts
+lb_account_tag_996,From other organization,accounts
+lb_account_tag_997,To other organization,accounts

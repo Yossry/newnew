@@ -1,0 +1,4142 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * l10n_lbp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-09 18:10+0000\n"
+"PO-Revision-Date: 2019-06-09 18:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cheques_for_collection_second
+#: model:account.account.template,name:l10n_lbp.cheques_for_collection_second
+msgid "Cheques For Collection"
+msgstr "شيكات مرسله للتحصيل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_for_diminution_in_value_of_stock
+#: model:account.account.template,name:l10n_lbp.write_back_for_diminution_in_value_of_stock
+msgid "Write-Back For Diminution In Value Of Stocks"
+msgstr "استردادات من مؤونات هبوط ذمم دائنه مشكوك بها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_first_raw_materials_purchases
+#: model:account.account.template,name:l10n_lbp.first_raw_materials_purchases
+msgid "A.Raw Materials Purchases"
+msgstr "مشتريات المواد الخام"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accured_revenues_not_collected
+#: model:account.account.template,name:l10n_lbp.accured_revenues_not_collected
+msgid "Acccured Revenues Not Collected"
+msgstr "إيرادات مستحقه غير مقبوضه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accessories_costs_on_purhases_of_marchandises
+#: model:account.account.template,name:l10n_lbp.accessories_costs_on_purhases_of_marchandises
+msgid "Accessories Costs On Purchases Of Marchandises"
+msgstr "نفقات اضافيه على شراء البضائع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_account_receivable_government_and_public_institutionss
+#: model:account.account.template,name:l10n_lbp.account_receivable_government_and_public_institutionss
+msgid "Account Receivable - Government And Public Institutions"
+msgstr "الدوله و المؤسسات العامه ذمم مدينه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_account_receivable_of_revaluation
+#: model:account.account.template,name:l10n_lbp.account_receivable_of_revaluation
+msgid "Account Receivable Of Revaluation"
+msgstr "ذمم على عمليات اعاده التقييم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accounts_payable_to_social_security
+#: model:account.account.template,name:l10n_lbp.accounts_payable_to_social_security
+msgid "Accounts Payable To Social Security"
+msgstr "ذمم دائنه تجاه مؤسسات الضمان الاجتماعي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accounts_receivable_for_consignments_and_containers
+#: model:account.account.template,name:l10n_lbp.accounts_receivable_for_consignments_and_containers
+msgid "Accounts Receivable For Consignments And Containers"
+msgstr "ذمم متعلقه بالعبوات و المعدات الواجب اعادتها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accounts_receivable_from_social_security_fund
+#: model:account.account.template,name:l10n_lbp.accounts_receivable_from_social_security_fund
+msgid "Accounts Receivable From Social Security Fund"
+msgstr "ذمم مدينه على مؤسسات الضمان الاجتماعي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accounts_receivable_on_fixed_assets_disposal_and_sale_of_payments_security
+#: model:account.account.template,name:l10n_lbp.accounts_receivable_on_fixed_assets_disposal_and_sale_of_payments_security
+msgid "Accounts Receivable On Fixed Assets Disposal And Sale of paymenyts security"
+msgstr "ذمم مدينه على بيع أصول ثابته و سندات توظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accured_charges_payable_social_security
+#: model:account.account.template,name:l10n_lbp.accured_charges_payable_social_security
+msgid "Accured Charges Payable Social Security"
+msgstr "أعباء يجب لحظها مؤسسات الضمان الاجتماعي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_administratif_transportation
+#: model:account.account.template,name:l10n_lbp.administratif_transportation
+msgid "Administratif Transportaion"
+msgstr "نفقات نقل اداريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advertising_and_public_relation_fees
+#: model:account.account.template,name:l10n_lbp.advertising_and_public_relation_fees
+msgid "Advertising And Public Relation Fees"
+msgstr "دعايه, إعلانات , علاقات عامه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_affiliated_companies_first
+#: model:account.account,name:l10n_lbp.1_affiliated_companies_four
+#: model:account.account.template,name:l10n_lbp.affiliated_companies_first
+#: model:account.account.template,name:l10n_lbp.affiliated_companies_four
+msgid "Affiliated Companies"
+msgstr "الشركات المشاركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_all_risks_insurance
+#: model:account.account.template,name:l10n_lbp.all_risks_insurance
+msgid "All Risks Insurance"
+msgstr "تامين على كامل الاخطار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_allocation_of_exceptional_charges
+#: model:account.account.template,name:l10n_lbp.allocation_of_exceptional_charges
+msgid "Allocation Of Exceptional Charges"
+msgstr "أعباء استثنائيه محوله الى حسابات أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_allocation_of_operating_expenses
+#: model:account.account.template,name:l10n_lbp.allocation_of_operating_expenses
+msgid "Allocation Of Operating Expenses"
+msgstr "أعباء استثمار محوله الى حسابات أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_and_provisions_on_financial_charges
+#: model:account.account.template,name:l10n_lbp.amortization_and_provisions_on_financial_charges
+msgid "Amortization And Provisions On Financial Charges"
+msgstr "مخصصات الاستهلاكات و المؤونات الماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_business_concern
+#: model:account.account.template,name:l10n_lbp.amortization_of_business_concern
+msgid "Amortization Of Business Concern(key ,money..)"
+msgstr "مخصصات استهلاك المؤسسه التجاريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_deffered_charges
+#: model:account.account.template,name:l10n_lbp.amortization_of_deffered_charges
+msgid "Amortization Of Deffered Charges"
+msgstr "مخصصات استهلاك أعباء للتوزيع على عده دورات ماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_establishment_expenses
+#: model:account.account.template,name:l10n_lbp.amortization_of_establishment_expenses
+msgid "Amortization Of Establishment Expenses"
+msgstr "مخصصات استهلاك مصاريف التأسيس"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_other_intagible_assets
+#: model:account.account.template,name:l10n_lbp.amortization_of_other_intagible_assets
+msgid "Amortization Of Other Intagible Assets"
+msgstr "مخصصات استهلاك أصول ثابته غير ماديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_patents_licences
+#: model:account.account.template,name:l10n_lbp.amortization_of_patents_licences
+msgid "Amortization Of Pantents ,Licences,trade marks..."
+msgstr "مخصصات استهلاك شهادات اجازات علامات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_ancillary_activities
+#: model:account.account.template,name:l10n_lbp.ancillary_activities
+msgid "Ancillary Activities"
+msgstr "على بيع نشاطات فرعيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_attendance_allowance_of_board_directors
+#: model:account.account.template,name:l10n_lbp.attendance_allowance_of_board_directors
+msgid "Attendance Allowance Of Board Directors"
+msgstr "بدلات الحضور"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_audit_fees
+#: model:account.account.template,name:l10n_lbp.audit_fees
+msgid "Audit Fees"
+msgstr "اتعاب مدققي الحسابات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_b_raw_materials_purchases
+#: model:account.account.template,name:l10n_lbp.b_raw_materials_purchases
+msgid "B.Raw Materials Purchases"
+msgstr "مواد اوليه ب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_term_deposits
+#: model:account.account.template,name:l10n_lbp.banks_term_deposits
+msgid "Banks-Term Deposits"
+msgstr "بنوك ودائع لاجل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_term_deposits_for_guarantee_lbp
+#: model:account.account.template,name:l10n_lbp.banks_term_deposits_for_guarantee_lbp
+msgid "Banks-Term Deposits For Guarantee-LBP"
+msgstr " بنوك ودائع الضمانات ل ل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_bills_in_guaranties
+#: model:account.account.template,name:l10n_lbp.bills_in_guaranties
+msgid "Bills In Guaranties"
+msgstr "سندات مودعه كضمانه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_bills_to_collection
+#: model:account.account.template,name:l10n_lbp.bills_to_collection
+msgid "Bills To Collection"
+msgstr "سندات برسم القبض"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_bills_to_discount
+#: model:account.account.template,name:l10n_lbp.bills_to_discount
+msgid "Bills To Discount"
+msgstr "سندات برسم الحسم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_bonds_fees
+#: model:account.account.template,name:l10n_lbp.bonds_fees
+msgid "Bonds Fees"
+msgstr "مصاريف السندات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cash_branch
+#: model:account.account.template,name:l10n_lbp.cash_branch
+msgid "Cash Branch"
+msgstr "الصندوق الفروع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cash_branch_dollar
+#: model:account.account.template,name:l10n_lbp.cash_branch_dollar
+msgid "Cash Branch-US$"
+msgstr "صندوق الفروع دولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cash_head_office_dollar
+#: model:account.account.template,name:l10n_lbp.cash_head_office_dollar
+msgid "Cash Head Office-US$"
+msgstr "الصندوق المركز الرئيسي دولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cash_and_credits_cards
+#: model:account.account.template,name:l10n_lbp.cash_and_credits_cards
+msgid "Cash and Credits Cards"
+msgstr "الصندوق و بطاقات الاعتماد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_catalogues_and_printing
+#: model:account.account.template,name:l10n_lbp.catalogues_and_printing
+msgid "Catalogues And Printing"
+msgstr "مطبوعات و كاتالوغ"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cellular_charges
+#: model:account.account.template,name:l10n_lbp.cellular_charges
+msgid "Cellular Charges"
+msgstr "نفقات الهاتف الخليوي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_charges_on_administrative_operations
+#: model:account.account.template,name:l10n_lbp.charges_on_administrative_operations
+msgid "Charges On Administrative Operations"
+msgstr "أعباء على عمليات اداره المؤسسه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cheque_fees
+#: model:account.account.template,name:l10n_lbp.cheque_fees
+msgid "Cheque Fees"
+msgstr "مصاريف شيكات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cheques_for_collection_first
+#: model:account.account.template,name:l10n_lbp.cheques_for_collection_first
+msgid "Cheques For Collection"
+msgstr "شيكات مرسله للتحصيل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_clearing_expenses
+#: model:account.account.template,name:l10n_lbp.clearing_expenses
+msgid "Clearing Expenses"
+msgstr "مقاصة النفقات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_closing_stock_second
+#: model:account.account,name:l10n_lbp.1_closing_stock_third
+#: model:account.account.template,name:l10n_lbp.closing_stock_second
+#: model:account.account.template,name:l10n_lbp.closing_stock_third
+msgid "Closing Stock"
+msgstr "مخزون اخر المده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_collective_transportation
+#: model:account.account.template,name:l10n_lbp.collective_transportation
+msgid "Collective Transportation"
+msgstr "النقل الجماعي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_combination_of_accounts_of_income_and_expenses
+#: model:account.account.template,name:l10n_lbp.combination_of_accounts_of_income_and_expenses
+msgid "Combination Of Accounts Of Income And Expenses"
+msgstr "مجموعة من حسابات الدخل والمصروفات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_commission_on_ddebt
+#: model:account.account.template,name:l10n_lbp.commission_on_ddebt
+msgid "Commission On debt"
+msgstr "عمولات و مصاريف الديون"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_computer_fees
+#: model:account.account.template,name:l10n_lbp.computer_fees
+msgid "Computer Fees"
+msgstr "اتعاب المحاسبين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_conference_and_seminar_fees
+#: model:account.account.template,name:l10n_lbp.conference_and_seminar_fees
+msgid "Conference And Seminar Fees"
+msgstr "مصاريف محاضرات وندوات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_constribution_to_the_company_capital
+#: model:account.account.template,name:l10n_lbp.constribution_to_the_company_capital
+msgid "Constribution To The Company's Capital"
+msgstr "حسابات المقدمات للشركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_consulting_fees
+#: model:account.account.template,name:l10n_lbp.consulting_fees
+msgid "Consulting Fees"
+msgstr "اتعاب استشاريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_consumables_purchases
+#: model:account.account.template,name:l10n_lbp.consumables_purchases
+msgid "Consumables Puchases"
+msgstr "مشتريات المستهلكات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_containers_and_packing_materials_purchases
+#: model:account.account.template,name:l10n_lbp.containers_and_packing_materials_purchases
+msgid "Containers And Packing Materials Purchases"
+msgstr "شراء عبوات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_contract_registration_fees
+#: model:account.account.template,name:l10n_lbp.contract_registration_fees
+msgid "Contract - Registration Fees"
+msgstr "رسوم تسجيل عقود"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_contribution_payable
+#: model:account.account.template,name:l10n_lbp.contribution_payable
+msgid "Contribution Payable"
+msgstr "تقديمات برسم الدفع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_costs_related_to_sub_contracts
+#: model:account.account.template,name:l10n_lbp.costs_related_to_sub_contracts
+msgid "Costs Related o Sub Contracts"
+msgstr "مشتريات من ملتزمين ثانويين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_credits_cards
+#: model:account.account.template,name:l10n_lbp.credits_cards
+msgid "Credits Cards"
+msgstr "بطاقات الاعتماد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_credits_cards_dollar
+#: model:account.account.template,name:l10n_lbp.credits_cards_dollar
+msgid "Credits Cards-US$"
+msgstr "بطاقات الاعتماد دولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_customs_charges_second
+#: model:account.account.template,name:l10n_lbp.customs_charges_second
+msgid "Customs Charges"
+msgstr "رسوم جمركيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_debentures_first
+#: model:account.account.template,name:l10n_lbp.debentures_first
+msgid "Debentures"
+msgstr "سندات الدين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_debentures_and_blonds
+#: model:account.account.template,name:l10n_lbp.debentures_and_blonds
+msgid "Debentures And Blonds"
+msgstr "سندات تيم و قسائم  صادره عن الشركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_debenture_and_bonds_premiums
+#: model:account.account.template,name:l10n_lbp.debenture_and_bonds_premiums
+msgid "Debentures And Bonds Premiums"
+msgstr "علاوات تسديد السندات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_decrease_on_accounts_payables
+#: model:account.account.template,name:l10n_lbp.decrease_on_accounts_payables
+msgid "Decrease On Accounts Payables"
+msgstr "النقص في الحسابات الدائنة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_deffered_charges
+#: model:account.account.template,name:l10n_lbp.deffered_charges
+msgid "Deffered Charges"
+msgstr "الأعباء الواجب توزيعها على عده دورات ماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_and_amortization
+#: model:account.account.template,name:l10n_lbp.depreciation_and_amortization
+msgid "Depreciation And Amortization"
+msgstr "الاهلاك واستهلاك الدين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_and_provisions_non_operating
+#: model:account.account.template,name:l10n_lbp.depreciation_and_provisions_non_operating
+msgid "Depreciation And Provisions non-operating"
+msgstr "مخصصات الاستهلاكات و المؤونات خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_fixed_assets_first
+#: model:account.account.template,name:l10n_lbp.depreciation_of_fixed_assets_first
+msgid "Depreciation Of Fixed Assets"
+msgstr "مخصصات استهلاك أصول ثابته ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_furniture
+#: model:account.account.template,name:l10n_lbp.depreciation_of_furniture
+msgid "Depreciation Of Furniture"
+msgstr "مخصصات استهلاك الأثاث و المفروشات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_general_installations
+#: model:account.account.template,name:l10n_lbp.depreciation_of_general_installations
+msgid "Depreciation Of General Installations"
+msgstr "مخصصات استهلاك تجهيزات مختلفه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_office_and_computer_equipment_second
+#: model:account.account.template,name:l10n_lbp.depreciation_of_office_and_computer_equipment_second
+msgid "Depreciation Of Office And Computer Equipment"
+msgstr "مخصصات استهلاك المعدات المكتبيه و المعلوماتيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_determination_of_non_operating_result
+#: model:account.account.template,name:l10n_lbp.determination_of_non_operating_result
+msgid "Determination Of Non-Operating Result"
+msgstr "تحديد النتيجه خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_determination_of_operating_result_prior_to_financial_income_and_charges
+#: model:account.account.template,name:l10n_lbp.determination_of_operating_result_prior_to_financial_income_and_charges
+msgid "Determination Of Operating Result Prior To Financial Income And Charges"
+msgstr "تحديد نتيجة التشغيل قبل الدخل المالي والرسوم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_determination_of_the_current_result_before_taxation
+#: model:account.account.template,name:l10n_lbp.determination_of_the_current_result_before_taxation
+msgid "Determination Of The Current Result Before Taxation"
+msgstr "تحديد النتيجه الجاريه قبل الضريبه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_determination_of_the_gross_operating_income
+#: model:account.account.template,name:l10n_lbp.determination_of_the_gross_operating_income
+msgid "Determination Of The Gross Operating Income"
+msgstr "تحديد الفائض غير الصافي للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_determination_of_the_gross_trading_margin
+#: model:account.account.template,name:l10n_lbp.determination_of_the_gross_trading_margin
+msgid "Determination Of The Gross Trading Margin"
+msgstr "تحديد هامش التداول الإجمالي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_determination_of_value_added
+#: model:account.account.template,name:l10n_lbp.determination_of_value_added
+msgid "Determination Of Value Added"
+msgstr "تحديد القيمه المضافه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_determination_of_the_period_result
+#: model:account.account.template,name:l10n_lbp.determination_of_the_period_result
+msgid "Determination Of the Period's Result"
+msgstr "تحديد نتيجه الدوره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_difference_on_exchange_negative
+#: model:account.account.template,name:l10n_lbp.difference_on_exchange_negative
+msgid "Difference On Exchange Negative"
+msgstr "فروقات صرف سلبيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_director_attendance_fees_and_allowances
+#: model:account.account.template,name:l10n_lbp.director_attendance_fees_and_allowances
+msgid "Director's Attendance Fees And Allowances"
+msgstr "بدلات حضور و تعويضات أعضاء مجلس الاداره و المديرين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_directors_renumeration_second
+#: model:account.account.template,name:l10n_lbp.directors_renumeration_second
+msgid "Directors Renumeration(2)"
+msgstr "مكافأة أعضاء مجلس الإدارة (2)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_discount_and_allowances_earned
+#: model:account.account.template,name:l10n_lbp.discount_and_allowances_earned
+msgid "Discount And Allowances Earned"
+msgstr "الخصم والبدلات المكتسبة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_discount_and_allowances_in_purchases_from_sub_contractors
+#: model:account.account.template,name:l10n_lbp.discount_and_allowances_in_purchases_from_sub_contractors
+msgid "Discount And Allowances In Purchases From Sub Contractors"
+msgstr "حسومات مكتسبه على شراء من ملتزمين ثانويين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_discount_paid
+#: model:account.account.template,name:l10n_lbp.discount_paid
+msgid "Discount Paid"
+msgstr "الخصم الممنوح من المؤسسه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_dividends_payable
+#: model:account.account.template,name:l10n_lbp.dividends_payable
+msgid "Dividends Payable"
+msgstr "أرباح مستحقة الدفع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_dividents_7711
+#: model:account.account.template,name:l10n_lbp.dividents_7711
+msgid "Dividents"
+msgstr "أرباح"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_documentation_first
+#: model:account.account.template,name:l10n_lbp.documentation_first
+msgid "Documentation"
+msgstr "مصاريف توثيق"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_doubtfull_clients
+#: model:account.account.template,name:l10n_lbp.doubtfull_clients
+msgid "Doubtfull Clients"
+msgstr "زبائن ديون مشكوك بتحصيلها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_employees_paid_allowances
+#: model:account.account.template,name:l10n_lbp.employees_paid_allowances
+msgid "Employees-Paid Allowances"
+msgstr "مستخدمون تقديمات مستوفاه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_end_of_service_indemnity_second
+#: model:account.account.template,name:l10n_lbp.end_of_service_indemnity_second
+msgid "End Of Service Indemnity"
+msgstr "تعويض نهايه الخدمه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_entertainment_six
+#: model:account.account.template,name:l10n_lbp.entertainment_six
+msgid "Entertainment"
+msgstr "مصاريف الضيافات و التشريفات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_exceptional_depreciation_of_fixed_assets_second
+#: model:account.account.template,name:l10n_lbp.exceptional_depreciation_of_fixed_assets_second
+msgid "Exceptional Depreciation Of Fixed Assets"
+msgstr "استهلاك  استثنائي على أصول ثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_exceptional_revenues_on_business_operation
+#: model:account.account.template,name:l10n_lbp.exceptional_revenues_on_business_operation
+msgid "Exceptional Revenues On Business Operation"
+msgstr "إيرادات عن عمليات استثنائيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_exchange_difference_liabilies
+#: model:account.account.template,name:l10n_lbp.exchange_difference_liabilies
+msgid "Exchange Difference -Liabilities"
+msgstr "فرق التبادل - الخصوم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_exchange_difference_assets
+#: model:account.account.template,name:l10n_lbp.exchange_difference_assets
+msgid "Exchange Differences -assets"
+msgstr "فروقات صرف أصول"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_expenses_connected_to_raw_materials_and_consumable_purchase
+#: model:account.account.template,name:l10n_lbp.expenses_connected_to_raw_materials_and_consumable_purchase
+msgid "Expenses Connected To Raw Materials And Consumable Purchase"
+msgstr "المصروفات المرتبطة بالمواد الخام والشراء المستهلك"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_exposition_fees
+#: model:account.account.template,name:l10n_lbp.exposition_fees
+msgid "Exposition Fees"
+msgstr "معارض"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_extenrnal_services
+#: model:account.account.template,name:l10n_lbp.extenrnal_services
+msgid "External Services"
+msgstr "الخدمات الخارجيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_family_allowances_first
+#: model:account.account.template,name:l10n_lbp.family_allowances_first
+msgid "Family Allowances"
+msgstr "تعويضات عائليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fees_and_taxes
+#: model:account.account.template,name:l10n_lbp.fees_and_taxes
+msgid "Fees And Taxes"
+msgstr "ضرائب و رسوم و مدفوعات مماثله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_charges
+#: model:account.account.template,name:l10n_lbp.financial_charges
+msgid "Financial Charges"
+msgstr "الأعباء الماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_fixed_assets_last
+#: model:account.account,name:l10n_lbp.1_financial_fixed_assets_second
+#: model:account.account.template,name:l10n_lbp.financial_fixed_assets_last
+#: model:account.account.template,name:l10n_lbp.financial_fixed_assets_second
+msgid "Financial Fixed Assets"
+msgstr "أصول ثابته ماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_institutions_first
+#: model:account.account.template,name:l10n_lbp.financial_institutions_first
+msgid "Financial Institutions"
+msgstr "المؤسسات الماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_revenues
+#: model:account.account.template,name:l10n_lbp.financial_revenues
+msgid "Financial Revenues"
+msgstr "الإيرادات الماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fixed_commission
+#: model:account.account.template,name:l10n_lbp.fixed_commission
+msgid "Fixed Commissions"
+msgstr "العمولات الثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fuel_and_gaz
+#: model:account.account.template,name:l10n_lbp.fuel_and_gaz
+msgid "Fuel And Gaz"
+msgstr "الوقود والغاز"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_gaz_and_fuel_fees
+#: model:account.account.template,name:l10n_lbp.gaz_and_fuel_fees
+msgid "Gaz And Fuel Fees"
+msgstr "مصاريف غاز"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_general_documentation
+#: model:account.account.template,name:l10n_lbp.general_documentation
+msgid "General Documentation"
+msgstr "توثيقات عامه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_goods_and_services
+#: model:account.account.template,name:l10n_lbp.goods_and_services
+msgid "Goods And Services"
+msgstr "البضاعه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_government_and_public_institutions_other_account_payable
+#: model:account.account.template,name:l10n_lbp.government_and_public_institutions_other_account_payable
+msgid "Government And Public Institutions Other Account Payable"
+msgstr "الدوله والمؤسسات العامه ذمم دائنه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_income_tax_on_profit
+#: model:account.account.template,name:l10n_lbp.income_tax_on_profit
+msgid "Income Tax On Profit"
+msgstr "ضرائب على الأرباح"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_increase_on_accounts_receivables
+#: model:account.account.template,name:l10n_lbp.increase_on_accounts_receivables
+msgid "Increase On Accounts Receivables"
+msgstr "زيادة على حسابات الذمم المدينة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_inssurance_of_freight
+#: model:account.account.template,name:l10n_lbp.inssurance_of_freight
+msgid "Inssurance Of Freight"
+msgstr "تامين على الشحن"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_installments_on_acquisition_of_security_placements
+#: model:account.account.template,name:l10n_lbp.installments_on_acquisition_of_security_placements
+msgid "Installments On Acquisition Of Security Placements"
+msgstr "أقساط برسم الدفع على سندات توظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_installments_on_financial_fixed_assets
+#: model:account.account.template,name:l10n_lbp.installments_on_financial_fixed_assets
+msgid "Installments on Financial Fixed Assets"
+msgstr "أقساط على الأصول المالية الثابتة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_insurance_six
+#: model:account.account.template,name:l10n_lbp.insurance_six
+msgid "Insurance"
+msgstr "أقساط التامين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_intangible_fixed_assets_eight
+#: model:account.account.template,name:l10n_lbp.intangible_fixed_assets_eight
+msgid "Intagible Fixed Assets"
+msgstr "أصول ثابته غير ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_intangible_fixed_assets_seven
+#: model:account.account,name:l10n_lbp.1_intangible_fixed_assets_six
+#: model:account.account.template,name:l10n_lbp.intangible_fixed_assets_seven
+#: model:account.account.template,name:l10n_lbp.intangible_fixed_assets_six
+msgid "Intangible Fixed Assets"
+msgstr "أصول ثابته غير ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_and_similar_revenues
+#: model:account.account.template,name:l10n_lbp.interest_and_similar_revenues
+msgid "Interest And Similar Revenues"
+msgstr "فوائد و إيرادات مشابهه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_banks_and_financial_operation
+#: model:account.account.template,name:l10n_lbp.interest_banks_and_financial_operation
+msgid "Interest Banks And Financial Operation"
+msgstr "فوائد مصرفيه و فوائد على عمليات التمويل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_guaranteed_debenture_and_bonds
+#: model:account.account.template,name:l10n_lbp.interest_guaranteed_debenture_and_bonds
+msgid "Interest Guaranteed Debenture And Bonds"
+msgstr "فوائد السندات المربوطه بكفالات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_on_account_payable_and_similar_loans
+#: model:account.account.template,name:l10n_lbp.interest_on_account_payable_and_similar_loans
+msgid "Interest On Account Payable And Similar Loans"
+msgstr "فوائد على الذمم الدائنه و قروض مشابهه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_on_commercial_loans
+#: model:account.account.template,name:l10n_lbp.interest_on_commercial_loans
+msgid "Interest On Commercial Loans"
+msgstr "الفائدة على القروض التجارية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_overdrafts_and_disposit
+#: model:account.account.template,name:l10n_lbp.interest_overdrafts_and_disposit
+msgid "Interest Overdrafts And Disposit"
+msgstr "الفائدة على المكشوف والإيداع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_internal_transfers_dollar
+#: model:account.account.template,name:l10n_lbp.internal_transfers_dollar
+msgid "Internal Transfers-US$"
+msgstr "تحويلات داخليه دولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_internet_charges
+#: model:account.account.template,name:l10n_lbp.internet_charges
+msgid "Internet Charges"
+msgstr "نفقات الانترنت"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_investment_subsides_transfered_to_profit_and_loss
+#: model:account.account.template,name:l10n_lbp.investment_subsides_transfered_to_profit_and_loss
+msgid "Investement Subsides Transfered To Profit And Loss"
+msgstr "اعانات للتوظيفات محوله الى نتيجه الدوره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_invoices_under_preparation
+#: model:account.account.template,name:l10n_lbp.invoices_under_preparation
+msgid "Invoices Under Preparation"
+msgstr "فواتير قيد الاعداد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_irrecoverable_receivables
+#: model:account.account.template,name:l10n_lbp.irrecoverable_receivables
+msgid "Irrecoverable Receivables"
+msgstr "ذمم مدينه أصبحت هالكه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_joint_venture_income
+#: model:account.account.template,name:l10n_lbp.joint_venture_income
+msgid "Joint Venture Income"
+msgstr "حصص اؤباح العمليات المشتركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_leasing_and_patents_cost
+#: model:account.account.template,name:l10n_lbp.leasing_and_patents_cost
+msgid "Leasing And Patents Cost"
+msgstr "الاتاوى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_leasing_on_property
+#: model:account.account.template,name:l10n_lbp.leasing_on_property
+msgid "Leasing On Property"
+msgstr "ايجار قرض أموال  غير منقوله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_liabilities_rights_related_to_notes
+#: model:account.account.template,name:l10n_lbp.liabilities_rights_related_to_notes
+msgid "Liabilites Rights Related To Notes"
+msgstr "سندات تمنح حامليها حقوق الدائنين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_licenses_first_six
+#: model:account.account,name:l10n_lbp.1_licenses_second_six
+#: model:account.account.template,name:l10n_lbp.licenses_first_six
+#: model:account.account.template,name:l10n_lbp.licenses_second_six
+msgid "Licenses"
+msgstr "اجازات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_lighting_fee
+#: model:account.account.template,name:l10n_lbp.lighting_fee
+msgid "Lighting Fees"
+msgstr "مصاريف الاداره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_loss_on_joint_venture
+#: model:account.account.template,name:l10n_lbp.loss_on_joint_venture
+msgid "Loss On Joint Venture"
+msgstr "حصه المؤسسه من الخسائر على عمليات مشتركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_and_repairs
+#: model:account.account.template,name:l10n_lbp.maintenance_and_repairs
+msgid "Maintenance And Repairs"
+msgstr "الصيانه و التصليحات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_and_repairs_of_building
+#: model:account.account.template,name:l10n_lbp.maintenance_and_repairs_of_building
+msgid "Maintenance And Repairs Of Building"
+msgstr "الصيانه و التصليحات المحليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_and_repairs_of_electricity
+#: model:account.account.template,name:l10n_lbp.maintenance_and_repairs_of_electricity
+msgid "Maintenance And Repairs Of Electricity"
+msgstr "صيانه الكهرباء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_and_repairs_of_furniture
+#: model:account.account.template,name:l10n_lbp.maintenance_and_repairs_of_furniture
+msgid "Maintenance And Repairs Of Furniture"
+msgstr "صيانه و تصليحات الأثاث و المفروشات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_and_repairs_of_transportation_equipment
+#: model:account.account.template,name:l10n_lbp.maintenance_and_repairs_of_transportation_equipment
+msgid "Maintenance And Repairs Of Transportation Equipment"
+msgstr "صيانه اليات النقل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_and_repairs_sanitary
+#: model:account.account.template,name:l10n_lbp.maintenance_and_repairs_sanitary
+msgid "Maintenance And Repairs Sanitary"
+msgstr "صيانه الأدوات الصحيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_products
+#: model:account.account.template,name:l10n_lbp.maintenance_products
+msgid "Maintenance Products"
+msgstr "مواد الصيانه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_major_repairs_for_amortization
+#: model:account.account.template,name:l10n_lbp.major_repairs_for_amortization
+msgid "Major Repairs For Amortization"
+msgstr "التصليحات الكبيره الواجب استهلاكها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_manager_remuneration_voting_right_first
+#: model:account.account.template,name:l10n_lbp.manager_remuneration_voting_right_first
+msgid "Manager Remuneration(Voting Rights)(1)"
+msgstr "البلات المدفوعه للمديرين الذين يتمتعون باغلبيه في الملكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_manufactured_goods_second
+#: model:account.account.template,name:l10n_lbp.manufactured_goods_second
+msgid "Manufactured Goods"
+msgstr "منتجات تامه الصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_misc_receivables_operational
+#: model:account.account.template,name:l10n_lbp.misc_receivables_operational
+msgid "Misc Receivables-Operational"
+msgstr "مدينون مختلفون للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_miscellaneous_accounts_payable_non_operating
+#: model:account.account.template,name:l10n_lbp.miscellaneous_accounts_payable_non_operating
+msgid "Miscellaneous Accounts Payable - non operating"
+msgstr "حسابات متنوعة مستحقة الدفع - غير عاملة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_miscellaneous_accounts_receivable_and_payable
+#: model:account.account.template,name:l10n_lbp.miscellaneous_accounts_receivable_and_payable
+msgid "Miscellaneous Accounts Receivable And Payable"
+msgstr "ذمم مختلفه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_miscellaneous_operating_accounts_payable
+#: model:account.account.template,name:l10n_lbp.miscellaneous_operating_accounts_payable
+msgid "Miscellaneous Operating Accounts Payable"
+msgstr "حسابات التشغيل المتنوعة المستحقة الدفع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_miscellaneous_receivable_non_operational
+#: model:account.account.template,name:l10n_lbp.other_miscellaneous_receivable_non_operational
+msgid "Miscellaneous Receivable - Non Operational"
+msgstr "حسابات مدينه أخرى مختلفه خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_miscellaneous_receivable_non_operational
+#: model:account.account.template,name:l10n_lbp.miscellaneous_receivable_non_operational
+msgid "Miscellaneous Receivable Non Operational"
+msgstr "مدينون مختلفون خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_mother_companies
+#: model:account.account.template,name:l10n_lbp.mother_companies
+msgid "Mother Companies"
+msgstr "الشركه الام"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_multi_group_companies
+#: model:account.account.template,name:l10n_lbp.multi_group_companies
+msgid "Multi-Group Companies"
+msgstr "شركات متعددة المجموعة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_municipal_tax
+#: model:account.account.template,name:l10n_lbp.municipal_tax
+msgid "Municipal Tax"
+msgstr "ضرائب و رسوم للبلديات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_net_book_value_of_fixed_assets_disposed_of
+#: model:account.account.template,name:l10n_lbp.net_book_value_of_fixed_assets_disposed_of
+msgid "Net Book Value Of Fixed Assets Disposed Of"
+msgstr "القيمه الدفتريه للأصول الثابته المتفرغ عنها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_net_transfers_of_allowed_charges
+#: model:account.account.template,name:l10n_lbp.net_transfers_of_allowed_charges
+msgid "Net Transfers Of Allowed Charges"
+msgstr ""
+"حصص الأعباء الصافيه التي جرى تحويلها (محاسبه المؤسسه التي ادارت العمليات"
+"المشتركه)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_net_attributions_of_income
+#: model:account.account.template,name:l10n_lbp.net_attributions_of_income
+msgid "Net_Attributions Of Income"
+msgstr ""
+"حصص الإيرادات الصافيه المقرره (محاسبه المؤسسه التي لم تتولى اداره العمليات"
+"المشتركه)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_non_operating_charges
+#: model:account.account.template,name:l10n_lbp.non_operating_charges
+msgid "Non Operating Charges"
+msgstr "رسوم التشغيل غير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notes_receivable_clients
+#: model:account.account.template,name:l10n_lbp.notes_receivable_clients
+msgid "Note Receivable(clients)"
+msgstr "زبائن أوراق قبض"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notes_payable_social_security
+#: model:account.account.template,name:l10n_lbp.notes_payable_social_security
+msgid "Notes Payable Social Security"
+msgstr "أوراق الدفع مؤسسات الضمان الاجتماعي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notes_receivable
+#: model:account.account.template,name:l10n_lbp.notes_receivable
+msgid "Notes Receivable"
+msgstr "اوراق قبض"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notice_paid
+#: model:account.account.template,name:l10n_lbp.notice_paid
+msgid "Notice Paid"
+msgstr "إنذارات مدفوعه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_office_suppliers
+#: model:account.account.template,name:l10n_lbp.office_suppliers
+msgid "Office Suppliers"
+msgstr "لوازم مكتبيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_opening_stock_second
+#: model:account.account.template,name:l10n_lbp.opening_stock_second
+msgid "Opening Stock"
+msgstr "مخزون اول المده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_operations_of_internal_transfer
+#: model:account.account.template,name:l10n_lbp.operations_of_internal_transfer
+msgid "Operations Of Internal Transfer"
+msgstr "عمليات التحويلات الداخليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_order_and_regularization_account
+#: model:account.account.template,name:l10n_lbp.order_and_regularization_account
+msgid "Order And Regularization Account"
+msgstr "حسابات التسويه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_ordinary_clients
+#: model:account.account.template,name:l10n_lbp.ordinary_clients
+msgid "Ordinary Clients"
+msgstr "زبائن عاديون"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_ordinary_income
+#: model:account.account.template,name:l10n_lbp.ordinary_income
+msgid "Ordinary Income"
+msgstr "إيرادات عاديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_administrative_charges
+#: model:account.account.template,name:l10n_lbp.other_administrative_charges
+msgid "Other Administrative Charges"
+msgstr "أعباء اداريه عاديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_administrative_operations
+#: model:account.account.template,name:l10n_lbp.other_administrative_operations
+msgid "Other Administrative Operations"
+msgstr "عمليات إدارية أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_blocked_securities_uncalled
+#: model:account.account.template,name:l10n_lbp.other_blocked_securities_uncalled
+msgid "Other Blocked Securities (Uncalled)"
+msgstr "سندات أخرى مجمده غير محرره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_charges_and_disbursements
+#: model:account.account.template,name:l10n_lbp.other_charges_and_disbursements
+msgid "Other Charges And Disbursements"
+msgstr "الرسوم والمصروفات الأخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_charges_non_operating
+#: model:account.account.template,name:l10n_lbp.other_charges_non_operating
+msgid "Other Charges Non Operating"
+msgstr "أعباء أخرى خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_containers
+#: model:account.account.template,name:l10n_lbp.other_containers
+msgid "Other Containers"
+msgstr "عبوات تستعمل على أوجه مختلفه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_creditors_containers
+#: model:account.account.template,name:l10n_lbp.other_creditors_containers
+msgid "Other Creditors Cobtainers"
+msgstr "حاويات دائنة أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_deffered_charges
+#: model:account.account.template,name:l10n_lbp.other_deffered_charges
+msgid "Other Deffered Charges"
+msgstr "أعباء أخرى واجب توزيعها على عده دورات ماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_disposed_assets
+#: model:account.account.template,name:l10n_lbp.other_disposed_assets
+msgid "Other Disposed Assets"
+msgstr "عناصر موجبه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_exchange_difference_first
+#: model:account.account,name:l10n_lbp.1_other_exchange_difference_second
+#: model:account.account.template,name:l10n_lbp.other_exchange_difference_first
+#: model:account.account.template,name:l10n_lbp.other_exchange_difference_second
+msgid "Other Exchange Difference"
+msgstr "فروقات معوضه بفرق الصرف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_financial_income
+#: model:account.account.template,name:l10n_lbp.other_financial_income
+msgid "Other Financial Incomne"
+msgstr "إيرادات ماليه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_insurance
+#: model:account.account.template,name:l10n_lbp.other_insurance
+msgid "Other Insurance"
+msgstr "تامين مختلف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_interest_on_account_payable
+#: model:account.account.template,name:l10n_lbp.other_interest_on_account_payable
+msgid "Other Interest On Account Payable"
+msgstr "فوائد أخرى على حساب مستحق"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_miscellaneous_receivable_operational
+#: model:account.account.template,name:l10n_lbp.other_miscellaneous_receivable_operational
+msgid "Other Miscellaneous Receivable Operational"
+msgstr "حسابات أخرى مدينه مختلفه للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_non_operating_revenues
+#: model:account.account.template,name:l10n_lbp.other_non_operating_revenues
+msgid "Other Non Operating Revenues"
+msgstr "إيرادات أخرى خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_partners
+#: model:account.account.template,name:l10n_lbp.other_partners
+msgid "Other Partners"
+msgstr "شركاء اخرون"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_partners_payable
+#: model:account.account.template,name:l10n_lbp.other_partners_payable
+msgid "Other Partners Payable"
+msgstr "ذمم دائنه أخرى للشركاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_payables_operational
+#: model:account.account.template,name:l10n_lbp.other_payables_operational
+msgid "Other Payables (operational)"
+msgstr "الذمم الدائنة الأخرى (التشغيلية)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_primes_and_gratifications
+#: model:account.account.template,name:l10n_lbp.other_primes_and_gratifications
+msgid "Other Primes And Gratifications"
+msgstr "الأعداد الأولية الأخرى والشهادات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_receivable
+#: model:account.account.template,name:l10n_lbp.other_receivable
+msgid "Other Receivable"
+msgstr "ذمم مدينه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_registration_fees
+#: model:account.account.template,name:l10n_lbp.other_registration_fees
+msgid "Other Registration Fees"
+msgstr "رسوم تسجيل أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_revenue_on_exceptional_capital_operations
+#: model:account.account.template,name:l10n_lbp.other_revenue_on_exceptional_capital_operations
+msgid "Other Revenue On Exceptional Capital Operations"
+msgstr "إيرادات أخرى  على عمليات راسماليه استثنائيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_taxes
+#: model:account.account.template,name:l10n_lbp.other_taxes
+msgid "Other Taxes"
+msgstr "ضرائب ورسوم ومدفوعات مماثله أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_others_first
+#: model:account.account.template,name:l10n_lbp.others_first
+msgid "Others"
+msgstr "مختلف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_overtime_first
+#: model:account.account.template,name:l10n_lbp.overtime_first
+msgid "Overtime"
+msgstr "ساعات اضافيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_partners_current_account
+#: model:account.account.template,name:l10n_lbp.partners_current_account
+msgid "Partners Current Account"
+msgstr "حسابات الشركاء الجاريه الدائنه او المدينه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_payables_on_acquisition_of_security_placements
+#: model:account.account.template,name:l10n_lbp.payables_on_acquisition_of_security_placements
+msgid "Payables On Acquisition Of Security Placements"
+msgstr "ذمم دائنه على امتلاك سندات التوظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_penalties_on_contracts
+#: model:account.account.template,name:l10n_lbp.penalties_on_contracts
+msgid "Penalties On Contracts"
+msgstr "العقوبات على العقود"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_periodical_allocation_of_expenses
+#: model:account.account.template,name:l10n_lbp.periodical_allocation_of_expenses
+msgid "Periodical Allocation Of Expenses"
+msgstr "حسابات توزيع الدوري للأعباء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_periodical_allocation_of_income
+#: model:account.account.template,name:l10n_lbp.periodical_allocation_of_income
+msgid "Periodical Allocation Of Income"
+msgstr "التخصيص الدوري للدخل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_personnel_collective_transportation
+#: model:account.account.template,name:l10n_lbp.personnel_collective_transportation
+msgid "Personnel Collective Transportation"
+msgstr "نفقات النقل المشترك للمستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_personnel_meals
+#: model:account.account.template,name:l10n_lbp.personnel_meals
+msgid "Personnel Meals"
+msgstr "نفقات اطعام المستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_pre_operation_expenses
+#: model:account.account.template,name:l10n_lbp.pre_operation_expenses
+msgid "Pre-operation Expenses"
+msgstr "مصاريف ما قبل التشغيل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_pre_paid_expenses
+#: model:account.account.template,name:l10n_lbp.pre_paid_expenses
+msgid "Pre-paid Expenses"
+msgstr "أعباء محتسبه مسبقا"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_primes_gratifications_and_allocatives
+#: model:account.account.template,name:l10n_lbp.primes_gratifications_and_allocatives
+msgid "Primes Gratifications And Allocatives"
+msgstr "علاوات , تعويضات , ومكافات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_proceeds_from_ancillary_activities
+#: model:account.account.template,name:l10n_lbp.proceeds_from_ancillary_activities
+msgid "Proceeds From Ancillary Activities"
+msgstr "إيرادات النشاطات الفرعيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_production_in_process
+#: model:account.account.template,name:l10n_lbp.production_in_process
+msgid "Production In Process"
+msgstr "منتجات قيد الصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_production_variation
+#: model:account.account.template,name:l10n_lbp.production_variation
+msgid "Production(Variation)"
+msgstr "إنتاج (التغيير)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_property_rights_related_to_notes
+#: model:account.account.template,name:l10n_lbp.property_rights_related_to_notes
+msgid "Property Rights Related To Notes"
+msgstr "سندات تمنح حاملها حق الملكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provision_for_diminution_in_value
+#: model:account.account.template,name:l10n_lbp.provision_for_diminution_in_value
+msgid "Provision For Diminution In Value"
+msgstr "توفير التقليل في القيمة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provision_for_diminution_in_value_of_doubtful_debts
+#: model:account.account.template,name:l10n_lbp.provision_for_diminution_in_value_of_doubtful_debts
+msgid "Provision For Diminution In Value Of Doubtful Debts"
+msgstr "مؤونات لمواجهه هبوط قيم الذمم المشكوك بتحصيلها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provision_for_diminution_in_value_of_partners_accounts
+#: model:account.account.template,name:l10n_lbp.provision_for_diminution_in_value_of_partners_accounts
+msgid "Provision For Diminution In Value Of Partners Accounts"
+msgstr "مؤونات لمواجهه هبوط قيم حسابات الشركاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provision_for_diminution_in_value_of_receivables
+#: model:account.account.template,name:l10n_lbp.provision_for_diminution_in_value_of_receivables
+msgid "Provision For Diminution In Value Of Receivables"
+msgstr "مؤونات لمواجهه هبوط قيم الذمم المدينه الزبائن"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provision_for_diminution_in_value_of_security_placements
+#: model:account.account.template,name:l10n_lbp.provision_for_diminution_in_value_of_security_placements
+msgid "Provision For Diminution In Value Of Security Placements"
+msgstr "مؤونات هبوط أسعار سندات التوظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_bad_and_doubtful_debts
+#: model:account.account.template,name:l10n_lbp.provisions_for_bad_and_doubtful_debts
+msgid "Provisions For Bad And Doubtful Debts"
+msgstr "أحكام الديون المشكوك في تحصيلها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_intangible_fixed_assets_first
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_intangible_fixed_assets_first
+msgid "Provisions For Diminution In Value Of Intangible Fixed Assets"
+msgstr "مؤونات هبوط أسعار الأصول الثابته غير الماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_Provisions_for_diminution_in_value_of_inventory_and_goods_in_process
+#: model:account.account.template,name:l10n_lbp.Provisions_for_diminution_in_value_of_inventory_and_goods_in_process
+msgid "Provisions For Diminution In Value Of Inventory And Goods In Process"
+msgstr "مؤونات هبوط أسعار المخزون وقيد الصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provision_for_diminution_in_value_of_misc_receivables
+#: model:account.account.template,name:l10n_lbp.provision_for_diminution_in_value_of_misc_receivables
+msgid "Provisions For Diminution In Value Of Misc Receivables"
+msgstr "أحكام للتقليل من قيمة الذمم المدينة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provision_for_diminution_in_value_of_securities_placements
+#: model:account.account.template,name:l10n_lbp.provision_for_diminution_in_value_of_securities_placements
+msgid "Provisions For Diminution In Value Of Securities Placements"
+msgstr "مؤونات هبوط أسعار سندات التوظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_tangible_fixed_assets
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_tangible_fixed_assets
+msgid "Provisions For Diminution In Value Of tangible Fixed Assets"
+msgstr "مؤونات هبوط أسعار الأصول الثابته الماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_exceptional_diminution_in_prices
+#: model:account.account.template,name:l10n_lbp.provisions_for_exceptional_diminution_in_prices
+msgid "Provisions For Exceptional Diminution In Prices"
+msgstr "مؤونات هبوط أسعار استثنائي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_risks_and_charges_operational
+#: model:account.account.template,name:l10n_lbp.provisions_for_risks_and_charges_operational
+msgid "Provisions For Risks And Charges (operational)"
+msgstr "مؤونات لمواجهه المخاطر و الأعباء العائده للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_risks_and_charges_non_operational
+#: model:account.account.template,name:l10n_lbp.provisions_for_risks_and_charges_non_operational
+msgid "Provisions For Risks And Charges - Non operational"
+msgstr "مؤونات لمواجهه مخاطر و أعباء خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_publicity_fees
+#: model:account.account.template,name:l10n_lbp.publicity_fees
+msgid "Publicity Fees"
+msgstr "مصاريف اعلان"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_purchase_and_variation_of_inventory
+#: model:account.account.template,name:l10n_lbp.purchase_and_variation_of_inventory
+msgid "Purchase And Variation of Inventory"
+msgstr "مشتريات البضاعه وقيمه التغيير في المخزون"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_purchases_of_the_company_own_shares_and_notes
+#: model:account.account.template,name:l10n_lbp.purchases_of_the_company_own_shares_and_notes
+msgid "Purchase Of The Company Own Shares And Notes"
+msgstr "أعباء ناتجه عن استرداد المؤسسه لاسهم و سندات صادره عنها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_purchases_of_the_company_own_shares
+#: model:account.account.template,name:l10n_lbp.purchases_of_the_company_own_shares
+msgid "Purchases Of The Company Own Shares"
+msgstr "اسهم صادره عن الشركه ومعاد شرائها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_purchases_raw_materials_and_consumables
+#: model:account.account.template,name:l10n_lbp.purchases_raw_materials_and_consumables
+msgid "Purchases Raw Materials And Consumbles"
+msgstr "مواد اوليه و استهلاكيه مستخدمه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_raw_materials_and_consumables_purchases
+#: model:account.account.template,name:l10n_lbp.raw_materials_and_consumables_purchases
+msgid "Raw Materials And Consumbles Purchases"
+msgstr "مشتريات مواد اوليه و استهلاكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_raw_materials_purchases
+#: model:account.account.template,name:l10n_lbp.raw_materials_purchases
+msgid "Raw Materials Purchases"
+msgstr "شراء مواد اوليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_real_estate_taxes
+#: model:account.account.template,name:l10n_lbp.real_estate_taxes
+msgid "Real Estate Taxes"
+msgstr "رسوم عقاريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_registration_fees_of_rolling_material
+#: model:account.account.template,name:l10n_lbp.registration_fees_of_rolling_material
+msgid "Registration Fees Of Rolling Material"
+msgstr "رسوم تسجيل الاليات المتحركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_related_to_production
+#: model:account.account.template,name:l10n_lbp.related_to_production
+msgid "Related To Production"
+msgstr "للإنتاج"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_rent_first
+#: model:account.account.template,name:l10n_lbp.rent_first
+msgid "Rent"
+msgstr "الإيجارات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_returnable_containers
+#: model:account.account.template,name:l10n_lbp.returnable_containers
+msgid "Returnable Container"
+msgstr "عبوات تسترد ويعاد استعمالها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_blocked_receivable
+#: model:account.account.template,name:l10n_lbp.revenues_from_blocked_receivable
+msgid "Revenues From Blocked Receivable"
+msgstr "عائدات الذمم المدينه المجمده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_blocked_securities
+#: model:account.account.template,name:l10n_lbp.revenues_from_blocked_securities
+msgid "Revenues From Blocked Securities"
+msgstr "عائدات السندات المجمده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_commercial_receivable
+#: model:account.account.template,name:l10n_lbp.revenues_from_commercial_receivable
+msgid "Revenues From Commercial Receivable"
+msgstr "الإيرادات من الذمم التجارية المدينة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_misc_receivable
+#: model:account.account.template,name:l10n_lbp.revenues_from_misc_receivable
+msgid "Revenues From Misc Receivable"
+msgstr "عائدات الذمم المدينه التجاريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_other_blocked_equity
+#: model:account.account.template,name:l10n_lbp.revenues_from_other_blocked_equity
+msgid "Revenues From Other Blocked Equity"
+msgstr "عائدات سندات الدين المجمده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_salaries_first
+#: model:account.account.template,name:l10n_lbp.salaries_first
+msgid "Salaries"
+msgstr "الرواتب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_salaries_and_wages
+#: model:account.account.template,name:l10n_lbp.salaries_and_wages
+msgid "Salaries And Wages"
+msgstr "رواتب و أجور المستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sales_of_manufactured_goods
+#: model:account.account.template,name:l10n_lbp.sales_of_manufactured_goods
+msgid "Sales Of Manufactured Goods"
+msgstr "مبيعات المنتجات التامه الصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sales_of_production
+#: model:account.account.template,name:l10n_lbp.sales_of_production
+msgid "Sales Of Production"
+msgstr "مبيعات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sales_of_products
+#: model:account.account.template,name:l10n_lbp.sales_of_products
+msgid "Sales Of Products"
+msgstr "مبيعات المنتجات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_samples_first
+#: model:account.account.template,name:l10n_lbp.samples_first
+msgid "Samples"
+msgstr "نماذج"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_services_7193
+#: model:account.account.template,name:l10n_lbp.services_7193
+msgid "Services"
+msgstr "على بيع الخدمات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_shareholders_receivable
+#: model:account.account.template,name:l10n_lbp.shareholders_receivable
+msgid "Shareholders Receivable"
+msgstr "ذمم الشركاء المدينه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sickness_and_motherhood_allowances_first
+#: model:account.account.template,name:l10n_lbp.sickness_and_motherhood_allowances_first
+msgid "Sicknes And Motherhood Allowances"
+msgstr "المرض و الامومه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sickness_and_motherhood_allowance_second
+#: model:account.account.template,name:l10n_lbp.sickness_and_motherhood_allowance_second
+msgid "Sickness And Motherhood Allowance"
+msgstr "مرض و امومه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_similar_values_and_rights
+#: model:account.account.template,name:l10n_lbp.similar_values_and_rights
+msgid "Similar Value And Rights"
+msgstr "حقوق و قيم مماثله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_social_security_second
+#: model:account.account.template,name:l10n_lbp.social_security_second
+msgid "Social Security"
+msgstr "الأعباء الاجتماعيه (ضمان اجتماعي, و غيره)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_staff_services
+#: model:account.account.template,name:l10n_lbp.staff_services
+msgid "Staff Services"
+msgstr "خدمات المستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_studies_and_research
+#: model:account.account.template,name:l10n_lbp.studies_and_research
+msgid "Studies And Research"
+msgstr "الدراسات و البحوث"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_studies_and_services_in_progress_variation
+#: model:account.account.template,name:l10n_lbp.studies_and_services_in_progress_variation
+msgid "Studies And Services In Progress(variation)"
+msgstr "قيد الصنع (خدمات)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_studies_in_progress_second
+#: model:account.account.template,name:l10n_lbp.studies_in_progress_second
+msgid "Studies In Progress"
+msgstr "دراسات قيد الاعداد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sub_contracts_second
+#: model:account.account.template,name:l10n_lbp.sub_contracts_second
+msgid "Sub Contracts B"
+msgstr "ملتزم ثانوي ب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subscribed_and_uncalled_capital
+#: model:account.account.template,name:l10n_lbp.subscribed_and_uncalled_capital
+msgid "Subscribed And Uncalled Capital"
+msgstr "راس المال المكتتب غير المستدعى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subscribed_capital_called_and_unpaid
+#: model:account.account.template,name:l10n_lbp.subscribed_capital_called_and_unpaid
+msgid "Subscribed Capital Called And Unpaid"
+msgstr "راس المال المستدعى و غير المدفوع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subsides_granted
+#: model:account.account.template,name:l10n_lbp.subsides_granted
+msgid "Subsides Granted"
+msgstr "الإعانات الممنوحة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subsidiary_companies
+#: model:account.account.template,name:l10n_lbp.subsidiary_companies
+msgid "Subsidiary Companies"
+msgstr "الشركات التابعه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_trangible_fixed_assets_fourth
+#: model:account.account,name:l10n_lbp.1_trangible_fixed_assets_second
+#: model:account.account,name:l10n_lbp.1_trangible_fixed_assets_third
+#: model:account.account.template,name:l10n_lbp.trangible_fixed_assets_fourth
+#: model:account.account.template,name:l10n_lbp.trangible_fixed_assets_second
+#: model:account.account.template,name:l10n_lbp.trangible_fixed_assets_third
+msgid "Tangible Fixed Assets"
+msgstr "أصول ثابته ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_tax_on_remuneration_of_managing_director
+#: model:account.account.template,name:l10n_lbp.tax_on_remuneration_of_managing_director
+msgid "Tax On Remuneration Of Managing Director"
+msgstr "ضريبه على رواتب الإداريين و المدراء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_tax_on_wages_and_salaries
+#: model:account.account.template,name:l10n_lbp.tax_on_wages_and_salaries
+msgid "Tax On Wages And Salaries"
+msgstr "ضريبه الرواتب و الأجور"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_taxes_due_operational_second
+#: model:account.account.template,name:l10n_lbp.taxes_due_operational_second
+msgid "Taxes Due (Operational))"
+msgstr "أوراق دفع ضرائب ورسوم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_teaching_services
+#: model:account.account.template,name:l10n_lbp.teaching_services
+msgid "Teaching Services"
+msgstr "خدمات تعليميه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_temporary_and_regularization_accounts
+#: model:account.account.template,name:l10n_lbp.temporary_and_regularization_accounts
+msgid "Temporary And Regularization Accounts"
+msgstr "الحسابات المؤقته و قيد التسويه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_training_and_development
+#: model:account.account.template,name:l10n_lbp.training_and_development
+msgid "Training And Developement"
+msgstr "الاعداد و التدريب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_transportation_and_communication
+#: model:account.account.template,name:l10n_lbp.transportation_and_communication
+msgid "Transportation And Communication"
+msgstr "نقليات و اتصالات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_transportation_of_assets
+#: model:account.account.template,name:l10n_lbp.transportation_of_assets
+msgid "Transportation Of Assets"
+msgstr "نفقات نقل الموجودات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_transportation_on_purchases
+#: model:account.account.template,name:l10n_lbp.transportation_on_purchases
+msgid "Transportation On Purchases"
+msgstr "مصاريف نقل على المشتريات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_travel_and_accomodation
+#: model:account.account.template,name:l10n_lbp.travel_and_accomodation
+msgid "Travel And Accomodation"
+msgstr "نفقات السفر و الأقامه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_travel_and_transport
+#: model:account.account.template,name:l10n_lbp.travel_and_transport
+msgid "Travel And Transport"
+msgstr "نقل و انتقال"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_uncalled_equity_participation
+#: model:account.account.template,name:l10n_lbp.uncalled_equity_participation
+msgid "Uncalled Equity Participations"
+msgstr "سندات مشاركه غير محرره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_unearned_income
+#: model:account.account.template,name:l10n_lbp.unearned_income
+msgid "Unearned Income"
+msgstr "إيرادات محتسبه مسبقا"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_unreturnable_containers
+#: model:account.account.template,name:l10n_lbp.unreturnable_containers
+msgid "Unreturnable Containers"
+msgstr "عبوات لاتسترد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vat_payable
+#: model:account.account.template,name:l10n_lbp.vat_payable
+msgid "VAT Payable"
+msgstr "الضريبه على القيمه المضافه للاسترجاع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vacations_paid
+#: model:account.account.template,name:l10n_lbp.vacations_paid
+msgid "Vacations Paid"
+msgstr "اجازات مدفوعه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_variation_of_inventory
+#: model:account.account.template,name:l10n_lbp.variation_of_inventory
+msgid "Variation Of Inventory"
+msgstr "قيمه التغيير في مخزون البضاعه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_variation_of_raw_materials_and_consumable_inventory
+#: model:account.account.template,name:l10n_lbp.variation_of_raw_materials_and_consumable_inventory
+msgid "Variation Of Raw Materials And Consumable Inventory"
+msgstr "قيمه التغيير في قيمه المواد الاوليه و الاستهلاكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vehicles_insurance
+#: model:account.account.template,name:l10n_lbp.vehicles_insurance
+msgid "Vehicles Insurance"
+msgstr "تامين السيارات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_water_fees
+#: model:account.account.template,name:l10n_lbp.water_fees
+msgid "Water Fees"
+msgstr "مصاريف  المياه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_works_7192
+#: model:account.account.template,name:l10n_lbp.works_7192
+msgid "Works"
+msgstr "على بيع الاشغال"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_workshop_and_factory_suppliers
+#: model:account.account.template,name:l10n_lbp.workshop_and_factory_suppliers
+msgid "Workshop And Factory Suppliers"
+msgstr "لوازم للمشغل و المصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_for_diminution_in_value_of_doubtful_debts
+#: model:account.account.template,name:l10n_lbp.write_back_for_diminution_in_value_of_doubtful_debts
+msgid "Write-Back For Diminution In Value Of Doubtful Debts"
+msgstr "رد على التراجع في قيمة الديون المشكوك فيها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_for_diminution_in_value_of_fixed_assets
+#: model:account.account.template,name:l10n_lbp.write_back_for_diminution_in_value_of_fixed_assets
+msgid "Write-Back For Diminution In Value Of Fixed Assets"
+msgstr "استردادات من مؤونات هبوط أسعار الأصول الثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_of_provisions_for_risks_and_charges_first
+#: model:account.account.template,name:l10n_lbp.write_back_of_provisions_for_risks_and_charges_first
+msgid "Write-Back OF Provisions For Risks And Charges"
+msgstr "الرد على الأحكام الخاصة بالمخاطر والرسوم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_of_financial
+#: model:account.account.template,name:l10n_lbp.write_back_of_financial
+msgid "Write-Back Of Financial"
+msgstr "استردادات من المؤونات الماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_of_provisions_for_diminution_in_values
+#: model:account.account.template,name:l10n_lbp.write_back_of_provisions_for_diminution_in_values
+msgid "Write-Back Of Provisions For Diminution In Values"
+msgstr "استردادات من مؤونات هبوط الأسعار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_of_provisions_for_risks_and_charges_second
+#: model:account.account.template,name:l10n_lbp.write_back_of_provisions_for_risks_and_charges_second
+msgid "Write-Back Of Provisions For Risks And Charges"
+msgstr "استردادات من مؤونات المخاطر و الأعباء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_publicating_on_newspapers
+#: model:account.account.template,name:l10n_lbp.publicating_on_newspapers
+msgid "{ublicating On Newspapers"
+msgstr "{النشر في الصحف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accountant_fees
+#: model:account.account.template,name:l10n_lbp.accountant_fees
+msgid "Accountant Fees"
+msgstr "رسوم المحاسب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accounts_payables_suppliers
+#: model:account.account.template,name:l10n_lbp.accounts_payables_suppliers
+msgid "Accounts Payables (Suppliers)"
+msgstr "الحسابات الدائنة (الموردون)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accounts_with_affiliated_companies
+#: model:account.account.template,name:l10n_lbp.accounts_with_affiliated_companies
+msgid "Accounts With Affiliated Companies"
+msgstr "حسابات ارتباط المؤسسات والفروع والشركات المشاركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accured_charges_taxes
+#: model:account.account.template,name:l10n_lbp.accured_charges_taxes
+msgid "Accured Charges(Taxes)"
+msgstr "الضريبه على القيمه المضافه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_accured_expenses
+#: model:account.account.template,name:l10n_lbp.accured_expenses
+msgid "Accured Expenses "
+msgstr "أعباء برسم الدفع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advance_payment_on_account_of_intangible_fixed_assets
+#: model:account.account.template,name:l10n_lbp.advance_payment_on_account_of_intangible_fixed_assets
+msgid "Advance Payment On Account Of Intangible Fixed Assets"
+msgstr "سلفات ودفعات على حساب تملك أصول ثابته غير ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advanced_on_work_unbilled
+#: model:account.account.template,name:l10n_lbp.advanced_on_work_unbilled
+msgid "Advanced On Work Unbilled"
+msgstr "متقدم في العمل غير مدفوع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advanced_payments_on_account_of_tangible_fixed_assets
+#: model:account.account.template,name:l10n_lbp.advanced_payments_on_account_of_tangible_fixed_assets
+msgid "Advanced Payments On Account Of Tangible Fixed Assets"
+msgstr "سلفات ودفعات على حساب تملك أصول ثابته ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advances_and_payment_on_account_of_operational_suppliers
+#: model:account.account.template,name:l10n_lbp.advances_and_payment_on_account_of_operational_suppliers
+msgid "Advances And Payment On Account Of Operational Suppliers"
+msgstr "السلف والدفع لحساب الموردين التشغيليين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advances_and_payments_for_employees
+#: model:account.account.template,name:l10n_lbp.advances_and_payments_for_employees
+msgid "Advances And Payments For Employees"
+msgstr "سلفات و دفعات للمستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advances_and_payments_on_account_of_orders_under_execution
+#: model:account.account.template,name:l10n_lbp.advances_and_payments_on_account_of_orders_under_execution
+msgid "Advances And Payments On Account Of Orders Under Execution"
+msgstr "سلفات و مقبوضات على حساب طلبيات قيد التنفيذ"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_advances_from_the_goverment
+#: model:account.account.template,name:l10n_lbp.advances_from_the_goverment
+msgid "Advances From The Goverment"
+msgstr "السلف المقدمة من الحكومة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_agent_commission
+#: model:account.account.template,name:l10n_lbp.agent_commission
+msgid "Agent's Commission"
+msgstr "لجنة الوكيل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_agriculture_investments
+#: model:account.account.template,name:l10n_lbp.agriculture_investments
+msgid "Agriculture Investments"
+msgstr "استثمارات زراعيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_allocation_of_financial_charges
+#: model:account.account.template,name:l10n_lbp.allocation_of_financial_charges
+msgid "Allocation Of Financial Charges"
+msgstr "تخصيص الرسوم المالية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_depreciation_and_provisions_operational
+#: model:account.account.template,name:l10n_lbp.amortization_depreciation_and_provisions_operational
+msgid "Amortization ,Depreciation And Provisions (operational)"
+msgstr "مخصصات الاستهلاك و المؤونات للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortizaton_of_establishment_expenses
+#: model:account.account.template,name:l10n_lbp.amortizaton_of_establishment_expenses
+msgid "Amortization Of Establishment Expenses"
+msgstr "مخصصات استهلاك مصاريف التأسيس"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_intangible_assets
+#: model:account.account.template,name:l10n_lbp.amortization_of_intangible_assets
+msgid "Amortization Of Intagible Assets"
+msgstr "مخصصات استهلاك أصول ثابته غير ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortizaion_of_other_intangible_fixed_assets
+#: model:account.account.template,name:l10n_lbp.amortizaion_of_other_intangible_fixed_assets
+msgid "Amortization Of Other Intangible Fixed Assets"
+msgstr "استهلاك الأصول الثابته غير الماديه الأخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_reimbursement_premiums
+#: model:account.account.template,name:l10n_lbp.amortization_of_reimbursement_premiums
+msgid "Amortization Of Reimbursement Premiums"
+msgstr "استهلاك علاوات التسديد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_amortization_of_research_and_development_expenses
+#: model:account.account.template,name:l10n_lbp.amortization_of_research_and_development_expenses
+msgid "Amortization Of Research And Development Expenses"
+msgstr "مخصصات استهلاك مصاريف البحوث و التطور"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_assets_insurance
+#: model:account.account.template,name:l10n_lbp.assets_insurance
+msgid "Assets Insurance"
+msgstr "التأمين على الأصول"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_balances_brought_forward
+#: model:account.account.template,name:l10n_lbp.balances_brought_forward
+msgid "Balances Brought Forward"
+msgstr "ارتباط المؤسسات والفروع والشركات المشاركه(رصيد مدور)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_bank_interest_blocked_accounts
+#: model:account.account.template,name:l10n_lbp.bank_interest_blocked_accounts
+msgid "Bank Interest - Blocked Accounts"
+msgstr "فوائد الودائع المجمده في المصارف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_first
+#: model:account.account.template,name:l10n_lbp.banks_first
+msgid "Banks"
+msgstr "البنوك"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_term_deposits_dollar
+#: model:account.account.template,name:l10n_lbp.banks_term_deposits_dollar
+msgid "Banks -Term Deposits-$"
+msgstr "بنوك ودائع لاجل دولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_current_accounts
+#: model:account.account.template,name:l10n_lbp.banks_current_accounts
+msgid "Banks-Currents Accounts"
+msgstr "بنوك حسابات جاريه ل ل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_current_accounts_dollar
+#: model:account.account.template,name:l10n_lbp.banks_current_accounts_dollar
+msgid "Banks-Currents Accounts-$"
+msgstr "حسابات تيارات البنوك- $"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_current_accounts_lbp
+#: model:account.account.template,name:l10n_lbp.banks_current_accounts_lbp
+msgid "Banks-Currents Accounts-LBP"
+msgstr "حسابات تيارات البنوك - lbp"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_term_deposits_lbp
+#: model:account.account.template,name:l10n_lbp.banks_term_deposits_lbp
+msgid "Banks-Term Deposits -LBP"
+msgstr "بنوك ودائع لاجل ل ل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_term_deposits_for_guarantee
+#: model:account.account.template,name:l10n_lbp.banks_term_deposits_for_guarantee
+msgid "Banks-Term Deposits For Guarantee"
+msgstr "بنوك ودائع الضمانات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_banks_term_deposits_for_guarantee_dollar
+#: model:account.account.template,name:l10n_lbp.banks_term_deposits_for_guarantee_dollar
+msgid "Banks-Term Deposits For Guarantee-$"
+msgstr "بنوك ودائع الضمانات دولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_bills_fees
+#: model:account.account.template,name:l10n_lbp.bills_fees
+msgid "Bills Fess"
+msgstr "مصاريف أوراق تجاريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_branches_and_joint_ventures_accounts
+#: model:account.account.template,name:l10n_lbp.branches_and_joint_ventures_accounts
+msgid "Branches And Joint Ventures Accounts"
+msgstr "حسابات ارتباط المؤسسات والفروع والشركات المشاركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_brought_forward_results
+#: model:account.account.template,name:l10n_lbp.brought_forward_results
+msgid "Brought Forward Results"
+msgstr "نتائج سابقه مدوره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_building_second
+#: model:account.account.template,name:l10n_lbp.building_second
+msgid "Building"
+msgstr "الابنيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_buildings_first
+#: model:account.account,name:l10n_lbp.1_buildings_second
+#: model:account.account.template,name:l10n_lbp.buildings_first
+#: model:account.account.template,name:l10n_lbp.buildings_second
+msgid "Buildings"
+msgstr "ابنيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_built_land_first
+#: model:account.account.template,name:l10n_lbp.built_land_first
+msgid "Built Land"
+msgstr "أرض مبنية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_built_lands
+#: model:account.account.template,name:l10n_lbp.built_lands
+msgid "Built Lands (real estate complexes)"
+msgstr "الأراضي المبنيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_business_concern
+#: model:account.account.template,name:l10n_lbp.business_concern
+msgid "Business Concern (keymoney,good will,clients)"
+msgstr "لمؤسسه التجاريه (الخلو, الشهره, الزبائن)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_by_products_items
+#: model:account.account.template,name:l10n_lbp.by_products_items
+msgid "By Products Items"
+msgstr "منتجات وسطيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_capital_account
+#: model:account.account.template,name:l10n_lbp.capital_account
+msgid "Capital"
+msgstr "راس المال"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_capital_company_or_individual
+#: model:account.account.template,name:l10n_lbp.capital_company_or_individual
+msgid "Capital (Company or individual)"
+msgstr "راس المال( للشركه او للشخص)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_capitalized_life_annuilies
+#: model:account.account.template,name:l10n_lbp.capitalized_life_annuilies
+msgid "Capitalized Life Annuilies"
+msgstr "دخل لمدى الحياه المتراكم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cash_branch_lbp
+#: model:account.account.template,name:l10n_lbp.cash_branch_lbp
+msgid "Cash Branch-LBP"
+msgstr "صندوق الفروع ل ل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cash_head_office
+#: model:account.account.template,name:l10n_lbp.cash_head_office
+msgid "Cash Head Office"
+msgstr "الصندوق المركز الرئيسي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cash_head_office_lbp
+#: model:account.account.template,name:l10n_lbp.cash_head_office_lbp
+msgid "Cash Head Office-LBP"
+msgstr "الصندوق المركز الرئيسي ل ل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_charges_on_capital_operations
+#: model:account.account.template,name:l10n_lbp.charges_on_capital_operations
+msgid "Charges On Capital Operations"
+msgstr "أعباء على عمليات راس ماليه"
+
+#. module: l10n_lbp
+#: model:ir.ui.menu,name:l10n_lbp.menu_chart_of_accounts
+msgid "Chart of Account Templates"
+msgstr "مخطط قوالب الحساب"
+
+#. module: l10n_lbp
+#: model:ir.actions.act_window,name:l10n_lbp.chart_of_account_template
+msgid "Chart of Accounts Templates"
+msgstr "قوالب الدليل المحاسبي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_cheques_and_coupons_for_collection
+#: model:account.account.template,name:l10n_lbp.cheques_and_coupons_for_collection
+msgid "Cheques And Coupons For Collection"
+msgstr "شيكات و قسائم برسم القبض"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_clearing_charges
+#: model:account.account.template,name:l10n_lbp.clearing_charges
+msgid "Clearing Charges"
+msgstr "اتعاب مخلصي البضاعه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_closing_stock_first
+#: model:account.account.template,name:l10n_lbp.closing_stock_first
+msgid "Closing Stock"
+msgstr "مخزون اخر المده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_commission_on_lc_and_lg
+#: model:account.account.template,name:l10n_lbp.commission_on_lc_and_lg
+msgid "Commission On Lc And LG"
+msgstr "لجنة على lc و lg"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_commissions_first_six
+#: model:account.account.template,name:l10n_lbp.commissions_first_six
+msgid "Commissions"
+msgstr "اللجان"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_commissions_and_brokerage
+#: model:account.account.template,name:l10n_lbp.commissions_and_brokerage
+msgid "Commissions And Brokerage"
+msgstr "سمسره و عمولات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_commun_charges
+#: model:account.account.template,name:l10n_lbp.commun_charges
+msgid "Commun Charges"
+msgstr "الرسوم المشتركة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_computer_equipment_and_programs
+#: model:account.account.template,name:l10n_lbp.computer_equipment_and_programs
+msgid "Computer Equipment And Programs"
+msgstr "معدات وبرامج الكمبيوتر"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_constructions_second
+#: model:account.account.template,name:l10n_lbp.constructions_second
+msgid "Constributions"
+msgstr "النشاءات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_constributiuons_premiums
+#: model:account.account.template,name:l10n_lbp.constributiuons_premiums
+msgid "Constributions Premiums"
+msgstr "علاوات المقدمات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_construction_first
+#: model:account.account.template,name:l10n_lbp.construction_first
+msgid "Construction"
+msgstr "الانشاءات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_construction_on_leasehold_land
+#: model:account.account.template,name:l10n_lbp.construction_on_leasehold_land
+msgid "Construction On Leasehold Land"
+msgstr "انشاءات على أراضي الغير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_consumable_materials
+#: model:account.account.template,name:l10n_lbp.consumable_materials
+msgid "Consumable Materials"
+msgstr "مواد استهلاكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_contractual_reserve
+#: model:account.account.template,name:l10n_lbp.contractual_reserve
+msgid "Contractual Reserve"
+msgstr "الاحتياطي التعاقدي"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_move_line__credit_euro
+msgid "Credit EUR"
+msgstr "الائتمان يورو"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_move_line__credit_lbp
+msgid "Credit LBP"
+msgstr "الائتمان ليرة لبنانية"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_move_line__credit_usd
+msgid "Credit USD"
+msgstr "الائتمان دولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_credits_cards_lbp
+#: model:account.account.template,name:l10n_lbp.credits_cards_lbp
+msgid "Credits Cards-LBP"
+msgstr "ائتمانات بطاقات lbp"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice__currency
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice_line__currency
+msgid "Currency"
+msgstr "العملة"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice__currency_euro
+msgid "Currency EUR"
+msgstr "عملة يورو"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice__currency_lbp
+msgid "Currency LBP"
+msgstr "Lbp العملة"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice__currency_usd
+msgid "Currency USD"
+msgstr "العملة usd"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_current_operations
+#: model:account.account.template,name:l10n_lbp.current_operations
+msgid "Current Operations"
+msgstr "على عمليات جاريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_customers_invoices
+#: model:account.account.template,name:l10n_lbp.customers_invoices
+msgid "Customers Invoices"
+msgstr "فواتير العملاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_customs_charges_first
+#: model:account.account.template,name:l10n_lbp.customs_charges_first
+msgid "Customs Charges"
+msgstr "رسوم جمركية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_debentuure_loans
+#: model:account.account.template,name:l10n_lbp.debentuure_loans
+msgid "Debenture Loans(bonds)"
+msgstr "سندات دين (سندات, قسائم)"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_move_line__debit_euro
+msgid "Debit EUR"
+msgstr "الخصم يورو"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_move_line__debit_lbp
+msgid "Debit LBP"
+msgstr "الخصم lbp"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_move_line__debit_usd
+msgid "Debit USD"
+msgstr "الخصم usd"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_debtors_four_one
+#: model:account.account.template,name:l10n_lbp.debtors_four_one
+msgid "Debtors"
+msgstr "المدينين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_decrease_on_accounts_receivables
+#: model:account.account.template,name:l10n_lbp.decrease_on_accounts_receivables
+msgid "Decrease On Accounts Receivables"
+msgstr "التدني في الذمم المدينه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_deposits_first
+#: model:account.account.template,name:l10n_lbp.deposits_first
+msgid "Deposits"
+msgstr "التامينات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_deposits_and_guarantees
+#: model:account.account.template,name:l10n_lbp.deposits_and_guarantees
+msgid "Deposits And Guarantees"
+msgstr "ودائع وكفالات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_construction
+#: model:account.account.template,name:l10n_lbp.depreciation_of_construction
+msgid "Depreciation Of Construction"
+msgstr "مخصصات استهلاك الابنيه و الانشاءات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_fixed_assets_third
+#: model:account.account.template,name:l10n_lbp.depreciation_of_fixed_assets_third
+msgid "Depreciation Of Fixed Assets"
+msgstr "مخصصات استهلاك أصول ثابته ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_fixed_assignment_assets
+#: model:account.account.template,name:l10n_lbp.depreciation_of_fixed_assignment_assets
+msgid "Depreciation Of Fixed Assignment Assets"
+msgstr "مخصصات استهلاك أصول ثابته ملتزمه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_operational_land
+#: model:account.account.template,name:l10n_lbp.depreciation_of_operational_land
+msgid "Depreciation Of Operational Land"
+msgstr "مخصصات استهلاك الأراضي المستثمره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_tangible_fixed_assets
+#: model:account.account.template,name:l10n_lbp.depreciation_of_tangible_fixed_assets
+msgid "Depreciation Of Tangible Fixed assets"
+msgstr "استهلاك الأصول الثابته الماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_depreciation_of_transportation_equipment
+#: model:account.account.template,name:l10n_lbp.depreciation_of_transportation_equipment
+msgid "Depreciation Of Transportation Equipmemnt"
+msgstr "مخصصات استهلاك اليات النقل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_difference_on_exchange_positive
+#: model:account.account.template,name:l10n_lbp.difference_on_exchange_positive
+msgid "Difference On Exchange (positive)"
+msgstr "فروقات صرف ايجابيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_discount_and_allowances_earned_detailed
+#: model:account.account.template,name:l10n_lbp.discount_and_allowances_earned_detailed
+msgid "Discount And Allowances Earned(Detailed)"
+msgstr "حسومات مكتسبه (بالتفصيل)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_discounts_and_allowances
+#: model:account.account.template,name:l10n_lbp.discounts_and_allowances
+msgid "Discounts and Allowances"
+msgstr "حسومات ممنوحه من المؤسسه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_documentary_credit_No
+#: model:account.account.template,name:l10n_lbp.documentary_credit_No
+msgid "Documentary Credit No"
+msgstr "اعتماد مستندي رقم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_documentory_credit_no
+#: model:account.account.template,name:l10n_lbp.documentory_credit_no
+msgid "Documentory Credit No"
+msgstr "فواتير لم تصل بعد - شراء اصول ثابتة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_donations_68511
+#: model:account.account.template,name:l10n_lbp.donations_68511
+msgid "Donations"
+msgstr "التبرعات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_earned_discount_and_allowances
+#: model:account.account.template,name:l10n_lbp.earned_discount_and_allowances
+msgid "Earned Discount And Allowances "
+msgstr "حصل خصم والبدلات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_earned_discounts_allowances_first
+#: model:account.account.template,name:l10n_lbp.earned_discounts_allowances_first
+msgid "Earned Discounts And Allowances"
+msgstr "حسومات مكتسبه شراء أصول ثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_earned_discounts_allowances_second
+#: model:account.account.template,name:l10n_lbp.earned_discounts_allowances_second
+msgid "Earned Discounts And Allowances"
+msgstr "خصومات المكتسبة والبدلات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_electricity_fees
+#: model:account.account.template,name:l10n_lbp.electricity_fees
+msgid "Electricity Fees"
+msgstr "رسوم الكهرباء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_employee_four_five
+#: model:account.account.template,name:l10n_lbp.employee_four_five
+msgid "Employees"
+msgstr "المستخدمون"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_employees_accounts_receivable
+#: model:account.account.template,name:l10n_lbp.employees_accounts_receivable
+msgid "Employees Accounts Receivable"
+msgstr "حسابات المستخدمين المدينه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_end_of_service_indemnity_first
+#: model:account.account.template,name:l10n_lbp.end_of_service_indemnity_first
+msgid "End Of Service Indemnity"
+msgstr "تعويض نهايه الخدمه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_equity_participations_first
+#: model:account.account,name:l10n_lbp.1_equity_participations_third
+#: model:account.account.template,name:l10n_lbp.equity_participations_first
+#: model:account.account.template,name:l10n_lbp.equity_participations_third
+msgid "Equity Participations"
+msgstr "سندات المشاركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_establishment_expenses_first
+#: model:account.account,name:l10n_lbp.1_establishment_expenses_second
+#: model:account.account.template,name:l10n_lbp.establishment_expenses_first
+#: model:account.account.template,name:l10n_lbp.establishment_expenses_second
+msgid "Establishment Expenses"
+msgstr "مصاريف التأسيس"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_exhibition_renumeration_first
+#: model:account.account.template,name:l10n_lbp.exhibition_renumeration_first
+msgid "Exhibition Renumeration E365"
+msgstr "بدلات المستثمر"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_extractive_land_sites_first
+#: model:account.account.template,name:l10n_lbp.extractive_land_sites_first
+msgid "Extractive Land Sites (mines and Quarries)"
+msgstr "الأراضي برسم الاستثمار الجوفي(مناجم,مقالع)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_extractive_land_sites_second
+#: model:account.account.template,name:l10n_lbp.extractive_land_sites_second
+msgid "Extractive Land Sites(mines and quarries)"
+msgstr "مواقع الأراضي الاستخراجية (المناجم والمحاجر)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_family_allowance_second
+#: model:account.account.template,name:l10n_lbp.family_allowance_second
+msgid "Family Allowances"
+msgstr "تعويضات عائليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fees_first_six
+#: model:account.account.template,name:l10n_lbp.fees_first_six
+msgid "Fees"
+msgstr "رسوم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_institutions_third
+#: model:account.account.template,name:l10n_lbp.financial_institutions_third
+msgid "Financia Institutions(3)"
+msgstr "مؤسساتالتمويل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_constribution
+#: model:account.account.template,name:l10n_lbp.financial_constribution
+msgid "Financial Constribution"
+msgstr "مقدمات ماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_fees_and_expenses_on_securities_and_notes
+#: model:account.account.template,name:l10n_lbp.financial_fees_and_expenses_on_securities_and_notes
+msgid "Financial Fees And Expenses On Securities And Notes"
+msgstr "خدمات ماليه (مصاريف على سندات و أوراق ماليه)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_financial_fixed_assets_first
+#: model:account.account.template,name:l10n_lbp.financial_fixed_assets_first
+msgid "Financial Fixed Assets"
+msgstr "أصول ثابته ماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fines_and_penalties
+#: model:account.account.template,name:l10n_lbp.fines_and_penalties
+msgid "Fines And Penalties"
+msgstr "غرامات ضريبيه و جزئيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fiscal_stamps
+#: model:account.account.template,name:l10n_lbp.fiscal_stamps
+msgid "Fiscal Stamps"
+msgstr "الطوابع المالية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fixed_assets_suppliers
+#: model:account.account.template,name:l10n_lbp.fixed_assets_suppliers
+msgid "Fixed Assets Suppliers"
+msgstr "موردون الأصول الثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_freight_first_six
+#: model:account.account.template,name:l10n_lbp.freight_first_six
+msgid "Freight"
+msgstr "شحن"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_fuel_and_oil
+#: model:account.account.template,name:l10n_lbp.fuel_and_oil
+msgid "Fuel And Oil"
+msgstr "مصاريف نقل الوفود"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_furniture_and_fixtures_first
+#: model:account.account,name:l10n_lbp.1_furniture_and_fixtures_last
+#: model:account.account.template,name:l10n_lbp.furniture_and_fixtures_first
+#: model:account.account.template,name:l10n_lbp.furniture_and_fixtures_last
+msgid "Furniture And Fixtures"
+msgstr "الأثاث والمفروشات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_general_installation_and_leashoid_improvements_first
+#: model:account.account,name:l10n_lbp.1_general_installation_and_leashold_improvements_second
+#: model:account.account.template,name:l10n_lbp.general_installation_and_leashoid_improvements_first
+#: model:account.account.template,name:l10n_lbp.general_installation_and_leashold_improvements_second
+msgid "General Installation And Leasehold Improvements"
+msgstr "التجهيزات العامه و استصلاح الابنيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_general_installation_and_other_improvements_first
+#: model:account.account,name:l10n_lbp.1_general_installation_and_other_improvements_second
+#: model:account.account.template,name:l10n_lbp.general_installation_and_other_improvements_first
+#: model:account.account.template,name:l10n_lbp.general_installation_and_other_improvements_second
+msgid "General Installation And Other Improvements"
+msgstr "تجهيزات عامه ترميمات و تحسينات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_gifts_for_clients
+#: model:account.account.template,name:l10n_lbp.gifts_for_clients
+msgid "Gifts For Clients"
+msgstr "هدايا للعملاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_goods_and_services_type_first
+#: model:account.account.template,name:l10n_lbp.goods_and_services_type_first
+msgid "Goods And Services Type \"A\""
+msgstr "البضاعه او الخدمات فئه أ"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_goods_and_services_type_second
+#: model:account.account.template,name:l10n_lbp.goods_and_services_type_second
+msgid "Goods And Services Type \"B\""
+msgstr "البضاعه او الخدمات فئه ب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_goods_in_progress
+#: model:account.account.template,name:l10n_lbp.goods_in_progress
+msgid "Goods In Progress (goods ,works and services)"
+msgstr "قيد الصنع (سلع واشغال و خدمات)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_government_and_public_institutions_first
+#: model:account.account.template,name:l10n_lbp.government_and_public_institutions_first
+msgid "Government And Public Institution"
+msgstr "ضرائب متوجبه على الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_gross_trade_margin
+#: model:account.account.template,name:l10n_lbp.gross_trade_margin
+msgid "Gross Trade Margin"
+msgstr "الهامش التجاري القائم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_gross_trading_operating_margin
+#: model:account.account.template,name:l10n_lbp.gross_trading_operating_margin
+msgid "Gross Trading Operating Margin"
+msgstr "الفائض غير الصافي للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_hotel_and_restaurant
+#: model:account.account.template,name:l10n_lbp.hotel_and_restaurant
+msgid "Hotel And Restaurant"
+msgstr "خدمات الفنادق و المطاعم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_in_kinfd_constribution
+#: model:account.account.template,name:l10n_lbp.in_kinfd_constribution
+msgid "In Kind Constribution"
+msgstr "مقدمات عينيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_income_tax_on_salaries_and_remuneration
+#: model:account.account.template,name:l10n_lbp.income_tax_on_salaries_and_remuneration
+msgid "Income Tax On Salaries And Remuneration"
+msgstr "ضريبة الدخل على الرواتب والمكافآت"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_increase_on_accounts_payables
+#: model:account.account.template,name:l10n_lbp.increase_on_accounts_payables
+msgid "Increase On Accounts Payables"
+msgstr "الزياده في الذمم المدينه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_industrial_tools_two
+#: model:account.account.template,name:l10n_lbp.industrial_tools_two
+msgid "Industrial Tools"
+msgstr "الأدوات الصناعيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_industrial_equipment_two
+#: model:account.account.template,name:l10n_lbp.industrial_equipment_two
+msgid "Industrial_equipment"
+msgstr "المعدات الصناعيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_infrastructure_works
+#: model:account.account.template,name:l10n_lbp.infrastructure_works
+msgid "Infrastructure Works (dams,airport runways...)"
+msgstr "انشاءات الابنيه التحتيه (سدود, مدارج المطارات)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_inssurance_on_freight
+#: model:account.account.template,name:l10n_lbp.inssurance_on_freight
+msgid "Inssurance On Freight"
+msgstr "تامين على الشحن"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_intangible_fixed_assets_first_two
+#: model:account.account.template,name:l10n_lbp.intangible_fixed_assets_first_two
+msgid "Intangible Fixed Assets"
+msgstr "أصول ثابته غير ماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interbranches_transportation_first
+#: model:account.account,name:l10n_lbp.1_interbranches_transportation_second
+#: model:account.account.template,name:l10n_lbp.interbranches_transportation_first
+#: model:account.account.template,name:l10n_lbp.interbranches_transportation_second
+msgid "Interbranches Transportation"
+msgstr "نقليات بين الفروع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_intercompany_charges
+#: model:account.account.template,name:l10n_lbp.intercompany_charges
+msgid "Intercompany Charges"
+msgstr "الأموال و الخدمات المتبادله بين الفروع (أعباء)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_intercompany_income
+#: model:account.account.template,name:l10n_lbp.intercompany_income
+msgid "Intercompany Income"
+msgstr "الأموال و الخدمات المتبادله بين الفروع (ايرادات)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_account_payable_and_loans
+#: model:account.account.template,name:l10n_lbp.interest_account_payable_and_loans
+msgid "Intereset -Account Payable And similar Loans"
+msgstr "فوائد على الذمم الدائنه و القروض"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_interest_and_similar_charges
+#: model:account.account.template,name:l10n_lbp.interest_and_similar_charges
+msgid "Interest And Similar Charges"
+msgstr "فوائد و أعباء متشابهه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_internal_transfers
+#: model:account.account.template,name:l10n_lbp.internal_transfers
+msgid "Internal Transfers"
+msgstr "التحويلات الداخليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_internal_transfers_lbp
+#: model:account.account.template,name:l10n_lbp.internal_transfers_lbp
+msgid "Internal Transfers-LBP"
+msgstr "التحويلات الداخلية - ليرة لبنانية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_investment_subsides_one_four
+#: model:account.account.template,name:l10n_lbp.investment_subsides_one_four
+msgid "Investment Subsides"
+msgstr "إعانات الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_investment_subsides_received
+#: model:account.account.template,name:l10n_lbp.investment_subsides_received
+msgid "Investment Subsides Received"
+msgstr "الإعانات المالية المستلمة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_investment_subsides_transfered_to_results
+#: model:account.account.template,name:l10n_lbp.investment_subsides_transfered_to_results
+msgid "Investment Subsides Transfered To Results"
+msgstr "تحويل إعانات الاستثمار إلى نتائج"
+
+#. module: l10n_lbp
+#: model:ir.model,name:l10n_lbp.model_account_invoice
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: l10n_lbp
+#: model:ir.model,name:l10n_lbp.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "بند الفاتورة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_invoices_701
+#: model:account.account,name:l10n_lbp.1_invoices_four_one
+#: model:account.account.template,name:l10n_lbp.invoices_701
+#: model:account.account.template,name:l10n_lbp.invoices_four_one
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_invoices_suppliers
+#: model:account.account.template,name:l10n_lbp.invoices_suppliers
+msgid "Invoices (Suppliers)"
+msgstr "الفواتير (الموردين)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_invoices_not_received_yet_purchase_of_goods
+#: model:account.account.template,name:l10n_lbp.invoices_not_received_yet_purchase_of_goods
+msgid "Invoices Not Received Yet (Purchase Of Goods)"
+msgstr "فوائد لم تصل بعد شراء بضائع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_invoices_purchases_first
+#: model:account.account,name:l10n_lbp.1_invoices_purchases_second
+#: model:account.account.template,name:l10n_lbp.invoices_purchases_first
+#: model:account.account.template,name:l10n_lbp.invoices_purchases_second
+msgid "Invoices Purchases"
+msgstr "موردون شراء بضائع فواتير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_invoices_services
+#: model:account.account.template,name:l10n_lbp.invoices_services
+msgid "Invoices Services"
+msgstr "خدمات الفواتير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_issue_premiums
+#: model:account.account.template,name:l10n_lbp.issue_premiums
+msgid "Issue Premiums"
+msgstr "علاوات الإصدار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_invoices__fixed_assets_purchases
+#: model:account.account.template,name:l10n_lbp.invoices__fixed_assets_purchases
+msgid "Ivoices Fixed Assets Purchases"
+msgstr "موردون الأصول الثابته فواتير"
+
+#. module: l10n_lbp
+#: model:ir.model,name:l10n_lbp.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر يومية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_know_how
+#: model:account.account.template,name:l10n_lbp.know_how
+msgid "Know -- How"
+msgstr "أساليب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_land_first
+#: model:account.account,name:l10n_lbp.1_land_second
+#: model:account.account.template,name:l10n_lbp.land_first
+#: model:account.account.template,name:l10n_lbp.land_second
+msgid "Land"
+msgstr "أراضي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_land_other_than_extractive
+#: model:account.account.template,name:l10n_lbp.land_other_than_extractive
+msgid "Land(other than Extractive Land Sites)"
+msgstr "الأراضي (غير أراضي الاستثمار الجوفي)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_land_development_and_reclamation
+#: model:account.account.template,name:l10n_lbp.land_development_and_reclamation
+msgid "Lands Development And Reclamation"
+msgstr "استصلاح وتنظيم الأراضي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_lease_first
+#: model:account.account.template,name:l10n_lbp.lease_first
+msgid "Lease"
+msgstr "حق الاييجار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_leasing_on_materials
+#: model:account.account.template,name:l10n_lbp.leasing_on_materials
+msgid "Leasing On Materials"
+msgstr "ايجار قرض أموال منقوله"
+
+#. module: l10n_lbp
+#: model:account.chart.template,name:l10n_lbp.l10n_lb_pcg_chart_template
+msgid "Lebanese Charts of Accounts"
+msgstr "مخططات الحسابات اللبنانية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_legal_and_other_reserve
+#: model:account.account.template,name:l10n_lbp.legal_and_other_reserve
+msgid "Legal and Other Reserve"
+msgstr "الاحتياطي القانوني و الاحتياطات الأخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_legal_reserve
+#: model:account.account.template,name:l10n_lbp.legal_reserve
+msgid "Legal_reserve"
+msgstr "احتياطي قانوني"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_loan_form_financial_institutions
+#: model:account.account.template,name:l10n_lbp.loan_form_financial_institutions
+msgid "Loan Form Financial Institution"
+msgstr "قروض من مؤسسات التسليف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_loans_against_debenture
+#: model:account.account.template,name:l10n_lbp.loans_against_debenture
+msgid "Loans Against Debenture"
+msgstr "قروض لقاء سندات الدين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_loans_to_employees
+#: model:account.account.template,name:l10n_lbp.loans_to_employees
+msgid "Loans To Employees"
+msgstr "قروض للمستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_loans_to_partners
+#: model:account.account.template,name:l10n_lbp.loans_to_partners
+msgid "Loans To Partners"
+msgstr "قروض للشركاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_local_equity_participation
+#: model:account.account.template,name:l10n_lbp.local_equity_participation
+msgid "Local Equity Participations"
+msgstr "ذمم مدينه مرتبطه بمشاركات محليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_losses_on_irrecoverable_operating_receivable
+#: model:account.account.template,name:l10n_lbp.losses_on_irrecoverable_operating_receivable
+msgid "Loesses On Irrecoverable Operating Receivables"
+msgstr "خساره على ذمم الاستثمار المدينه التي ثبت هلاكها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_long_and_mediun_term_loans
+#: model:account.account.template,name:l10n_lbp.long_and_mediun_term_loans
+msgid "Long And Medim Term Loans"
+msgstr "قروض طويله و متوسطه الاجل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_long_and_medium_term_debts
+#: model:account.account.template,name:l10n_lbp.long_and_medium_term_debts
+msgid "Long And Medium Term Debts"
+msgstr "ديون ماليه طويله ومتوسطه الاجل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_long_and_medium_term_loans
+#: model:account.account.template,name:l10n_lbp.long_and_medium_term_loans
+msgid "Long And Medium Term Loans"
+msgstr "قروض ممنوحه طويله و متوسطه الاجل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_loss_brought_forward
+#: model:account.account.template,name:l10n_lbp.loss_brought_forward
+msgid "Loss Brought Forward"
+msgstr "نتائج سابقه مدوره مدينه (خسائر)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_loyal_fees
+#: model:account.account.template,name:l10n_lbp.loyal_fees
+msgid "Loyal_fees"
+msgstr "اتعاب و مصاريف قضائيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_maintenance_and_repairs_of_elevator
+#: model:account.account.template,name:l10n_lbp.maintenance_and_repairs_of_elevator
+msgid "Maintenance And Repairs Of Elevator"
+msgstr "صيانه المصعد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_manufactured_goods_first
+#: model:account.account.template,name:l10n_lbp.manufactured_goods_first
+msgid "Manufactured Goods"
+msgstr "منتجات تامه الصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_marchandise_for_sale
+#: model:account.account.template,name:l10n_lbp.marchandise_for_sale
+msgid "Marchandise For Sale"
+msgstr "البضائع المعده للبيع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_medical_care
+#: model:account.account.template,name:l10n_lbp.medical_care
+msgid "Medical Care"
+msgstr "خدمات صحيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_merger_premiums
+#: model:account.account.template,name:l10n_lbp.merger_premiums
+msgid "Merger Premiums"
+msgstr "علاوات الاندماج"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_misc_receivables_non_operational
+#: model:account.account.template,name:l10n_lbp.misc_receivables_non_operational
+msgid "Misc Receivables - non Operational"
+msgstr "متفرقات المستحقات - غير التشغيلية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_miscellaneous_first
+#: model:account.account.template,name:l10n_lbp.miscellaneous_first
+msgid "Miscellaneous"
+msgstr "مختلف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_miscellaneous_accounts_receivable_operating
+#: model:account.account.template,name:l10n_lbp.miscellaneous_accounts_receivable_operating
+msgid "Miscellaneous Accounts Receivable Operating"
+msgstr "مدينون مختلفون للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_miscellaneous_contribution
+#: model:account.account.template,name:l10n_lbp.miscellaneous_contribution
+msgid "Miscellaneous Contribution"
+msgstr "اشتراكات مختلفه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_mouvement_of_the_period
+#: model:account.account.template,name:l10n_lbp.mouvement_of_the_period
+msgid "Mouvement Of The Perid"
+msgstr "ارتباط المؤسسات والفروع والشركات المشاركه(حركه الدوره الماليه)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_nssf_expenses
+#: model:account.account.template,name:l10n_lbp.nssf_expenses
+msgid "N.S.S.F Expenses"
+msgstr "أعباء الضمان الاجتماعي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_naked_land
+#: model:account.account.template,name:l10n_lbp.naked_land
+msgid "Naked Land"
+msgstr "الأراضي الفراغ"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_net_charges_on_disposal_of_securities_placements
+#: model:account.account.template,name:l10n_lbp.net_charges_on_disposal_of_securities_placements
+msgid "Net Charges On Disposal Of Securities Placements"
+msgstr "أعباء صافيه على عمليات التفرغ عن سندات توظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_net_income_on_sale_of_security_placement
+#: model:account.account.template,name:l10n_lbp.net_income_on_sale_of_security_placement
+msgid "Net Income On Sale Of Security Placement"
+msgstr "إيرادات صافيه على بيع سندات توظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_net_result_of_the_financial_period_profit_or_loss
+#: model:account.account.template,name:l10n_lbp.net_result_of_the_financial_period_profit_or_loss
+msgid "Net Result Of The Financial Period (Profit or Loss)"
+msgstr "النتيجه الصافيه للدوره الماليه(ربح او خساره)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_non_operating_revenues
+#: model:account.account.template,name:l10n_lbp.non_operating_revenues
+msgid "Non Operating Revenues"
+msgstr "الإيرادات غير التشغيلية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_non_operating_result
+#: model:account.account.template,name:l10n_lbp.non_operating_result
+msgid "Non-operating Result"
+msgstr "نتيجة غير التشغيل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_not_payable_suspended
+#: model:account.account.template,name:l10n_lbp.not_payable_suspended
+msgid "Not Payable (Suspended)"
+msgstr "أوراق الدفع شراء الأصول الثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_note_payable_fixed_assets
+#: model:account.account.template,name:l10n_lbp.note_payable_fixed_assets
+msgid "Note Payable Fixed Assets"
+msgstr "ملاحظة الأصول الثابتة المستحقة الدفع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notes_payable
+#: model:account.account.template,name:l10n_lbp.notes_payable
+msgid "Notes Payable"
+msgstr "أوراق دفع معلقه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notes_payable_taxes_and_rates
+#: model:account.account.template,name:l10n_lbp.notes_payable_taxes_and_rates
+msgid "Notes Payable Taxes And Rates"
+msgstr "أعباء يجب لحظها ضرائب ورسوم"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notes_payable_purschase_of_goods
+#: model:account.account.template,name:l10n_lbp.notes_payable_purschase_of_goods
+msgid "Notes Payables (Purchases Of Goods)"
+msgstr "ذمم دائنة (مشتريات البضائع)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_notes_paybables_resulting_from_the_purchase_of_the_entreprise
+#: model:account.account.template,name:l10n_lbp.notes_paybables_resulting_from_the_purchase_of_the_entreprise
+msgid "Notes Paybables Resulting From The Purchase Of The Entreprise"
+msgstr "أوراق دفع ناجمه عن شراء المؤسسه التجاريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_office_and_computer_equipment_first
+#: model:account.account.template,name:l10n_lbp.office_and_computer_equipment_first
+msgid "Office And Computer Equipment"
+msgstr "أدوات مكتبيه و معلوماتيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_office_equipment_first
+#: model:account.account,name:l10n_lbp.1_office_equipment_last
+#: model:account.account.template,name:l10n_lbp.office_equipment_first
+#: model:account.account.template,name:l10n_lbp.office_equipment_last
+msgid "Office Equipment"
+msgstr "أدوات مكتبيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_office_equipment_and_furnitures
+#: model:account.account.template,name:l10n_lbp.office_equipment_and_furnitures
+msgid "Office Equipment And Furnitures"
+msgstr "مؤونات الأثاث والأدوات المكتبيه و المعلوماتيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_opening_stock_first
+#: model:account.account.template,name:l10n_lbp.opening_stock_first
+msgid "Opening Stock"
+msgstr "مخزون اول المده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_opening_stock_third
+#: model:account.account.template,name:l10n_lbp.opening_stock_third
+msgid "Opening Stock"
+msgstr "مخزون اول المده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_operating_subsides
+#: model:account.account.template,name:l10n_lbp.operating_subsides
+msgid "Operating Subsides"
+msgstr "اعانات للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_operational_notes_payable_suspended
+#: model:account.account.template,name:l10n_lbp.operational_notes_payable_suspended
+msgid "Operational Notes Payable (Suspended)"
+msgstr "الملاحظات التشغيلية المستحقة الدفع (مع وقف التنفيذ)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_optional_reserver
+#: model:account.account.template,name:l10n_lbp.optional_reserver
+msgid "Optional Reserve"
+msgstr "احتياطات اختياريه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_operating_result_prior_to_financial_income_and_charges_one_three
+#: model:account.account.template,name:l10n_lbp.operating_result_prior_to_financial_income_and_charges_one_three
+msgid "Orating Result Prior To Financial Income And Charges"
+msgstr "نتيجه الاستثمار(خارج الأعباء والإيرادات الماليه)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_account_receivable
+#: model:account.account.template,name:l10n_lbp.other_account_receivable
+msgid "Other Account Receivable"
+msgstr "حسابات القبض الأخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_assets_disposed_of
+#: model:account.account.template,name:l10n_lbp.other_assets_disposed_of
+msgid "Other Assets Disposed Of"
+msgstr "أصول أخرى متفرغ عنها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_blocked_first
+#: model:account.account,name:l10n_lbp.1_other_blocked_long_term_receivable_second
+#: model:account.account.template,name:l10n_lbp.other_blocked_first
+#: model:account.account.template,name:l10n_lbp.other_blocked_long_term_receivable_second
+msgid "Other Blocked Long Term Receivable"
+msgstr "ذمم مدينه أخرى مجمده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_blocked_receivable
+#: model:account.account.template,name:l10n_lbp.other_blocked_receivable
+msgid "Other Blocked Receivable"
+msgstr "ذمم مدينه أخرى مجمده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_blocked_securities_first
+#: model:account.account.template,name:l10n_lbp.other_blocked_securities_first
+msgid "Other Blocked Securities"
+msgstr "الأوراق المالية المحظورة الأخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_blocked_securities_and_shares
+#: model:account.account.template,name:l10n_lbp.other_blocked_securities_and_shares
+msgid "Other Blocked Securities And Shares"
+msgstr "سندات أخرى مجمده"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_consumable_materials
+#: model:account.account.template,name:l10n_lbp.other_consumable_materials
+msgid "Other Consumable Materials"
+msgstr "مواد ولوازم استهلاكيه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_direct_and_indirect_tax
+#: model:account.account.template,name:l10n_lbp.other_direct_and_indirect_tax
+msgid "Other Direct And Indirect Tax"
+msgstr "رسوم أخرى و غير مباشره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_equity_participations_second
+#: model:account.account.template,name:l10n_lbp.other_equity_participations_second
+msgid "Other Equity Participations"
+msgstr "ذمم مدينه اخرى مرتبطه بمشاركات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_external_services
+#: model:account.account.template,name:l10n_lbp.other_external_services
+msgid "Other External Services"
+msgstr "خدمات خارجيه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_fees
+#: model:account.account.template,name:l10n_lbp.other_fees
+msgid "Other Fees"
+msgstr "انعاب أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_otehr_gifts
+#: model:account.account.template,name:l10n_lbp.otehr_gifts
+msgid "Other Gifts"
+msgstr "هدأيا أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_intangible_fixed_assets_last
+#: model:account.account.template,name:l10n_lbp.other_intangible_fixed_assets_last
+msgid "Other Intangible Fixed Assets"
+msgstr "أصول ثابته غير ماديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_intangible_fixed_assets_first
+#: model:account.account.template,name:l10n_lbp.other_intangible_fixed_assets_first
+msgid "Other Intangible Fixed assets"
+msgstr "أصول ثابته غير ماديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_intangible_fixed_assets_second
+#: model:account.account.template,name:l10n_lbp.other_intangible_fixed_assets_second
+msgid "Other Intangible_fixed_assets"
+msgstr "أصول ثابته غير ماديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_maintenance_and_repairs
+#: model:account.account.template,name:l10n_lbp.other_maintenance_and_repairs
+msgid "Other Maintenance And Repairs"
+msgstr "صيانه و تصليحات أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_medium_and_long_term_debts
+#: model:account.account.template,name:l10n_lbp.other_medium_and_long_term_debts
+msgid "Other Medium And Long Term Debts"
+msgstr "ديون أخرى طويله ومتوسطه الاجل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_medium_and_long_term_loan
+#: model:account.account.template,name:l10n_lbp.other_medium_and_long_term_loan
+msgid "Other Medium And Long Term Loan"
+msgstr "قروض أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_miscellaneous_payables_non_operating
+#: model:account.account.template,name:l10n_lbp.other_miscellaneous_payables_non_operating
+msgid "Other Miscellaneous Payables-non operating"
+msgstr "الذمم الدائنة الأخرى غير العاملة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_operating_charges
+#: model:account.account.template,name:l10n_lbp.other_operating_charges
+msgid "Other Operating Charges"
+msgstr "أعباء أخرى للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_operating_income
+#: model:account.account.template,name:l10n_lbp.other_operating_income
+msgid "Other Operating Income"
+msgstr "إيرادات أخرى ناتجه عن الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_payable_first
+#: model:account.account.template,name:l10n_lbp.other_payable_first
+msgid "Other Payable"
+msgstr "ذمم دائنه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_related_charges
+#: model:account.account.template,name:l10n_lbp.other_related_charges
+msgid "Other Related Charges"
+msgstr "الرسوم الأخرى ذات الصلة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_reservers
+#: model:account.account.template,name:l10n_lbp.other_reservers
+msgid "Other Reserves"
+msgstr "احتياطيات أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_other_tangible_fixed_assets_first
+#: model:account.account,name:l10n_lbp.1_other_tangible_fixed_assets_second
+#: model:account.account,name:l10n_lbp.1_other_tangible_fixed_assets_third
+#: model:account.account.template,name:l10n_lbp.other_tangible_fixed_assets_first
+#: model:account.account.template,name:l10n_lbp.other_tangible_fixed_assets_second
+#: model:account.account.template,name:l10n_lbp.other_tangible_fixed_assets_third
+msgid "Other Tangible Fixed Assets"
+msgstr "أصول ثابته ماديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_others_tangible_fixed_assets
+#: model:account.account.template,name:l10n_lbp.others_tangible_fixed_assets
+msgid "Others Tangible Fixed Assets"
+msgstr "أصول ثابته ماديه أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_owners_current_account
+#: model:account.account.template,name:l10n_lbp.owners_current_account
+msgid "Owners Current Account"
+msgstr "الحساب الشخصي لصاحب المؤوسسه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_ownership_rihts_minor_participattions
+#: model:account.account.template,name:l10n_lbp.ownership_rihts_minor_participattions
+msgid "Ownership Rights(Minor Participations)"
+msgstr "سندات ملكيه (اسهم, حصص شراكه)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_packing_first
+#: model:account.account.template,name:l10n_lbp.packing_first
+msgid "Packing"
+msgstr "العبوات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_partners_four_five
+#: model:account.account.template,name:l10n_lbp.partners_four_five
+msgid "Partners"
+msgstr "شركاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_partners_anticipated_payments
+#: model:account.account.template,name:l10n_lbp.partners_anticipated_payments
+msgid "Partners Anticipated Payments"
+msgstr "شركاء دفعات مقرره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_partners_payment_on_capital_increase
+#: model:account.account.template,name:l10n_lbp.partners_payment_on_capital_increase
+msgid "Partners Payment On Capital Increase"
+msgstr "شركاء دفعات على زياده راس المال"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_patents_licences_and_similar_value
+#: model:account.account.template,name:l10n_lbp.patents_licences_and_similar_value
+msgid "Patents Licences And Similar Value"
+msgstr "براءات الاختراع, الاجازات, والقيم المماثله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_patents_licenses_trade_marks_similars
+#: model:account.account.template,name:l10n_lbp.patents_licenses_trade_marks_similars
+msgid "Patents Licences Trade Marks and Similars"
+msgstr "براءات الاختراع , الجازات, العلامات والقيم المماثله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_payment_due_to_employees
+#: model:account.account.template,name:l10n_lbp.payment_due_to_employees
+msgid "Payment Due To Employees"
+msgstr "مدفوعات متوجبه للمستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_personnel_charges
+#: model:account.account.template,name:l10n_lbp.personnel_charges
+msgid "Personnel Charges"
+msgstr "رسوم الموظفين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_postage_telephone_telecommunication
+#: model:account.account.template,name:l10n_lbp.postage_telephone_telecommunication
+msgid "Postage ,Telephone And Telecommunication"
+msgstr "نفقات البريد و الاتصالات السلكيه و الاسلكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_postage_charges
+#: model:account.account.template,name:l10n_lbp.postage_charges
+msgid "Postage Charges"
+msgstr "رسوم البريد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_premiums_related_to_the_capital
+#: model:account.account.template,name:l10n_lbp.premiums_related_to_the_capital
+msgid "Premiums Related to the Capital"
+msgstr "علاوات الإصدار و الاندماج و المقدمات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_prenium_on_converting_debenture_loans_to_share
+#: model:account.account.template,name:l10n_lbp.prenium_on_converting_debenture_loans_to_share
+msgid "Prenium On Converting Debenture Loans To Share"
+msgstr "علاوات تحويل السندات الى اسهم"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice_line__price_euro
+msgid "Price In EUR"
+msgstr "السعر باليورو"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice_line__price_lbp
+msgid "Price In LBP"
+msgstr "السعر في ليرة لبنانية"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice_line__price_usd
+msgid "Price In USD"
+msgstr "السعر بالدولار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_price_indexing
+#: model:account.account.template,name:l10n_lbp.price_indexing
+msgid "Price Indexing"
+msgstr "فهرسة الأسعار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_primes_first
+#: model:account.account.template,name:l10n_lbp.primes_first
+msgid "Primes"
+msgstr "أقساط"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_produced_items_variation
+#: model:account.account.template,name:l10n_lbp.produced_items_variation
+msgid "Producred Items (Variation)"
+msgstr "العناصر المنتجة (التباين)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_discount_and_allowances_allowed
+#: model:account.account.template,name:l10n_lbp.discount_and_allowances_allowed
+msgid "Production"
+msgstr "على بيع المنتجات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_production_of_fixed_assets
+#: model:account.account.template,name:l10n_lbp.production_of_fixed_assets
+msgid "Production Of Fixed Assets"
+msgstr "منتجات لها طابع الأصول الثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_products_first
+#: model:account.account.template,name:l10n_lbp.products_first
+msgid "Products"
+msgstr "منتجات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_products_in_progress
+#: model:account.account.template,name:l10n_lbp.products_in_progress
+msgid "Products In Progress"
+msgstr "منتجات قيد الصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_production_scrap
+#: model:account.account.template,name:l10n_lbp.production_scrap
+msgid "Prodution Scrap"
+msgstr "فضلات الإنتاج"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_profit_brought_forward
+#: model:account.account.template,name:l10n_lbp.profit_brought_forward
+msgid "Profit Brought Forward"
+msgstr "نتائج سابقه مدوره دائنه (أرباح)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_intangible_fixed_assets_third
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_intangible_fixed_assets_third
+msgid "Provision For Diminution In Value Of Intangible Fixed Assets"
+msgstr "مؤونات هبوط أسعار الأصول الثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_first
+#: model:account.account.template,name:l10n_lbp.provisions_first
+msgid "Provisions"
+msgstr "مخصصات المؤونات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_charges
+#: model:account.account.template,name:l10n_lbp.provisions_for_charges
+msgid "Provisions For Charges"
+msgstr "مؤونات لمواجهه أعباء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_contingencies_one
+#: model:account.account.template,name:l10n_lbp.provisions_for_contingencies_one
+msgid "Provisions For Contingencies"
+msgstr "مؤونات لمواجهه اخطار وأعباء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_contingencies_and_charges
+#: model:account.account.template,name:l10n_lbp.provisions_for_contingencies_and_charges
+msgid "Provisions For Contingencies And Charges"
+msgstr "مؤونات لمواجهه اخطار وأعباء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_financial_fixed_assets_first
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_financial_fixed_assets_first
+msgid "Provisions For Diminution In Value Of Financial Fixed Assets"
+msgstr "مؤونات هبوط أسعار الأصول الثابته الماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_financial_fixed_assets_second
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_financial_fixed_assets_second
+msgid "Provisions For Diminution In Value Of Financial Fixed Assets"
+msgstr "أحكام للتناقص في قيمة الأصول المالية الثابتة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_fixed_assets
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_fixed_assets
+msgid "Provisions For Diminution In Value Of Fixed Assets"
+msgstr "مؤونات هبوط أسعار الاصول الثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_intangible_fixed_assets_second
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_intangible_fixed_assets_second
+msgid "Provisions For Diminution In Value Of Intangible Fixed Assets"
+msgstr "مؤونات هبوط أسعار الأصول الثابته غير الماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_inventory
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_inventory
+msgid "Provisions For Diminution In Value Of Inventory "
+msgstr "أحكام للتقليل من قيمة المخزون"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_inventory_food
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_inventory_food
+msgid "Provisions For Diminution In Value Of Inventory And Food"
+msgstr "أحكام للتقليل من قيمة المخزون والغذاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_new_material
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_new_material
+msgid "Provisions For Diminution In Value Of New Material"
+msgstr "أحكام للتقليل من قيمة المواد الجديدة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_products
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_products
+msgid "Provisions For Diminution In Value Of Products"
+msgstr "أحكام للتقليل من قيمة المنتجات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_diminution_in_value_of_products_in_process
+#: model:account.account.template,name:l10n_lbp.provisions_for_diminution_in_value_of_products_in_process
+msgid "Provisions For Diminution In Value Of Products In Process "
+msgstr "أحكام للتقليل من قيمة المنتجات في العملية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_fines_and_penalties
+#: model:account.account.template,name:l10n_lbp.provisions_for_fines_and_penalties
+msgid "Provisions For Fines And Penalties"
+msgstr "مؤونات الغرامات و الجزاءات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_litigation_and_sundry_contingencies
+#: model:account.account.template,name:l10n_lbp.provisions_for_litigation_and_sundry_contingencies
+msgid "Provisions For Litigation And Sundry Contingencies"
+msgstr "مؤونات للمنازعات والاحتمالات المختلفه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_losses_on_exchange
+#: model:account.account.template,name:l10n_lbp.provisions_for_losses_on_exchange
+msgid "Provisions For Losses On Exchange"
+msgstr "مؤونات خسائر سعر الصرف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_losses_on_furure_transactions
+#: model:account.account.template,name:l10n_lbp.provisions_for_losses_on_furure_transactions
+msgid "Provisions For Losses On Future Transactions"
+msgstr "مؤونات خسائر على عقود الاجل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_retirement
+#: model:account.account.template,name:l10n_lbp.provisions_for_retirement
+msgid "Provisions For Retirement"
+msgstr "مؤونات لمواجهه معاشات التقاعد والموجبات الممثله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_risks_and_financial_charges
+#: model:account.account.template,name:l10n_lbp.provisions_for_risks_and_financial_charges
+msgid "Provisions For Risks And Financial Charges"
+msgstr "أحكام للمخاطر والرسوم المالية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_taxes
+#: model:account.account.template,name:l10n_lbp.provisions_for_taxes
+msgid "Provisions For Taxes"
+msgstr "مؤونات للضرائب"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_for_the_deffered_charges
+#: model:account.account.template,name:l10n_lbp.provisions_for_the_deffered_charges
+msgid "Provisions For The Deffred Charges"
+msgstr "مؤونات الأعباء الموزعه على عده دورات ماليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_in_respect_of_guarantees_given_to_customers
+#: model:account.account.template,name:l10n_lbp.provisions_in_respect_of_guarantees_given_to_customers
+msgid "Provisions In Respect Of Guarantees Given To Customers"
+msgstr "مؤونات لقاء الضمانات المعطاه للزبائن"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_provisions_write_back_operational
+#: model:account.account.template,name:l10n_lbp.provisions_write_back_operational
+msgid "Provisions Write-back (Operational)"
+msgstr "استردادات من المؤونات للاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_purchase_of_goods_or_services
+#: model:account.account.template,name:l10n_lbp.purchase_of_goods_or_services
+msgid "Purchase Of Goods Or Services"
+msgstr "مشتريات البضاعه او الخدمات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_purchases_containers_and_packing_materials
+#: model:account.account.template,name:l10n_lbp.purchases_containers_and_packing_materials
+msgid "Purchases Containers And Packing Materials"
+msgstr "العبوات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_raw_materials
+#: model:account.account.template,name:l10n_lbp.raw_materials
+msgid "Raw Materials"
+msgstr "مواد اوليه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_raw_materials_and_consumable_goods
+#: model:account.account.template,name:l10n_lbp.raw_materials_and_consumable_goods
+msgid "Raw Matrials And Consumable Goods"
+msgstr "مواد اوليه و استهلاكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_receivable_related_to_equity_participations_first
+#: model:account.account,name:l10n_lbp.1_receivable_related_to_equity_participations_second
+#: model:account.account.template,name:l10n_lbp.receivable_related_to_equity_participations_first
+#: model:account.account.template,name:l10n_lbp.receivable_related_to_equity_participations_second
+msgid "Receivable Related To Equity Participations"
+msgstr "ذمم مدينه مرتبطه بمشاركات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_recrutement_fees
+#: model:account.account.template,name:l10n_lbp.recrutement_fees
+msgid "Recrutement Fees"
+msgstr "مصاريف توظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_registration_fees
+#: model:account.account.template,name:l10n_lbp.registration_fees
+msgid "Registration Fees"
+msgstr "رسوم التسجيل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_reimbursement_of_company_capital
+#: model:account.account.template,name:l10n_lbp.reimbursement_of_company_capital
+msgid "Reimbursement Of the Company's Capital "
+msgstr "راس المال المقرر استرداده من الشركاء"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_reimbursement_allowances
+#: model:account.account.template,name:l10n_lbp.reimbursement_allowances
+msgid "Reimbursemnt Allowances"
+msgstr "جوائز تسديد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_related_to_products
+#: model:account.account.template,name:l10n_lbp.related_to_products
+msgid "Related To Products"
+msgstr "للبضائع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_remuneration_due_to_employees
+#: model:account.account.template,name:l10n_lbp.remuneration_due_to_employees
+msgid "Remuneration Due To Employees"
+msgstr "حسابات متوجبه للمستخدمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_remuneration_due_to_managing_director
+#: model:account.account.template,name:l10n_lbp.remuneration_due_to_managing_director
+msgid "Remuneration Due To Managing Director"
+msgstr "حسابات متوجبه الى الشريك المدير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_remuneration_due_to_members_of_the_board
+#: model:account.account.template,name:l10n_lbp.remuneration_due_to_members_of_the_board
+msgid "Remuneration Due To Members Of The Board"
+msgstr "حسابات متوجبه لأعضاء مجلس الاداره"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_rent_income
+#: model:account.account.template,name:l10n_lbp.rent_income
+msgid "Rent Income"
+msgstr "إيرادات الابنيه غير المخصصه للنشاط المهني"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_rent_building_services
+#: model:account.account.template,name:l10n_lbp.rent_building_services
+msgid "Rent(Building Services)"
+msgstr "ايجار (خدمات بناء)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_renting_safe
+#: model:account.account.template,name:l10n_lbp.renting_safe
+msgid "Renting Safe"
+msgstr "استئجار خزنه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_research_and_development_expenses_second
+#: model:account.account.template,name:l10n_lbp.research_and_development_expenses_second
+msgid "Research And Developement Expenses"
+msgstr "مصاريف الدراسات والتطوير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_research_and_development_expenses_first
+#: model:account.account.template,name:l10n_lbp.research_and_development_expenses_first
+msgid "Research And Developement Expenses"
+msgstr "نفقات البحث والتطوير"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_reservers_first
+#: model:account.account.template,name:l10n_lbp.reservers_first
+msgid "Reserves"
+msgstr "الاحتياطات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_result_befor_tax
+#: model:account.account.template,name:l10n_lbp.result_befor_tax
+msgid "Result Before Tax"
+msgstr "النتيجه الجاريه قبل الضريبه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_result_of_the_period_losses
+#: model:account.account.template,name:l10n_lbp.result_of_the_period_losses
+msgid "Result Of The Period-Losses"
+msgstr "نتيجة خسائر الفترة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_result_of_the_period_profits
+#: model:account.account.template,name:l10n_lbp.result_of_the_period_profits
+msgid "Result Of The Period-Profits"
+msgstr "نتيجه الدوره-أرباح"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_retention_first
+#: model:account.account.template,name:l10n_lbp.retention_first
+msgid "Retentions"
+msgstr "حجوزات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_reusable_packing_matrial
+#: model:account.account.template,name:l10n_lbp.reusable_packing_matrial
+msgid "Reusable Packing Matrial"
+msgstr "عبرات قابله لاعاده الاستعمال"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revaluation_variances
+#: model:account.account.template,name:l10n_lbp.revaluation_variances
+msgid "Revaluation Variances"
+msgstr "فروقات اعاده التخمين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revaluation_variances_of_unamortizable_fixed_assets
+#: model:account.account.template,name:l10n_lbp.revaluation_variances_of_unamortizable_fixed_assets
+msgid "Revaluation Variances Of UnAmortizable Fixed Assets"
+msgstr "فروقات اعاده تخمين الأصول الثابته غير القابله للاستهلاك"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revaluation_variances_of_amortizable_fixed_assets
+#: model:account.account.template,name:l10n_lbp.revaluation_variances_of_amortizable_fixed_assets
+msgid "Revaluation Variances Of amortizable Fixed Assets"
+msgstr "فروقات اعاده تخمين الأصول الثابته القابله للاستهلاك"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_receivable_related_to_equity
+#: model:account.account.template,name:l10n_lbp.revenues_from_receivable_related_to_equity
+msgid "Revenue From Receivable Related To Equity"
+msgstr "عائدات سندات المشاركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenue_of_services
+#: model:account.account.template,name:l10n_lbp.revenue_of_services
+msgid "Revenue Of Services"
+msgstr "إيرادات الخدمات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenue_on_loan_granted
+#: model:account.account.template,name:l10n_lbp.revenue_on_loan_granted
+msgid "Revenue On Loan Granted"
+msgstr "عائدات القروض الممنوحه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_equity_participations
+#: model:account.account.template,name:l10n_lbp.revenues_from_equity_participations
+msgid "Revenues From Equity Participations"
+msgstr "إيرادات سندات المشاركه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_revenues_from_fixed_assets_disposals
+#: model:account.account.template,name:l10n_lbp.revenues_from_fixed_assets_disposals
+msgid "Revenues From Fixed Assets Disposals"
+msgstr "إيرادات التفرغ عن أصول ثابته"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_royalities_patents_licences_trade_marks_know_how
+#: model:account.account.template,name:l10n_lbp.royalities_patents_licences_trade_marks_know_how
+msgid "Royalities ,Patents,Licences,Trade Marks,Know-How And Similar"
+msgstr ""
+"اتاوى الامتيازات, البراءات, الاجازات, العلامات و الأساليب و الحقوق و القيم"
+"المماثله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_royalties_first
+#: model:account.account.template,name:l10n_lbp.royalties_first
+msgid "Royalties"
+msgstr "العائدات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sales_of_by_products_items
+#: model:account.account.template,name:l10n_lbp.sales_of_by_products_items
+msgid "Sales Of By Products Items "
+msgstr "مبيعات المنتجات الوسطيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sales_of_goods
+#: model:account.account.template,name:l10n_lbp.sales_of_goods
+msgid "Sales Of Goods"
+msgstr "مبيعات السلع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sales_of_marchandies
+#: model:account.account.template,name:l10n_lbp.sales_of_marchandies
+msgid "Sales Of Marchandies (A,B...)"
+msgstr "المبيعات بضاعه (أ,ب.....)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sales_of_scrap
+#: model:account.account.template,name:l10n_lbp.sales_of_scrap
+msgid "Sales Of Scrap"
+msgstr "مبيعات فضلات الإنتاج"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_scrap_7258
+#: model:account.account.template,name:l10n_lbp.scrap_7258
+msgid "Scrap"
+msgstr "خردة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_security_placements
+#: model:account.account.template,name:l10n_lbp.security_placements
+msgid "Security Placements"
+msgstr "سندات التوظيف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_semi_finished_goods
+#: model:account.account.template,name:l10n_lbp.semi_finished_goods
+msgid "Semi-finished Goods"
+msgstr "منتجات وسطيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_services_713
+#: model:account.account.template,name:l10n_lbp.services_713
+msgid "Services"
+msgstr "خدمات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_services_in_progress_first
+#: model:account.account,name:l10n_lbp.1_services_in_progress_second
+#: model:account.account.template,name:l10n_lbp.services_in_progress_first
+#: model:account.account.template,name:l10n_lbp.services_in_progress_second
+msgid "Services In Progress"
+msgstr "خدمات قيد التنفيذ"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_social_security_first
+#: model:account.account.template,name:l10n_lbp.social_security_first
+msgid "Social Security"
+msgstr "ضمان اجتماعي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_special_documentation
+#: model:account.account.template,name:l10n_lbp.special_documentation
+msgid "Special Documentation"
+msgstr "وثائق خاصة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_specialized_installations
+#: model:account.account.template,name:l10n_lbp.specialized_installations
+msgid "Specialized Installations"
+msgstr "تجهيزات متخصصه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_specific_installations
+#: model:account.account.template,name:l10n_lbp.specific_installations
+msgid "Specific Installations"
+msgstr "تجهيزات ذات طبيعه خاصه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_statutory_reserver
+#: model:account.account.template,name:l10n_lbp.statutory_reserver
+msgid "Statutory Reserve"
+msgstr "احتياطات نظاميه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_stores_suppliers
+#: model:account.account.template,name:l10n_lbp.stores_suppliers
+msgid "Stores Suppliers"
+msgstr "مخازن الموردين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_studies_in_progress_first
+#: model:account.account.template,name:l10n_lbp.studies_in_progress_first
+msgid "Studies In Progress"
+msgstr "دراسات قيد الاعداد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sub_contracts_first
+#: model:account.account.template,name:l10n_lbp.sub_contracts_first
+msgid "Sub Contracts A"
+msgstr "ملتزم ثانوي أ"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subscribed_capital_called_paid_up
+#: model:account.account.template,name:l10n_lbp.subscribed_capital_called_paid_up
+msgid "Subscribed Capital (called and paid up)"
+msgstr "راس المال المستدعى و المدفوع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subscribed_capital_called_unpaid
+#: model:account.account.template,name:l10n_lbp.subscribed_capital_called_unpaid
+msgid "Subscribed Capital (called and unpaid)"
+msgstr "راس المال المكتتب المستدعى غير المدفوع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subscribed_capital_uncalled
+#: model:account.account.template,name:l10n_lbp.subscribed_capital_uncalled
+msgid "Subscribed Capital(uncalled)"
+msgstr "راس المال المكتتب غير المستدعى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_subsidies_receivables
+#: model:account.account.template,name:l10n_lbp.subsidies_receivables
+msgid "Subsidies Receivables"
+msgstr "اعانات مستحقه غير مقبوضه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_sundry_loans_and_debts
+#: model:account.account.template,name:l10n_lbp.sundry_loans_and_debts
+msgid "Sundry Loans And Debts"
+msgstr "قروض و ديون مختلفه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_suppliers_four_zero
+#: model:account.account.template,name:l10n_lbp.suppliers_four_zero
+msgid "Suppliers"
+msgstr "الموردين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_suppliers_documentary_credit
+#: model:account.account.template,name:l10n_lbp.suppliers_documentary_credit
+msgid "Suppliers Documentary Credit"
+msgstr "الموردون الائتمان المستندي"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_suppliers_fixed_assets
+#: model:account.account.template,name:l10n_lbp.suppliers_fixed_assets
+msgid "Suppliers Fixed Assets"
+msgstr "الأصول الثابتة للموردين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_suppliers_goods_on_consignement
+#: model:account.account.template,name:l10n_lbp.suppliers_goods_on_consignement
+msgid "Suppliers Goods On Consignement"
+msgstr "البضائع الموردين على شحنة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_suppliers_invoices
+#: model:account.account.template,name:l10n_lbp.suppliers_invoices
+msgid "Suppliers Invoices"
+msgstr "فواتير الموردين"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_suppliers_suspended_debts
+#: model:account.account.template,name:l10n_lbp.suppliers_suspended_debts
+msgid "Suppliers Suspended Debts"
+msgstr "الموردين الديون المعلقة"
+
+#. module: l10n_lbp
+#: model:account.tax.group,name:l10n_lbp.tax_group_tva_11
+msgid "TVA 11%"
+msgstr "ضريبة القيمة المضافة 11 ٪"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_tangible_fixed_assets_in_progress
+#: model:account.account.template,name:l10n_lbp.tangible_fixed_assets_in_progress
+msgid "Tangible Fixed Assets In Progress"
+msgstr "أصول ماديه قيد الصنع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_tax_due_in_lebanon
+#: model:account.account.template,name:l10n_lbp.tax_due_in_lebanon
+msgid "Tax Due In Lebanon"
+msgstr "ضرائب مدفوعه في لبنان"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_tax_on_consommation_hotel_and_rest
+#: model:account.account.template,name:l10n_lbp.tax_on_consommation_hotel_and_rest
+msgid "Tax On Consommation Hotel And Rest"
+msgstr "ضريبة على فندق الاستهلاك والراحة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_tax_on_honorary_paid
+#: model:account.account.template,name:l10n_lbp.tax_on_honorary_paid
+msgid "Tax On Honorary Paid"
+msgstr "ضريبه على اتعاب مدفوعه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_tax_on_profit_first
+#: model:account.account.template,name:l10n_lbp.tax_on_profit_first
+msgid "Tax On Profit"
+msgstr "ضريبة على الربح"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_taxes_due_operational_first
+#: model:account.account.template,name:l10n_lbp.taxes_due_operational_first
+msgid "Taxes Due (Operational)"
+msgstr "الضرائب المستحقة (التشغيلية)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_taxes_on_profit
+#: model:account.account.template,name:l10n_lbp.taxes_on_profit
+msgid "Taxes On Profit"
+msgstr "الضرائب على الأرباح"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_taxes_on_transportation_equipments_second
+#: model:account.account.template,name:l10n_lbp.taxes_on_transportation_equipments_second
+msgid "Taxes On Transportation Equipments"
+msgstr "رسوم على اليات النقل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_teaching_fees
+#: model:account.account.template,name:l10n_lbp.teaching_fees
+msgid "Teaching Fees"
+msgstr "رسوم التدريس"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_technical_installations_and_industrial_tools_first
+#: model:account.account,name:l10n_lbp.1_technical_installations_and_industrial_tools_second
+#: model:account.account.template,name:l10n_lbp.technical_installations_and_industrial_tools_first
+#: model:account.account.template,name:l10n_lbp.technical_installations_and_industrial_tools_second
+msgid "Technical Installations And Industrial Tools"
+msgstr "التجهيزات الفنيه والالات الصناعيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_technical_installation_industrial_equipment_tools
+#: model:account.account.template,name:l10n_lbp.technical_installation_industrial_equipment_tools
+msgid "Technical,Installation,Industrial Equipment and Tools"
+msgstr "تجهيزات فنيه معدات وأدوات صناعيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_telephone_charges
+#: model:account.account.template,name:l10n_lbp.telephone_charges
+msgid "Telephone Charges"
+msgstr "نفقات الهاتف"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_temporary_personnel
+#: model:account.account.template,name:l10n_lbp.temporary_personnel
+msgid "Temporary Personnel"
+msgstr "المستخدمون المؤقتون"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice__total_in_lbp
+msgid "Total In LBP"
+msgstr "المجموع في ليرة لبنانية"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice__total_in_usd
+msgid "Total In USD"
+msgstr "المجموع بالدولار الأمريكي"
+
+#. module: l10n_lbp
+#: model:ir.model.fields,field_description:l10n_lbp.field_account_invoice__total_in_euro
+msgid "Total in EUR"
+msgstr "المجموع باليورو"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_trade_marks
+#: model:account.account.template,name:l10n_lbp.trade_marks
+msgid "Trade Marks"
+msgstr "العلامات التجارية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_trade_marks_and_similar
+#: model:account.account.template,name:l10n_lbp.trade_marks_and_similar
+msgid "Trade Marks And Similar"
+msgstr "علامات وقيم مماثله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_trangible_fixed_assets_first
+#: model:account.account.template,name:l10n_lbp.trangible_fixed_assets_first
+msgid "Trangible Fixed Assets"
+msgstr "الأصول الثابته الماديه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_transport_and_freight
+#: model:account.account.template,name:l10n_lbp.transport_and_freight
+msgid "Transport And Freight"
+msgstr "النقل والشحن"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_transportation_equipment
+#: model:account.account.template,name:l10n_lbp.transportation_equipment
+msgid "Transportation Equipment"
+msgstr "اليات النقل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_transportation_equipments_first
+#: model:account.account.template,name:l10n_lbp.transportation_equipments_first
+msgid "Transportation Equipments"
+msgstr "اليات النقل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_transportation_on_sales
+#: model:account.account.template,name:l10n_lbp.transportation_on_sales
+msgid "Transportation On Sales"
+msgstr "مصاريف نقل على المبيعات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vat_collectet
+#: model:account.account.template,name:l10n_lbp.vat_collectet
+msgid "VAT Collected"
+msgstr "الضريبه على القيمه المضافه المحصله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vat_deductible
+#: model:account.account.template,name:l10n_lbp.vat_deductible
+msgid "VAT Deductible"
+msgstr "الضريبه على القيمه المضافه المدوره للاسترجاع"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vat_non_recoverable
+#: model:account.account.template,name:l10n_lbp.vat_non_recoverable
+msgid "VAT Non Recoverable"
+msgstr "ضريبة القيمة المضافة غير قابلة للاسترداد"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vat_refundable
+#: model:account.account.template,name:l10n_lbp.vat_refundable
+msgid "VAT Refundable"
+msgstr "الدوله و المؤسسات العامه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_vat_to_be_reimburse
+#: model:account.account.template,name:l10n_lbp.vat_to_be_reimburse
+msgid "VAT To Be Reimburse"
+msgstr "الضريبه على القيمه المضافه المطلوب استرجاعها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_value_added_one_three_two
+#: model:account.account.template,name:l10n_lbp.value_added_one_three_two
+msgid "Value Added"
+msgstr "القيمة المضافة"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_value_added_tax
+#: model:account.account.template,name:l10n_lbp.value_added_tax
+msgid "Value Added Tax"
+msgstr "الضريبه على القيمه المضافه المتوجب دفعها"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_wages_first
+#: model:account.account.template,name:l10n_lbp.wages_first
+msgid "Wages"
+msgstr "أجور"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_waste_consuming_materials
+#: model:account.account.template,name:l10n_lbp.waste_consuming_materials
+msgid "Waste Consuming Materials"
+msgstr "نفايات مواد استهلاكيه"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_waste_other_materials
+#: model:account.account.template,name:l10n_lbp.waste_other_materials
+msgid "Waste Other Materials"
+msgstr "نفايات مواد أخرى"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_waste_packing
+#: model:account.account.template,name:l10n_lbp.waste_packing
+msgid "Waste Packing"
+msgstr "نفايات عبوات"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_waste_raw_material_and_stock
+#: model:account.account.template,name:l10n_lbp.waste_raw_material_and_stock
+msgid "Waste Raw Material and Stock"
+msgstr "نفايات مواد اوليه ومخزون"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_work_accidents_insurance
+#: model:account.account.template,name:l10n_lbp.work_accidents_insurance
+msgid "Work Accidents Insurance"
+msgstr "تأمين حوادث العمل"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_works_712
+#: model:account.account.template,name:l10n_lbp.works_712
+msgid "Works"
+msgstr "أعمال"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_works_in_process
+#: model:account.account.template,name:l10n_lbp.works_in_process
+msgid "Works In Process"
+msgstr "يعمل في العملية"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_works_in_process_variation
+#: model:account.account.template,name:l10n_lbp.works_in_process_variation
+msgid "Works In Process (Variation)"
+msgstr "قيد الصنع (أموال)"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_works_in_progress
+#: model:account.account.template,name:l10n_lbp.works_in_progress
+msgid "Works In Progress"
+msgstr "اشغال قيد التنفيذ"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_for_diminution_in_value_of_current_assets
+#: model:account.account.template,name:l10n_lbp.write_back_for_diminution_in_value_of_current_assets
+msgid "Write-Back For Diminution In Value Of Current Assets"
+msgstr "استردادات من مؤونات هبوط أسعار الأصول المتداوله"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_of_provisions_for_diminution_of_values
+#: model:account.account.template,name:l10n_lbp.write_back_of_provisions_for_diminution_of_values
+msgid "Write-Back OF Provisions For Diminution Of Values"
+msgstr "استردادات من مؤونات هبوط الأسعار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_write_back_of_non_operating_provisions
+#: model:account.account.template,name:l10n_lbp.write_back_of_non_operating_provisions
+msgid "Write-Back Of Non Operating Provisions"
+msgstr "استؤدادات من مؤونات خارج الاستثمار"
+
+#. module: l10n_lbp
+#: model:account.account,name:l10n_lbp.1_computer_equipment
+#: model:account.account.template,name:l10n_lbp.computer_equipment
+msgid "computer Equipment"
+msgstr "معدات الحاسوب"
