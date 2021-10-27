@@ -123,7 +123,133 @@
 				</t>
 			</div>
 			<br /><br />
-			<div class='orderlines'>
+			<div class="pos-center-align">
+                <t t-if='widget.pos.get_client()'>
+                    Customer :<t t-esc="widget.pos.get_client().name || ''" /><br />
+
+                </t>
+                <t t-if="widget.pos.get_client()">
+					Phone : <t t-esc="widget.pos.get_client().phone || ''" /><br />
+                </t>
+                <t t-if="widget.pos.get_client()">
+					Address : <t t-esc="widget.pos.get_client().street || ''" /><br />
+                </t>
+
+
+            </div>
+            <br />
+            <t t-if="receipt.header">
+                <div style='text-align:center'>
+                    <t t-esc="receipt.header" />
+                </div>
+                <br />
+            </t>
+            <table class='receipt-orderlines' style="font-size:9.5pt; width:100%;">
+                <colgroup>
+                    <col width='40%' />
+                    <col width='30%' />
+                    <col width='30%' />
+
+                </colgroup>
+                <thead>
+					<tr style="border-bottom: 2px solid black;">
+						<th>Description</th>
+
+						<th class="pos-right-align">Quantity</th>
+						<th class="pos-right-align">Price</th>
+					</tr>
+				</thead>
+                <tbody>
+                <tr t-foreach="orderlines" t-as="orderline">
+                    <td>
+                        <t t-esc="orderline.get_product().display_name"/>
+                         <t t-if="orderline.get_discount() > 0">
+                            <div class="pos-disc-font">
+                                With a <t t-esc="orderline.get_discount()"/>% discount
+                            </div>
+                        </t>
+                    </td>
+                    <!--<td class="pos-right-align">
+							<t t-esc="widget.format_currency(orderline.product.lst_price)" />
+
+                    </td>-->
+                    <td class="pos-right-align">
+                        <t t-esc="orderline.get_quantity_str_with_unit()"/>
+                    </td>
+
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(orderline.get_display_price())"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br />
+            <table class='receipt-total'>
+                <tr>
+                    <td>Subtotal:</td>
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(order.get_total_without_tax())"/>
+                    </td>
+                </tr>
+                <t t-foreach="order.get_tax_details()" t-as="taxdetail">
+                    <tr>
+                        <td><t t-esc="taxdetail.name" /></td>
+                        <td class="pos-right-align">
+                            <t t-esc="widget.format_currency(taxdetail.amount)" />
+                        </td>
+                    </tr>
+                </t>
+                <tr>
+                    <t t-if="order.get_total_discount() > 0">
+                        <td>Discount:</td>
+                        <td class="pos-right-align">
+                            <t t-esc="widget.format_currency(order.get_total_discount())"/>
+                        </td>
+                    </t>
+                </tr>
+                <tr class="emph">
+                    <td>Total:</td>
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(order.get_total_with_tax())"/>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table class='receipt-paymentlines'>
+                <t t-foreach="paymentlines" t-as="line">
+                  <tr>
+                      <td>
+                          <t t-esc="line.name"/>
+                      </td>
+                      <td class="pos-right-align">
+                          <t t-esc="widget.format_currency(line.get_amount())"/>
+                      </td>
+                  </tr>
+                </t>
+            </table>
+            <br />
+            <table class='receipt-change'>
+                <tr><td>Change:</td><td class="pos-right-align">
+                    <t t-esc="widget.format_currency(order.get_change())"/>
+                    </td></tr>
+            </table>
+            <br/>
+            <table>
+                <tbody>
+                    <tr id="barcode1">
+                        <td style='padding:2px 2px 2px 0px; text-align:center;'>
+                            <div id="barcode_div" width='150' height='50'/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <t t-if="receipt.footer">
+                <br />
+                <div style='text-align:center'>
+                    <t t-esc="receipt.footer" />
+                </div>
+            </t>
+			<!--<div class='orderlines'>
 				<t t-foreach='props.orderlines' t-as='line'>
 					<t t-set='simple' t-value='(line.discount === 0 and line.qty === 1)' />
 					<div t-if='simple'>
@@ -151,7 +277,7 @@
 					</t>
 				</t>
 			</div>
-			<div class="pos-receipt-right-align">--------</div>
+			<div class="pos-receipt-right-align">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</div>
 			<br/>
 			<div class="pos-receipt-amount">
 				TOTAL
@@ -179,7 +305,7 @@
 			<div>
 				Total Taxes
 				<span t-esc='env.pos.format_currency(props.tax)' class="pos-receipt-right-align"/>
-			</div>
+			</div>-->
 			<div class='before-footer' />
 			<br/>
 			<div class="pos-receipt-order-data">
