@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="pos_doctor_commission_sequence" model="ir.sequence">
+            <field name="name">Point of Sale Doctor Commission Number</field>
+            <field name="code">pos.doctor.commission.number</field>
+            <field name="prefix">COMM/2019/</field>
+            <field name="padding">4</field>
+        </record>
+
+        <record forcecreate="True" id="expiration_coupon" model="ir.cron">
+            <field name="name">Expiration Coupon Mail</field>
+            <field eval="False" name="active"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_aspl_gift_card"/>
+            <field name="state">code</field>
+            <field name="code">model._send_mail_balance_and_expired_coupon(True, False)</field>
+        </record>
+
+        <record forcecreate="True" id="reminders_cron" model="ir.cron">
+            <field name="name">Birthday and Anniversary Reminders Mail</field>
+            <field eval="False" name="active"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">model._send_mail_birthday_and_anniversary()</field>
+        </record>
+        <record model="ir.cron" id="recurrent_schedular">
+            <field name="name">Pos Recurrent Order</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_pos_recurrent_order"/>
+            <field name="state">code</field>
+            <field name="code">model.recurrent_order_cron()</field>
+        </record>
+
+        <record model="ir.cron" id="auto_close_pos_session_schedular">
+            <field name="name">Auto Close POS Session</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="model_pos_session"/>
+            <field name="state">code</field>
+            <field name="code">model.auto_close_pos_session()</field>
+        </record>
+
+        <!--     <record id="pos_doctor_commission_cron" model="ir.cron">
+                <field name="name">Point of Sale: Doctor Commission Payment</field>
+                <field name="model_id" ref="model_res_partner"/>
+                <field name="state">code</field>
+                <field name="code">model.pos_payment_cron()</field>
+                <field name='interval_number'>1</field>
+                <field name='interval_type'>days</field>
+                <field name="numbercall">-1</field>
+            </record> -->
+    </data>
+</odoo>
