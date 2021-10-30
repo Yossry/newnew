@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="aspl_view_customer_form" model="ir.ui.view">
+            <field name="name">Customer Form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//notebook" position="inside">
+                    <page string="PoS Doctor Commission" attrs="{'invisible':[('is_doctor', '=', False)]}"
+                          groups="account.group_account_manager">
+                        <group>
+                            <group string="Currency">
+                                <field name="currency_id"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//sheet//div[@name='button_box']" position="inside">
+                    <button name="pos_commission_payment_count" type="object" class="oe_stat_button"
+                            icon="fa-pencil-square-o"
+                            attrs="{'invisible':[('is_doctor', '=', False)]}">
+                        <div class="o_form_field o_stat_info">
+                            <span class="o_stat_value">
+                                <field name="pos_commission_count" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                            </span>
+                            <span class="o_stat_text">PoS Commission</span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="is_doctor"/>
+                </xpath>
+                <xpath expr="//div[hasclass('o_address_format')]" position='after'>
+                    <field name="date_of_birth"/>
+                    <field name="anniversary_date"/>
+                </xpath>
+                <notebook>
+                    <page string="Wallet">
+                        <group>
+                            <field name="remaining_wallet_amount"/>
+                        </group>
+                        <group>
+                            <field name="wallet_lines" nolabel='1'>
+                                <tree create="true">
+                                    <field name="order_id"/>
+                                    <field name="cashier_id"/>
+                                    <field name="type"/>
+                                    <field name="debit"/>
+                                    <field name="credit"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+    </data>
+</odoo>
