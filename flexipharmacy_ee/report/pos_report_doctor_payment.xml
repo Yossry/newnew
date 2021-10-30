@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="pos_doctor_payment_report" model="ir.actions.report">
+            <field name="name">Doctor Commission Report</field>
+            <field name="model">pos.doctor.commission.payment</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">flexipharmacy_ee.pos_commission_report_template</field>
+            <field name="report_file">flexipharmacy_ee.pos_commission_report_template</field>
+        </record>
+
+    </data>
+</odoo>
