@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : <https://store.webkul.com/license.html/> -->
+<odoo>
+	<data>
+		<report 
+		id="reprint_report"
+		string="Receipt"
+		model="pos.order" 
+		report_type="qweb-pdf"
+		file="pos_order_reprint.pos_order_reprint_report_receipt" 
+		name="pos_order_reprint.pos_order_reprint_report_receipt" 
+		paperformat="pos_order_reprint.paperformat_pos_order_reprint_receipt"
+		/>
+	</data>
+</odoo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : <https://store.webkul.com/license.html/> -->
+<odoo>
+	<data>
+		<template id="pos_order_reprint_report_receipt">
+			<t t-call="web.basic_layout">
+				<t t-foreach="docs" t-as="o">
+					<div class="page">
+						<div class="row">
+							<div class="text-center" style="text-align:center">
+								<h2 t-esc="o.user_id.company_id.name"/>
+								<div t-field="o.partner_id" 
+									t-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true, "phone_icons": true}'/>
+=								User: <span t-field="o.user_id"/><br/>
+								Date: <span t-field="o.date_order"/><br/>
+							</div>
+						</div>
+						<br/>
+						<br/>
+
+						<table class="table table-condensed">
+							<thead>
+								<tr>
+									<th>Description</th>
+									<th class="text-right">Quantity</th>
+									<th class="text-right">Price</th>
+									<th class="text-right">Discount</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr t-foreach="o.lines" t-as="line">
+									<td><span t-field="line.product_id"/></td>
+									<td class="text-right">
+										<t t-if="o.state != 'cancel' and o.payment_ids">
+											<span t-field="line.qty"/>
+										</t>
+									</td>
+									<td class="text-right">
+										<t t-if="o.state != 'cancel' and o.payment_ids">
+											<span t-esc="o.order_formatLang(line.price_unit, currency_obj=res_company.currency_id)"/>
+										</t>
+										
+									</td>
+									<td class="text-right">
+										<t t-if="line.discount != 0.0">
+											<span t-esc="line.discount"/>%
+										</t>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br/>
+						<div style="float:right">
+							<div class="">
+								<table class="table table-condensed">
+									<tr class="border-black">
+										<td><strong>Taxes</strong></td>
+										<td class="col-2 offset-3 float-right text-center">
+											<strong t-esc="o.order_formatLang(o.amount_tax, currency_obj=res_company.currency_id)"/>
+										</td>
+									</tr>
+									<tr>
+										<td><strong>Total</strong></td>
+										<td class=" col-2 offset-3 float-right text-center">
+											<strong t-esc="o.order_formatLang(o.amount_total, currency_obj=res_company.currency_id)"/>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<br/>
+						<br/>
+
+						<table class="table table-condensed">
+							<thead>
+								<tr>
+									<th>Payment Mode</th>
+									<th>Amount</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr t-foreach="o.payment_ids" t-as="d">
+									<td>
+										<span t-esc="d.payment_method_id.name"/>
+									</td>
+									<td>
+										<span t-esc="o.order_formatLang(d['amount'], currency_obj=res_company.currency_id)"/>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

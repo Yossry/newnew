@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : <https://store.webkul.com/license.html/> -->
+<odoo>
+
+    <record id="pos_order_reprint_inherit_pos_config_view_form" model="ir.ui.view">
+        <field name="name">pos.config.form.view</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='wk_pos_orders']" position="after">
+                <h2>Order Re-Print Type</h2>
+                <div class="row mt16 o_settings_container" id="pos_order_reprint">
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="Select between option to print duplicate receipt in given format">
+                        <div class="o_setting_right_pane">
+                            <label for="wk_reprint_type" string="Order Reprint Type"/>
+                            <div class="text-muted">
+                                Select between option to print duplicate receipt as Pdf Format or as Xml Receipt(POSBOX) or as POS Ticket (Order Receipt)
+                            </div>
+                            <div class="content-group mt16">
+                                <field name="wk_reprint_type"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>
