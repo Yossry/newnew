@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_pos_order_sale_details_tree" model="ir.ui.view">
+        <field name="name">pos.order.tree</field>
+        <field name="model">pos.order</field>
+        <field name="arch" type="xml">
+            <tree string="POS Orders" decoration-info="state == 'draft'" decoration-muted="state in ('done','cancel')" create="0">
+                <field name="name"/>
+                <field name="pos_reference"/>
+                <field name="amount_total" sum="Total Sales"/>
+                <field name="total_discount" sum="Total Discount"/>
+                <field name="amount_net" sum="Total Net Sales"/>
+                <field name="order_new_date"/>
+                <field name="order_new_time"/>
+                <field name="cost"/>
+                <field name="day"/>
+                <field name="partner_id"/>
+                <field name="mobile"/>
+                <!--<field name="total_margin" string="Gross Profit Margin"/>-->
+                <field name="margin_perc"/>
+                <field name="state" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_report_pos_details_tree_1" model="ir.actions.act_window">
+        <field name="name">PoS Sale Details</field>
+        <field name="res_model">pos.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_pos_order_sale_details_tree"/>
+    </record>
+
+    <menuitem id="menu_report_order_details" name="PoS Sale Details" action="action_report_pos_details_tree_1" parent="point_of_sale.menu_point_rep" sequence="4"/>
+
+    <record id="view_pos_order_line_tree" model="ir.ui.view">
+        <field name="name">pos.order.line.tree</field>
+        <field name="model">pos.order.line</field>
+        <field name='type'>tree</field>
+        <field name="arch" type="xml">
+            <tree string="PoS Order Line" create="0">
+                <field name='serial_number'/>
+                <field name="product_id"/>
+                <field name="product_type"/>
+                <field name="default_code"/>
+                <field name="barcode"/>
+                <field name="product_brand_id"/>
+                <field name="categ_id" string="Category"/>
+                <field name="config_id"/>
+                <field name="pos_categ_id"/>
+                <field name="cost" sum="Total Cost"/>
+                <field name="lst_price" sum="Total Sale Price"/>
+                <field name="uom_id"/>
+                <field name="qty" sum="Total Quantity"/>
+                <field name="pos_categ_id"/>
+                <field name="order_new_date"/>
+                <field name="hour"/>
+                <field name="partner_id"/>
+                <field name="mobile"/>
+                <field name="margin_perc"/>
+                <!--<field name="margin" string="Gross Profit Margin"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_pos_order_line_product_filter" model="ir.ui.view">
+        <field name="name">pos.order.line.list.select</field>
+        <field name="model">pos.order.line</field>
+        <field name="arch" type="xml">
+           <search string="Search Sales Order Line">
+                <field name="name"/>
+                <group expand="0" string="Group By">
+                    <filter string="Brand" name="brand" context="{'group_by':'product_brand_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_pos_product_detail_line" model="ir.actions.act_window">
+        <field name="name">PoS Product</field>
+        <field name="res_model">pos.order.line</field>
+        <field name='view_mode'>tree,form</field>
+        <field name="view_id" ref="view_pos_order_line_tree"/>
+        <field name="search_view_id" ref="view_pos_order_line_product_filter"/>
+    </record>
+
+    <menuitem id="menu_pos_product_detail_line" name="PoS Product" action="action_pos_product_detail_line" parent="point_of_sale.menu_point_rep" sequence="5"/>
+
+</odoo>

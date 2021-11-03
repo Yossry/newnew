@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   <!-- <record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="related_project_id" position="replace">
+            </field>
+            <field name="project_id" position="replace">
+            </field>
+            <field name="payment_term_id" position="after">
+                <field name="project_id" options="{'no_create_edit': True}"/>
+                <field name="related_project_id" options="{'no_create_edit': True}"/>
+            </field>
+        </field>
+    </record>-->
+
+
+    <record id="view_sale_order_form_inherit_event" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']//form//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//tree//field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True}</attribute>
+            </xpath>
+         </field>
+    </record>
+
+    <record id="view_sale_order_details_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <tree string="Sale Orders" create="false" edit="false">
+                <field name="invoice_ids"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="order_new_date"/>
+                <field name="all_amount" sum="Total Sales"/>
+                <field name="amount_disocunt" string="Discount" sum="Total Discount"/>
+                <field name="amount_total" string="Net Sales" sum="Total Net Sales"/>
+                <field name="cost" string="Cost" sum="Total Cost"/>
+                <field name="order_new_time"/>
+                <field name="day"/>
+                <field name="mobile"/>
+                <field name="margin_perc"/>
+                <field name="margin" string="Gross Profit Margin"/>
+                <field name="state" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_report_sale_order_tree_1" model="ir.actions.act_window">
+        <field name="name">Sale Order Details</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_sale_order_details_tree"/>
+    </record>
+
+    <menuitem id="menu_report_sale_order_tree_1" name="Sale Order Details" action="action_report_sale_order_tree_1" parent="sale.menu_sale_report" sequence="5"/>
+
+    <record id="view_sale_order_line_tree" model="ir.ui.view">
+        <field name="name">sale.order.line.tree</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <tree string="Sale Order Line" create="0">
+                <field name="product_id"/>
+                <field name="product_type"/>
+                <field name="default_code"/>
+                <field name="barcode"/>
+                <field name="product_brand_id"/>
+                <field name="categ_id" string="Category"/>
+                <field name="pos_categ_id"/>
+                <field name="cost" sum="Total Cost"/>
+                <field name="lst_price" sum="Total Sale Price"/>
+                <field name="product_uom"/>
+                <field name="product_uom_qty" sum="Total Quantity"/>
+                <field name="invoice_ids"/>
+                <field name="order_new_date"/>
+                <field name="hour"/>
+                <field name="partner_id"/>
+                <field name="mobile"/>
+                <field name="margin" string="Gross Profit Margin"/>
+                <field name="margin_perc"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--<record id="view_sales_order_line_filter_search" model="ir.ui.view">
+        <field name="name">sale.order.line.select</field>
+        <field name="model">sale.order.line</field>
+        <field name="arch" type="xml">
+            <search string="Search Sales Order">
+                <filter string="To Invoice" domain="[('qty_to_invoice','&lt;&gt;', 0)]"  help="Sales Order Lines ready to be invoiced"/>
+                <separator/>
+                <filter string="My Sales Order Lines" domain="[('salesman_id','=',uid)]" help="Sales Order Lines related to a Sales Order of mine"/>
+                <field name="order_id"/>
+                <field name="order_partner_id" operator="child_of"/>
+                <field name="product_id"/>
+                <field name="salesman_id"/>
+                <group expand="0" string="Group By">
+                    <filter string="Product" name="product" context="{'group_by':'product_id'}"/>
+                    <filter string="Order" name="order" context="{'group_by':'order_id'}"/>
+                    <filter string="Salesperson" name="salesman" context="{'group_by':'user_id'}"/>
+                    <filter string="Brand" name="brand" context="{'group_by':'product_brand_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+-->
+
+    <record id="action_sale_order_product_detail_line" model="ir.actions.act_window">
+        <field name="name">Sale Order Product</field>
+        <field name="res_model">sale.order.line</field>
+        <field name='view_mode'>tree,form</field>
+        <field name="view_id" ref="view_sale_order_line_tree"/>
+    </record>
+
+    <menuitem id="menu_action_sale_order_product_detail_line" name="Sale Order Product" action="action_sale_order_product_detail_line" parent="sale.menu_sale_report" sequence="6"/>
+
+</odoo>
